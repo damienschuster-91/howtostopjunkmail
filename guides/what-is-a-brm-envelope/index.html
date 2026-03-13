@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is a BRM Envelope? Business Reply Mail Explained | HowToStopJunkMail.org</title>
+<meta name="description" content="A BRM envelope is a prepaid return envelope included in junk mail. The company pays postage only when you mail it back. Here's how to use it against them.">
+<link rel="canonical" href="https://howtostopjunkmail.org/guides/what-is-a-brm-envelope/">
+<meta property="og:title" content="What Is a BRM Envelope? Business Reply Mail Explained | HowToStopJunkMail.org">
+<meta property="og:description" content="A BRM envelope is a prepaid return envelope included in junk mail. The company pays postage only when you mail it back. Here's how to use it against them.">
+<meta property="og:url" content="https://howtostopjunkmail.org/guides/what-is-a-brm-envelope/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════
+   HowToStopJunkMail.org — Shared Stylesheet
+   Import this on every page
+═══════════════════════════════════════════════════ */
+
+:root {
+  --forest:      #1a3a2a;
+  --forest-mid:  #2d5a42;
+  --forest-lite: #3d7a58;
+  --sage:        #7aab8e;
+  --sage-light:  #b8d4c4;
+  --cream:       #f5f0e8;
+  --cream-dark:  #e8e0d0;
+  --parchment:   #ede6d8;
+  --ink:         #1a1a18;
+  --charcoal:    #2e2e2c;
+  --mid:         #5a5a55;
+  --muted:       #8a8a82;
+  --rule:        #d4ccbc;
+  --gold:        #c8a84b;
+  --gold-light:  #e8cc7a;
+  --white:       #fdfaf5;
+  --paid-bg:     #1a3a2a;
+  --paid-accent: #c8a84b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* paper texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ═══ NAV ═══ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: var(--forest);
+  border-bottom: 2px solid var(--gold);
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+.nav-logo span { color: var(--gold); }
+.nav-logo small { display: block; font-size: 9px; font-family: 'DM Mono', monospace; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; }
+
+/* Top-level link list */
+.nav-links { display: flex; gap: 0; list-style: none; align-items: center; }
+.nav-links > li { position: relative; }
+.nav-links > li > a {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 21px 14px;
+  display: block;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-links > li > a:hover,
+.nav-links > li:hover > a { color: var(--cream); }
+
+/* Dropdown panels */
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--forest);
+  border: 1px solid rgba(200,168,75,0.25);
+  border-top: 2px solid var(--gold);
+  z-index: 600;
+  padding: 8px 0;
+}
+.nav-links > li:hover .nav-dropdown { display: block; }
+
+.nav-dropdown a {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--cream); }
+.nav-dropdown-divider {
+  border: none; border-top: 1px solid rgba(255,255,255,0.07);
+  margin: 6px 0;
+}
+.nav-dropdown-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(122,171,142,0.5);
+  padding: 8px 20px 4px;
+}
+
+/* CTA button */
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--forest) !important;
+  font-weight: 500 !important;
+  padding: 9px 18px !important;
+  margin-left: 8px;
+  transition: background 0.2s !important;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--gold-light) !important; }
+
+/* Mobile: hide links */
+@media(max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+}
+
+/* ═══ PAGE SYSTEM ═══ */
+.page { display: block; padding-top: 62px; min-height: 100vh; }
+
+/* ═══════════════════════ HOME ═══════════════════════ */
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: calc(100vh - 62px);
+  background: var(--forest);
+}
+
+.hero-left {
+  padding: 80px 72px 72px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-left::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+
+.hero-kicker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-kicker::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+
+.hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(52px, 5.5vw, 88px);
+  line-height: 0.95;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+}
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--sage-light);
+  max-width: 480px;
+  line-height: 1.8;
+  margin-bottom: 52px;
+  font-weight: 300;
+}
+.hero-sub strong { color: var(--white); font-weight: 600; }
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--forest);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.btn-outline-cream {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--sage-light);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid var(--forest-lite);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline-cream:hover { border-color: var(--sage); color: var(--white); }
+
+/* HERO RIGHT - stats panel */
+.hero-right {
+  background: var(--forest-mid);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 64px;
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid rgba(200,168,75,0.2);
+}
+
+.hero-right::before {
+  content: 'STOP\AMAIL';
+  white-space: pre;
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  font-size: 140px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.03);
+  right: -20px;
+  bottom: -30px;
+  line-height: 0.85;
+  pointer-events: none;
+}
+
+.hero-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 36px;
+}
+.hero-stat {
+  background: rgba(255,255,255,0.04);
+  padding: 28px 24px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.hero-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.hero-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+  line-height: 1.4;
+}
+sup.cite { font-size: 8px; color: var(--gold); opacity: 0.7; }
+
+.hero-tools-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.hero-tool-list { list-style: none; }
+.hero-tool-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 14px;
+  color: var(--sage-light);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.hero-tool-list li:hover { color: var(--gold); }
+.hero-tool-list li::before { content: '→'; color: var(--gold); font-family: 'DM Mono', monospace; font-size: 12px; flex-shrink: 0; }
+
+/* TICKER */
+.ticker {
+  background: var(--gold);
+  padding: 0;
+  overflow: hidden;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+.ticker-track {
+  display: flex;
+  gap: 0;
+  animation: tick 30s linear infinite;
+  white-space: nowrap;
+}
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 40px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--forest);
+  white-space: nowrap;
+}
+.ticker-sep { color: rgba(26,58,42,0.3); }
+
+/* ═══ SECTIONS ═══ */
+.section { padding: 96px 80px; }
+.section-cream { background: var(--cream); }
+.section-parch { background: var(--parchment); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.section-forest { background: var(--forest); color: var(--cream); }
+.section-white { background: var(--white); }
+
+.section-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--forest-lite);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--forest-lite); }
+.section-forest .section-eyebrow { color: var(--gold); }
+.section-forest .section-eyebrow::before { background: var(--gold); }
+
+h2.display {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 4vw, 60px);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--forest);
+  margin-bottom: 18px;
+}
+h2.display em { font-style: italic; color: var(--forest-lite); }
+.section-forest h2.display { color: var(--white); }
+.section-forest h2.display em { color: var(--gold); }
+
+/* TOOL CARDS GRID */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 52px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.tool-card {
+  background: var(--white);
+  padding: 48px 44px;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--forest);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.tool-card:hover::before { transform: scaleX(1); }
+.tool-card:hover { background: var(--cream); }
+.tool-card.paid { background: var(--forest); }
+.tool-card.paid::before { background: var(--gold); }
+.tool-card.paid:hover { background: var(--forest-mid); }
+
+.tool-card-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.tool-card-badge.free { background: var(--sage-light); color: var(--forest); }
+.tool-card-badge.paid-badge { background: var(--gold); color: var(--forest); font-weight: 500; }
+
+.tool-card-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+.tool-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.tool-card.paid h3 { color: var(--gold); }
+.tool-card p { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 20px; }
+.tool-card.paid p { color: var(--sage-light); }
+.tool-card-cta {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--forest-lite);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tool-card.paid .tool-card-cta { color: var(--gold); }
+
+/* ═══ TOOL PAGES ═══ */
+
+/* Opt-Out Kit */
+.kit-hero {
+  background: var(--forest);
+  padding: 72px 80px 60px;
+  border-bottom: 2px solid var(--gold);
+}
+.kit-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.0;
+  margin: 16px 0 20px;
+  letter-spacing: -0.01em;
+}
+.kit-hero h1 em { font-style: italic; color: var(--gold); }
+.kit-hero p { font-size: 16px; color: var(--sage-light); max-width: 600px; line-height: 1.75; }
+
+.kit-wrap {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  min-height: 600px;
+}
+
+.kit-form-panel {
+  background: var(--white);
+  padding: 56px 48px;
+  border-right: 1px solid var(--rule);
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 6px;
+}
+.form-sub { font-size: 13px; color: var(--muted); margin-bottom: 32px; line-height: 1.6; }
+
+.field { margin-bottom: 20px; }
+.field label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 7px;
+}
+.field input, .field select {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Source Serif 4', serif;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1.5px solid var(--rule);
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.field input:focus, .field select:focus { border-color: var(--forest-mid); background: var(--white); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field-row3 { display: grid; grid-template-columns: 1fr 1fr 80px; gap: 10px; }
+
+.generate-btn {
+  width: 100%;
+  background: var(--forest);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.generate-btn:hover { background: var(--forest-mid); }
+
+.privacy-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 14px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Kit Results */
+.kit-results-panel {
+  background: var(--parchment);
+  padding: 56px 56px;
+}
+
+.kit-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  gap: 16px;
+  color: var(--muted);
+}
+.kit-placeholder-icon { font-size: 48px; opacity: 0.4; }
+.kit-placeholder p { font-size: 15px; max-width: 280px; line-height: 1.6; }
+
+.kit-results { display: none; }
+.kit-results.show { display: block; }
+
+.kit-step {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--forest);
+  margin-bottom: 16px;
+  transition: border-left-color 0.3s;
+}
+.kit-step.done { border-left-color: var(--gold); }
+.kit-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+.kit-step-left { display: flex; align-items: center; gap: 14px; }
+.kit-step-num {
+  width: 28px; height: 28px;
+  background: var(--forest);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.kit-step.done .kit-step-num { background: var(--gold); color: var(--forest); }
+.kit-step-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--forest);
+}
+.kit-step-impact {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+}
+.impact-high { background: var(--gold); color: var(--forest); }
+.impact-med { background: var(--sage-light); color: var(--forest); }
+
+.kit-step-body {
+  display: none;
+  padding: 0 24px 24px 66px;
+  font-size: 14px;
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+.kit-step-body.open { display: block; }
+.kit-step-body p { margin-bottom: 14px; }
+
+.clipboard-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--charcoal);
+}
+.copy-btn {
+  margin-left: auto;
+  background: var(--forest);
+  color: var(--gold);
+  border: none;
+  padding: 5px 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.copy-btn:hover { background: var(--forest-mid); }
+.copy-btn.copied { background: var(--gold); color: var(--forest); }
+
+.kit-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--forest);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.15s;
+}
+.kit-link-btn:hover { background: var(--forest-mid); }
+.kit-link-btn.paid-link {
+  background: var(--gold);
+  color: var(--forest);
+  font-weight: 500;
+}
+.kit-link-btn.paid-link:hover { background: var(--gold-light); }
+
+.mark-done-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 8px 0;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: color 0.15s;
+}
+.mark-done-btn:hover { color: var(--forest); }
+
+.progress-bar-wrap {
+  background: var(--rule);
+  height: 4px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.4s ease;
+  width: 0%;
+}
+.progress-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+}
+
+/* ═══ IDENTIFIER TOOL ═══ */
+.identifier-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+.identifier-left {
+  background: var(--white);
+  padding: 56px 48px;
+  border-right: 1px solid var(--rule);
+}
+.identifier-right {
+  background: var(--parchment);
+  padding: 56px 48px;
+}
+
+.mail-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0 28px;
+}
+.mail-type-btn {
+  padding: 14px 12px;
+  background: var(--cream);
+  border: 1.5px solid var(--rule);
+  font-family: 'Source Serif 4', serif;
+  font-size: 14px;
+  color: var(--charcoal);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+}
+.mail-type-btn:hover, .mail-type-btn.active {
+  background: var(--forest);
+  color: var(--gold);
+  border-color: var(--forest);
+}
+.mail-type-btn .mail-type-icon { font-size: 20px; display: block; margin-bottom: 6px; }
+
+.identify-btn {
+  width: 100%;
+  background: var(--gold);
+  color: var(--forest);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+.identify-btn:hover { background: var(--gold-light); }
+
+.id-result {
+  display: none;
+}
+.id-result.show { display: block; }
+.id-result-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--forest);
+  padding: 28px;
+  margin-bottom: 16px;
+}
+.id-result-card.priority { border-top-color: var(--gold); }
+.id-result-type {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.id-result-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+.id-result-card p { font-size: 13px; color: var(--charcoal); line-height: 1.65; margin-bottom: 14px; }
+
+.id-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  gap: 14px;
+  color: var(--muted);
+  min-height: 400px;
+}
+.id-placeholder-icon { font-size: 52px; opacity: 0.35; }
+.id-placeholder p { font-size: 15px; max-width: 260px; line-height: 1.6; }
+
+/* ═══ LETTER GENERATOR ═══ */
+.letter-wrap {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  min-height: 600px;
+}
+.letter-form-panel {
+  background: var(--white);
+  padding: 56px 44px;
+  border-right: 1px solid var(--rule);
+}
+.letter-preview-panel {
+  background: var(--cream-dark);
+  padding: 56px 60px;
+  overflow: auto;
+}
+
+.letter-type-list { list-style: none; margin: 16px 0 28px; }
+.letter-type-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--rule);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: var(--cream);
+}
+.letter-type-item:hover, .letter-type-item.active {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--gold);
+}
+.letter-type-item input[type="radio"] { display: none; }
+.letter-type-item .lti-label { font-size: 14px; font-weight: 400; }
+.letter-type-item .lti-sub { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
+.letter-type-item.active .lti-sub { color: var(--sage); }
+
+.gen-letter-btn {
+  width: 100%;
+  background: var(--forest);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.gen-letter-btn:hover { background: var(--forest-mid); }
+
+.letter-paper {
+  background: var(--white);
+  padding: 60px 64px;
+  min-height: 500px;
+  font-family: 'Source Serif 4', serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ink);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  position: relative;
+}
+.letter-paper::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 60px;
+  border-right: 1px solid rgba(200,168,75,0.2);
+  background: rgba(200,168,75,0.03);
+}
+.letter-date { color: var(--muted); margin-bottom: 28px; font-size: 13px; }
+.letter-addr { margin-bottom: 28px; line-height: 1.7; font-size: 13px; color: var(--charcoal); }
+.letter-body p { margin-bottom: 16px; }
+.letter-sig { margin-top: 32px; }
+.letter-placeholder { color: var(--muted); font-style: italic; display: flex; align-items: center; justify-content: center; min-height: 400px; text-align: center; font-size: 15px; }
+
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--forest);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  border: none;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background 0.15s;
+}
+.print-btn:hover { background: var(--forest-mid); }
+
+/* ═══ SAVINGS CALCULATOR ═══ */
+.calc-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+.calc-left {
+  background: var(--white);
+  padding: 56px 56px;
+  border-right: 1px solid var(--rule);
+}
+.calc-right {
+  background: var(--forest);
+  padding: 56px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calc-slider-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.calc-slider-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--forest);
+}
+.calc-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--rule);
+  margin: 10px 0 28px;
+  outline: none;
+  cursor: pointer;
+}
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px; height: 20px;
+  background: var(--forest);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid var(--gold);
+}
+
+.calc-toggle-group { display: flex; gap: 2px; margin-bottom: 32px; }
+.calc-toggle {
+  flex: 1;
+  padding: 10px 8px;
+  background: var(--cream);
+  border: 1.5px solid var(--rule);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s;
+}
+.calc-toggle.active { background: var(--forest); color: var(--gold); border-color: var(--forest); }
+
+.calc-result-big {
+  margin-bottom: 40px;
+}
+.calc-result-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 4px;
+}
+.calc-result-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.calc-result-unit {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--sage-light);
+  margin-top: 4px;
+}
+
+.calc-results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 36px;
+}
+.calc-result-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.calc-result-card .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.calc-result-card .desc {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--sage);
+  line-height: 1.4;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--forest);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.share-btn:hover { background: var(--gold-light); }
+
+/* ═══ CONTENT PAGES ═══ */
+.content-hero {
+  background: var(--forest);
+  padding: 72px 80px 60px;
+  border-bottom: 2px solid rgba(200,168,75,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.content-hero::after {
+  content: attr(data-bg);
+  position: absolute;
+  right: -20px; bottom: -40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.03);
+  pointer-events: none;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -5px;
+}
+.breadcrumb {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--sage);
+  margin-bottom: 24px;
+}
+.bc-link { color: var(--gold); cursor: pointer; }
+.bc-link:hover { text-decoration: underline; }
+
+.content-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 5.5vw, 80px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.0;
+  max-width: 700px;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+.content-hero h1 em { font-style: italic; color: var(--gold); }
+.content-hero .lead { font-size: 17px; color: var(--sage-light); max-width: 580px; line-height: 1.75; }
+
+.content-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 700px) 300px;
+}
+.content-main { padding: 72px 80px; border-right: 1px solid var(--rule); }
+.content-main p { font-size: 16px; color: var(--charcoal); line-height: 1.85; margin-bottom: 24px; }
+.content-main h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 52px 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--cream-dark);
+  letter-spacing: -0.01em;
+}
+.content-main ul { list-style: none; border: 1px solid var(--rule); margin-bottom: 28px; }
+.content-main ul li {
+  padding: 13px 16px 13px 42px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 15px;
+  color: var(--charcoal);
+  line-height: 1.65;
+  position: relative;
+}
+.content-main ul li:last-child { border-bottom: none; }
+.content-main ul li::before { content: '→'; position: absolute; left: 16px; color: var(--forest-lite); font-size: 13px; }
+
+.content-sidebar { padding: 60px 36px; background: var(--parchment); }
+.sidebar-section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--forest);
+}
+.sidebar-nav { list-style: none; margin-bottom: 32px; }
+.sidebar-nav li { border-bottom: 1px solid var(--rule); }
+.sidebar-nav a { display: block; padding: 11px 0; font-size: 14px; color: var(--mid); text-decoration: none; cursor: pointer; transition: color 0.15s; }
+.sidebar-nav a:hover { color: var(--forest); }
+
+/* TOOL BOX */
+.tool-box {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--forest);
+  padding: 28px 32px;
+  margin: 28px 0;
+}
+.tool-box-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.tool-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 8px;
+}
+.tool-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
+.tool-box-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.tool-box-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--forest-lite);
+  text-decoration: none;
+  border-bottom: 1px solid var(--forest-lite);
+  padding-bottom: 1px;
+  letter-spacing: 0.04em;
+  transition: opacity 0.15s;
+}
+.tool-box-link:hover { opacity: 0.65; }
+
+/* PAID HIGHLIGHT BOX */
+.paid-box {
+  background: var(--forest);
+  border-left: 4px solid var(--gold);
+  padding: 28px 32px;
+  margin: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.paid-box-text p { font-size: 14px; color: var(--sage-light); line-height: 1.65; margin: 0; }
+.paid-box-text strong { color: var(--white); font-weight: 600; }
+.paid-box-text .paid-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 8px;
+}
+.paid-box-cta {
+  background: var(--gold);
+  color: var(--forest);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 22px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+  display: inline-block;
+}
+.paid-box-cta:hover { background: var(--gold-light); }
+.paid-box-aff { font-size: 9px; color: var(--sage); letter-spacing: 0.08em; margin-top: 6px; font-family: 'DM Mono', monospace; }
+
+/* WARN / NOTE */
+.warn-box { background: #fdf8ec; border: 1px solid #ddd0a0; border-left: 4px solid #b8960c; padding: 18px 24px; margin: 24px 0; }
+.warn-box p { font-size: 13px; color: #5a4a10; line-height: 1.65; margin: 0; }
+.note-box { background: var(--parchment); border: 1px solid var(--rule); border-left: 4px solid var(--forest-lite); padding: 18px 24px; margin: 24px 0; }
+.note-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--forest-lite); margin-bottom: 6px; }
+.note-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
+
+/* FOOTER */
+footer {
+  background: var(--forest);
+  border-top: 3px solid var(--gold);
+  padding: 72px 80px 44px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand {}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.footer-logo span { color: var(--gold); }
+.footer-logo small { display: block; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; margin-top: 3px; }
+.footer-tagline { font-size: 13px; color: var(--sage); line-height: 1.7; max-width: 300px; margin-top: 14px; }
+
+.footer-col h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; cursor: pointer; transition: color 0.15s; }
+.footer-col ul li a:hover { color: var(--cream); }
+
+.citations { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.citations h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+.cite-list { list-style: none; counter-reset: cite; columns: 2; column-gap: 40px; }
+.cite-list li { counter-increment: cite; font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; margin-bottom: 6px; padding-left: 22px; position: relative; break-inside: avoid; }
+.cite-list li::before { content: '[' counter(cite) ']'; position: absolute; left: 0; color: var(--gold); opacity: 0.7; font-family: 'DM Mono', monospace; }
+.cite-list li a { color: rgba(255,255,255,0.3); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.cite-list li a:hover { color: var(--cream); }
+
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.2); }
+.footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.2); max-width: 480px; text-align: right; line-height: 1.6; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.fu  { animation: fadeUp 0.5s ease both; }
+.fu2 { animation: fadeUp 0.5s 0.08s ease both; }
+.fu3 { animation: fadeUp 0.5s 0.16s ease both; }
+.fu4 { animation: fadeUp 0.5s 0.24s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 60px 32px; }
+  .section { padding: 64px 32px; }
+  .kit-wrap, .identifier-wrap, .letter-wrap, .calc-wrap, .content-layout { grid-template-columns: 1fr; }
+  .kit-form-panel, .identifier-left, .letter-form-panel, .calc-left, .content-main { border-right: none; }
+  .content-sidebar { padding: 40px 32px; }
+  .content-hero, .kit-hero { padding: 56px 32px 44px; }
+  footer { padding: 48px 32px 36px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; }
+  .footer-disclaimer { text-align: left; max-width: 100%; }
+  .paid-box { flex-direction: column; }
+  .cite-list { columns: 1; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .hero-stat-grid { grid-template-columns: 1fr 1fr; }
+}
+/* end shared.css */
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">
+    HowToStopJunkMail<span>.org</span>
+    <small>Free guides · Opt-out tools · Data removal</small>
+  </a>
+  <ul class="nav-links">
+    <li>
+      <a>Tools ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Free Tools</div>
+        <a href="/tools/opt-out-kit/">📋 Opt-Out Kit Generator</a>
+        <a href="/tools/identify-mail/">🔍 Identify Your Mail</a>
+        <a href="/tools/letter-generator/">✍️ Letter Generator</a>
+        <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
+        <hr class="nav-dropdown-divider">
+        <div class="nav-dropdown-label">Paid — $3.99</div>
+        <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
+      </div>
+    </li>
+    <li>
+      <a>Guides ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Opt-Out Guides</div>
+        <a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a>
+        <a href="/guides/return-junk-mail-to-sender/">Return to Sender</a>
+        <a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a>
+        <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
+        <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
+        <a href="/guides/what-is-a-brm-envelope/">What Is a BRM Envelope?</a>
+        <hr class="nav-dropdown-divider">
+        <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
+      </div>
+    </li>
+    <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
+    <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+<div class="content-hero" data-bg="BRM">
+  <div class="breadcrumb"><a class="bc-link" href="/">Home</a> / <a class="bc-link" href="/guides/">Guides</a> / What Is a BRM Envelope?</div>
+  <h1>What Is a<em> BRM Envelope?</em></h1>
+  <p class="lead">A Business Reply Mail envelope is a prepaid return envelope tucked inside junk mail. The company pays nothing until you actually mail it back — which means it's your most direct lever against the people sending you unwanted mail.</p>
+</div>
+
+<div class="content-layout">
+  <div class="content-main">
+
+    <p>BRM stands for <strong>Business Reply Mail</strong> — a USPS service that lets companies pre-pay for return postage on envelopes they include in their mailings.<sup class="cite">[1]</sup> You've seen these hundreds of times: the envelope printed with "No Postage Necessary if Mailed in the United States" and a distinctive permit imprint in the upper right corner instead of a stamp.</p>
+
+    <p>The key mechanic: the company pays nothing when they print it. They only pay when you drop it in a mailbox and USPS delivers it back to them. Every envelope you return costs them real money — typically $0.70 to $1.20 per piece, including First-Class postage plus a per-piece handling fee.<sup class="cite">[1]</sup></p>
+
+    <h2>How to Identify a BRM Envelope</h2>
+    <p>Look for these markings on the envelope's front face:</p>
+    <ul>
+      <li>"NO POSTAGE NECESSARY IF MAILED IN THE UNITED STATES" printed in the upper right area</li>
+      <li>A permit imprint box (usually reads "BUSINESS REPLY MAIL" or "FIRST-CLASS MAIL PERMIT NO. XXXX")</li>
+      <li>Horizontal FIM (Facing Identification Mark) bars — a small row of vertical bars near the top edge</li>
+      <li>The company's return address pre-printed on the envelope</li>
+      <li>A POSTNET or Intelligent Mail barcode along the bottom</li>
+    </ul>
+    <div class="note-box">
+      <div class="note-label">Note</div>
+      <p>Not all prepaid return envelopes are BRM. Some are "Courtesy Reply Mail" (CRM) — these have a stamp area and require you to add postage. Only BRM envelopes with the "No Postage Necessary" imprint are truly prepaid at the sender's expense.</p>
+    </div>
+
+    <h2>How the USPS BRM Permit System Works</h2>
+    <p>To use BRM, a company must hold a valid USPS Business Reply Mail permit for the post office that will receive the returned mail. They pay an annual permit fee to USPS, then pay per piece only when envelopes are physically returned and delivered.<sup class="cite">[1]</sup></p>
+    <ul>
+      <li>Annual permit fee: paid upfront regardless of volume</li>
+      <li>Per-piece charge: First-Class postage rate + handling surcharge (~$0.21–$0.30 extra per piece)</li>
+      <li>Accounting method: companies can prepay a deposit or be billed monthly</li>
+      <li>Volume discounts exist for high-volume permit holders</li>
+    </ul>
+    <p>This structure means a mailer sending 100,000 pieces assumes they'll only get a small fraction returned. Every additional return you send raises their cost-per-acquisition — making their campaigns measurably less profitable.</p>
+
+    <h2>What You Can Legally Do With a BRM Envelope</h2>
+    <p>USPS regulations require that BRM envelopes be used for their "intended purpose" — that is, as return mail for the piece they came with.<sup class="cite">[2]</sup> Within that framework, you have real options:</p>
+    <ul>
+      <li>Mail it back completely empty — it still costs them the full per-piece fee</li>
+      <li>Stuff it with the junk mail they sent you — stays within normal weight limits</li>
+      <li>Include a written opt-out request with your name and mailing label</li>
+      <li>Add a printed opt-out letter generated by our <a href="/tools/letter-generator/" style="color:var(--forest-lite)">Letter Generator</a></li>
+    </ul>
+    <div class="warn-box">
+      <p><strong>Legal boundary:</strong> Adding heavy objects, bricks, or anything outside the original mailing violates USPS regulations on BRM usage and may result in the piece being treated as non-mailable or returned to you.<sup class="cite">[2]</sup> The effective and legal approach is stuffing it with the sender's own materials and a written opt-out — same financial impact, no postal violations.</p>
+    </div>
+
+    <h2>Using BRM as an Opt-Out Tool</h2>
+    <p>Returning the envelope alone does not guarantee opt-out processing — many companies require a specific written request linked to your mailing label. The combination that works: return the BRM envelope with the original junk mail folded inside, plus a written opt-out note or letter that includes your full name and mailing address as it appears on the label.</p>
+
+    <div class="tool-box">
+      <div class="tool-box-tag">Free Tool</div>
+      <h3>Generate Your Opt-Out Letter</h3>
+      <p>Create a formatted opt-out demand letter in seconds. Professional, Stern, or Maximum Spite — your choice. Print it, fold it, stuff it in the BRM envelope.</p>
+      <div class="tool-box-links">
+        <a href="/tools/letter-generator/" class="tool-box-link">Open Letter Generator →</a>
+      </div>
+    </div>
+
+    <h2>When There's No BRM Envelope</h2>
+    <p>Some junk mail — particularly from smaller local businesses, political campaigns, or non-profit solicitations — doesn't include a BRM envelope. In that case you have two options: ignore it, or send them a letter yourself.</p>
+    <p>If you want to send a physical opt-out demand letter without printing it yourself, our <a href="/tools/send-letter/" style="color:var(--forest-lite)">Send a Letter tool</a> lets you enter the company's address and we'll have a formatted letter printed and mailed via USPS First-Class mail for $3.99 — covering print, envelope, and postage through Lob.</p>
+
+    <h2>Does Returning BRM Mail Actually Stop It?</h2>
+    <p>On its own, returning one envelope rarely triggers immediate removal. What it does do is register a direct opt-out signal at the company — more effective than ignoring the mail, and far more effective than writing "Return to Sender" (which does not work for bulk mail without specific USPS endorsements).</p>
+    <p>For lasting results, combine the BRM return with upstream opt-outs: <a href="https://optoutprescreen.com" target="_blank" rel="nofollow noopener" style="color:var(--forest-lite)">OptOutPrescreen.com</a> for credit card and insurance offers, <a href="https://dmachoice.org" target="_blank" rel="nofollow noopener" style="color:var(--forest-lite)">DMAchoice.org</a> for general marketing mail, and data broker removal for the databases that keep re-selling your address.</p>
+
+    <div class="paid-box">
+      <div class="paid-box-text">
+        <div class="paid-tag">⭐ Stop It at the Source — Affiliate Link</div>
+        <p><strong>Incogni</strong> removes you from 180+ data broker databases — the upstream source that keeps re-selling your address to new mailers — automatically, every quarter.</p>
+        <div class="paid-box-aff">Affiliate link — we may earn a commission</div>
+      </div>
+      <a href="https://incogni.com" target="_blank" rel="nofollow noopener" class="paid-box-cta">Try Incogni →</a>
+    </div>
+
+  </div>
+
+  <div class="content-sidebar">
+    <div class="sidebar-section-label">All Guides</div>
+    <ul class="sidebar-nav">
+      <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+      <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+      <li><a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a></li>
+      <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
+      <li><a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a></li>
+      <li><a href="/guides/what-is-a-brm-envelope/" style="color:var(--forest);font-weight:600;">↳ What Is a BRM Envelope?</a></li>
+    </ul>
+    <div class="sidebar-section-label" style="margin-top:24px;">Related Tool</div>
+    <div style="background:var(--forest);padding:24px;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Free Tool</div>
+      <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--white);margin-bottom:8px;">Letter Generator</div>
+      <p style="font-size:12px;color:var(--sage-light);line-height:1.6;margin-bottom:14px;">Generate a formatted opt-out letter to stuff in the BRM envelope. Professional, Stern, or Maximum Spite.</p>
+      <a href="/tools/letter-generator/" style="display:block;background:var(--gold);color:var(--forest);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 16px;text-align:center;text-decoration:none;">Generate Letter →</a>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--gold);padding:20px 24px;margin-top:16px;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Paid — $3.99</div>
+      <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--forest);margin-bottom:8px;">No BRM Envelope?</div>
+      <p style="font-size:12px;color:var(--mid);line-height:1.6;margin-bottom:14px;">We'll print and mail your opt-out letter via USPS First-Class. No printer needed.</p>
+      <a href="/tools/send-letter/" style="display:block;background:var(--forest);color:var(--gold);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 16px;text-align:center;text-decoration:none;">Send a Letter →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">HowToStopJunkMail<span>.org</span><small>Free opt-out guides & tools</small></div><p class="footer-tagline">Free guides and tools for reclaiming your mailbox and your privacy.</p></div>
+    <div class="footer-col"><h4>More Guides</h4><ul>
+      <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+      <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+      <li><a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a></li>
+      <li><a href="/guides/opt-out-services-compared/">Opt-Out Services</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Free Tools</h4><ul>
+      <li><a href="/tools/letter-generator/">Letter Generator</a></li>
+      <li><a href="/tools/opt-out-kit/">Opt-Out Kit Generator</a></li>
+      <li><a href="/tools/send-letter/">Send a Letter ($3.99)</a></li>
+      <li><a href="https://optoutprescreen.com" target="_blank" rel="nofollow noopener">OptOutPrescreen</a></li>
+    </ul></div>
+  </div>
+  <div class="citations"><h4>Sources & Citations</h4><ol class="cite-list">
+    <li>USPS Business Reply Mail permit requirements, fees, and per-piece charges: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">USPS Domestic Mail Manual §507</a></li>
+    <li>BRM intended-purpose requirement and mailability rules: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">USPS DMM §507</a></li>
+  </ol></div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 HowToStopJunkMail.org</p>
+    <p class="footer-disclaimer">Incogni and DeleteMe links are affiliate links.</p>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>

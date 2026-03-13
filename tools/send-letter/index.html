@@ -1352,47 +1352,371 @@ footer {
 }
 /* end shared.css */
 
+/* ═══ SEND LETTER TOOL ═══ */
+.send-hero {
+  background: var(--forest);
+  padding: 72px 80px 60px;
+  border-bottom: 2px solid var(--gold);
+}
+.send-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.0;
+  margin: 16px 0 20px;
+  letter-spacing: -0.01em;
+}
+.send-hero h1 em { font-style: italic; color: var(--gold); }
+.send-hero p { font-size: 16px; color: var(--sage-light); max-width: 620px; line-height: 1.75; }
+
+.send-trust-strip {
+  background: var(--forest-mid);
+  border-bottom: 1px solid rgba(200,168,75,0.2);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+.send-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  margin-right: 36px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--sage-light);
+}
+.send-trust-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+.when-to-use {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background: var(--parchment);
+  border-bottom: 1px solid var(--rule);
+  padding: 40px 80px;
+}
+.wtu-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--forest);
+  font-weight: 500;
+}
+.wtu-col ul { list-style: none; margin-top: 12px; }
+.wtu-col ul li {
+  padding: 8px 0 8px 20px;
+  position: relative;
+  font-size: 14px;
+  color: var(--charcoal);
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.5;
+}
+.wtu-col ul li:last-child { border-bottom: none; }
+.wtu-col ul li::before { content: '→'; position: absolute; left: 0; color: var(--forest-lite); font-size: 12px; }
+.wtu-divider { width: 1px; background: var(--rule); margin: 0 48px; }
+
+.send-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  min-height: 600px;
+}
+.send-form-panel {
+  background: var(--white);
+  padding: 48px 44px;
+  border-right: 1px solid var(--rule);
+}
+.send-preview-panel {
+  background: var(--cream-dark);
+  padding: 48px 56px;
+  overflow: auto;
+}
+
+.tone-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.tone-chip {
+  padding: 9px 18px;
+  background: var(--cream);
+  border: 1.5px solid var(--rule);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--charcoal);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tone-chip:hover, .tone-chip.active { background: var(--forest); border-color: var(--forest); color: var(--gold); }
+
+.envelope-wrap {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 44px 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.envelope-flap {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 36px;
+  background: var(--cream-dark);
+  border-bottom: 1px solid var(--rule);
+}
+.envelope-from {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.envelope-to {
+  text-align: center;
+  margin: 4px 32px 8px;
+  font-family: 'Source Serif 4', serif;
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.6;
+}
+.envelope-stamp {
+  position: absolute;
+  top: 44px; right: 20px;
+  width: 44px; height: 52px;
+  background: var(--forest);
+  border: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.envelope-stamp-icon { font-size: 18px; line-height: 1; }
+.envelope-stamp-text { font-family: 'DM Mono', monospace; font-size: 7px; color: var(--gold); letter-spacing: 0.05em; text-transform: uppercase; }
+
+.letter-paper-preview {
+  background: var(--white);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  min-height: 400px;
+}
+.preview-placeholder-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  gap: 14px;
+  color: var(--muted);
+  padding: 40px;
+}
+.ph-icon { font-size: 44px; opacity: 0.4; }
+.preview-placeholder-msg p { font-size: 14px; max-width: 240px; line-height: 1.6; }
+.lpp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--forest);
+  border-bottom: 2px solid var(--gold);
+}
+.lpp-header-left, .lpp-header-right {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+.lpp-body { padding: 32px 36px; font-family: 'Source Serif 4', serif; font-size: 13px; line-height: 1.85; color: var(--ink); }
+.lpp-date { color: var(--muted); font-size: 12px; margin-bottom: 20px; }
+.lpp-to { margin-bottom: 20px; font-size: 13px; line-height: 1.65; color: var(--charcoal); }
+.lpp-subject {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.lpp-content p { margin-bottom: 12px; font-size: 13px; }
+.lpp-sig { margin-top: 24px; font-size: 13px; }
+.lpp-footer {
+  margin-top: 24px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+
+.send-checkout-bar {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: var(--forest);
+  border-top: 2px solid var(--gold);
+  padding: 24px 80px;
+}
+.sco-price-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  white-space: nowrap;
+}
+.sco-price-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--sage);
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+.sco-values { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 32px; }
+.sco-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--sage-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sco-value::before { content: '✓'; color: var(--gold); font-size: 10px; flex-shrink: 0; }
+.sco-send-btn {
+  background: var(--gold);
+  color: var(--forest);
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 18px 32px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, opacity 0.2s;
+}
+.sco-send-btn:hover:not(:disabled) { background: var(--gold-light); }
+.sco-send-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.sco-send-btn.sending { background: var(--forest-mid); color: var(--sage-light); }
+
+.lob-confirm {
+  display: none;
+  background: var(--forest);
+  padding: 80px;
+  text-align: center;
+  color: var(--white);
+  min-height: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.lob-confirm.show { display: flex; }
+.lob-confirm h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.lob-confirm > p { font-size: 15px; color: var(--sage-light); max-width: 520px; line-height: 1.75; margin-bottom: 32px; }
+.lob-confirm-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 24px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 28px 36px;
+  margin-bottom: 32px;
+  text-align: left;
+  max-width: 480px;
+  width: 100%;
+}
+.lcd-l { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); white-space: nowrap; }
+.lcd-v { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--white); }
+.lob-next-steps {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 4px solid var(--gold);
+  padding: 24px 28px;
+  text-align: left;
+  max-width: 540px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+.lob-next-steps h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.lob-next-steps ul { list-style: none; }
+.lob-next-steps ul li {
+  padding: 8px 0 8px 18px;
+  position: relative;
+  font-size: 14px;
+  color: var(--sage-light);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  line-height: 1.6;
+}
+.lob-next-steps ul li:last-child { border-bottom: none; }
+.lob-next-steps ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 11px; }
+.lob-confirm-affiliate {
+  background: rgba(200,168,75,0.08);
+  border: 1px solid rgba(200,168,75,0.25);
+  padding: 24px 28px;
+  max-width: 540px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.aff-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.lob-confirm-affiliate p { font-size: 14px; color: var(--sage-light); line-height: 1.65; margin-bottom: 14px; }
+.lob-confirm-affiliate a {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200,168,75,0.4);
+  padding-bottom: 1px;
+  letter-spacing: 0.06em;
+  transition: opacity 0.15s;
+}
+.lob-confirm-affiliate a:hover { opacity: 0.75; }
+
+@media (max-width: 960px) {
+  .send-hero { padding: 56px 32px 44px; }
+  .send-trust-strip { padding: 0 24px; }
+  .when-to-use { grid-template-columns: 1fr; padding: 32px 24px; }
+  .wtu-divider { width: 100%; height: 1px; margin: 24px 0; }
+  .send-layout { grid-template-columns: 1fr; }
+  .send-form-panel { border-right: none; padding: 40px 24px; }
+  .send-preview-panel { padding: 32px 24px; }
+  .send-checkout-bar { flex-direction: column; align-items: flex-start; padding: 28px 24px; gap: 20px; }
+  .sco-values { grid-template-columns: 1fr; }
+  .sco-send-btn { width: 100%; }
+  .lob-confirm { padding: 48px 24px; }
+}
 
 </style>
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="/">
-    HowToStopJunkMail<span>.org</span>
-    <small>Free guides · Opt-out tools · Data removal</small>
-  </a>
-  <ul class="nav-links">
-    <li>
-      <a>Tools ▾</a>
-      <div class="nav-dropdown">
-        <div class="nav-dropdown-label">Free Tools</div>
-        <a href="/tools/opt-out-kit/">📋 Opt-Out Kit Generator</a>
-        <a href="/tools/identify-mail/">🔍 Identify Your Mail</a>
-        <a href="/tools/letter-generator/">✍️ Letter Generator</a>
-        <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
-        <hr class="nav-dropdown-divider">
-        <div class="nav-dropdown-label">Paid — $3.99</div>
-        <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
-      </div>
-    </li>
-    <li>
-      <a>Guides ▾</a>
-      <div class="nav-dropdown">
-        <div class="nav-dropdown-label">Opt-Out Guides</div>
-        <a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a>
-        <a href="/guides/return-junk-mail-to-sender/">Return to Sender</a>
-        <a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a>
-        <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
-        <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
-        <hr class="nav-dropdown-divider">
-        <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
-      </div>
-    </li>
-    <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
-    <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
-  </ul>
-</nav>
-
 <nav>
   <a class="nav-logo" href="/">
     HowToStopJunkMail<span>.org</span>
@@ -1649,9 +1973,6 @@ footer {
 </footer>
 </div>
 
-</body>
-</html>
-</html>
 <script>// ════════════════════════════════════
 // LOB PHYSICAL LETTER TOOL
 // ════════════════════════════════════
@@ -1778,6 +2099,6 @@ function resetLobTool() {
   document.querySelectorAll('.tone-chip').forEach((c,i) => c.classList.toggle('active', i===0));
 }
 
-</body></script>
+</script>
 </body>
 </html>

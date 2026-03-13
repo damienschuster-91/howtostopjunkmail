@@ -342,6 +342,8 @@ sup.cite { font-size: 8px; color: var(--gold); opacity: 0.7; }
 }
 .hero-tool-list li:hover { color: var(--gold); }
 .hero-tool-list li::before { content: '→'; color: var(--gold); font-family: 'DM Mono', monospace; font-size: 12px; flex-shrink: 0; }
+.hero-tool-list li a { color: inherit; text-decoration: none; display: contents; }
+.hero-tool-list li a:hover { color: var(--gold); }
 
 /* TICKER */
 .ticker {
@@ -425,6 +427,9 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
   transition: background 0.2s;
   position: relative;
   overflow: hidden;
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 .tool-card::before {
   content: '';

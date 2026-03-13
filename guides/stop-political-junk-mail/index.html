@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Stop Political Junk Mail (2025) | HowToStopJunkMail.org</title>
+<meta name="description" content="Political mailers, campaign fundraising letters, and PAC solicitations don't follow standard opt-out rules — but there are still ways to reduce them significantly. Here's what actually works.">
+<link rel="canonical" href="https://howtostopjunkmail.org/guides/stop-political-junk-mail/">
+<meta property="og:title" content="How to Stop Political Junk Mail (2025)">
+<meta property="og:description" content="Political mailers don't follow standard opt-out rules — but there are still ways to reduce them significantly. Here's what actually works.">
+<meta property="og:url" content="https://howtostopjunkmail.org/guides/stop-political-junk-mail/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:      #1a3a2a;
+  --forest-mid:  #2d5a42;
+  --forest-lite: #3d7a58;
+  --sage:        #7aab8e;
+  --sage-light:  #b8d4c4;
+  --cream:       #f5f0e8;
+  --cream-dark:  #e8e0d0;
+  --parchment:   #ede6d8;
+  --ink:         #1a1a18;
+  --charcoal:    #2e2e2c;
+  --mid:         #5a5a55;
+  --muted:       #8a8a82;
+  --rule:        #d4ccbc;
+  --gold:        #c8a84b;
+  --gold-light:  #e8cc7a;
+  --white:       #fdfaf5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.75; }
+a { color: var(--forest-lite); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { font-weight: 600; }
+sup.cite { font-size: 11px; color: var(--muted); vertical-align: super; }
+nav { background: var(--forest); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { color: var(--white); font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 500; text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
+.nav-logo span { color: var(--gold); }
+.nav-logo small { font-size: 9px; letter-spacing: 0.08em; color: var(--sage); text-transform: uppercase; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
+.nav-links > li { position: relative; }
+.nav-links > li > a { color: var(--sage-light); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-dropdown { display: none; position: absolute; top: calc(100% + 12px); left: -16px; background: var(--forest-mid); min-width: 220px; padding: 8px 0; z-index: 200; }
+.nav-links > li:hover .nav-dropdown { display: block; }
+.nav-dropdown a { display: block; padding: 8px 18px; font-size: 13px; color: var(--sage-light); text-decoration: none; }
+.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--white); }
+.nav-dropdown-label { padding: 8px 18px 4px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); }
+.nav-dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 6px 0; }
+.nav-cta { background: var(--gold); color: var(--forest) !important; padding: 8px 18px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; text-decoration: none; }
+.nav-cta:hover { background: var(--gold-light); }
+.page { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+.content-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--rule); margin-bottom: 48px; }
+.breadcrumb { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+.bc-link { color: var(--muted); text-decoration: none; }
+.bc-link:hover { color: var(--forest-lite); }
+.content-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 900; line-height: 1.05; color: var(--forest); margin-bottom: 20px; }
+.content-hero h1 em { font-style: italic; color: var(--gold); }
+.lead { font-size: 19px; color: var(--mid); line-height: 1.7; max-width: 680px; font-weight: 300; }
+.content-layout { display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+.content-main h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--forest); margin: 48px 0 16px; padding-top: 48px; border-top: 1px solid var(--rule); }
+.content-main h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.content-main h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--forest); margin: 28px 0 10px; }
+.content-main p { margin-bottom: 20px; color: var(--charcoal); }
+.content-main ul, .content-main ol { margin: 16px 0 24px 24px; color: var(--charcoal); }
+.content-main li { margin-bottom: 8px; line-height: 1.65; }
+.tool-box { background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--forest-lite); padding: 24px 28px; margin: 24px 0; }
+.tool-box-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--forest-lite); margin-bottom: 10px; }
+.tool-box h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--forest); margin-bottom: 8px; }
+.tool-box p { font-size: 15px; margin-bottom: 14px; }
+.tool-box-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.tool-box-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--forest-lite); border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+.paid-box { background: var(--forest); padding: 24px 28px; margin: 24px 0; display: flex; align-items: center; gap: 24px; }
+.paid-box-text { flex: 1; }
+.paid-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.paid-box-text p { font-size: 14px; color: var(--sage-light); margin-bottom: 6px; }
+.paid-box-aff { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--sage); }
+.paid-box-cta { background: var(--gold); color: var(--forest); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 18px; white-space: nowrap; font-weight: 500; }
+.warn-box { background: #fdf6e8; border-left: 3px solid var(--gold); padding: 18px 22px; margin: 28px 0; font-size: 15px; color: var(--charcoal); }
+.note-box { background: var(--parchment); border-left: 3px solid var(--sage); padding: 18px 22px; margin: 28px 0; font-size: 15px; }
+.note-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); margin-bottom: 6px; }
+.reality-box { background: var(--forest); color: var(--sage-light); padding: 28px 32px; margin: 32px 0; border-left: 4px solid var(--gold); }
+.reality-box h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--gold); margin-bottom: 12px; }
+.reality-box p { font-size: 15px; line-height: 1.7; margin-bottom: 0; }
+.content-sidebar { position: sticky; top: 80px; }
+.sidebar-section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.sidebar-nav { list-style: none; border-left: 2px solid var(--rule); padding-left: 16px; margin-bottom: 28px; }
+.sidebar-nav li { margin-bottom: 10px; }
+.sidebar-nav a { font-size: 14px; color: var(--mid); text-decoration: none; }
+.sidebar-nav a:hover { color: var(--forest); }
+footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer-logo { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--forest); margin-bottom: 10px; display: block; }
+.footer-logo span { color: var(--gold); }
+.footer-tagline { font-size: 13px; color: var(--mid); line-height: 1.6; }
+.footer-col h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a { font-size: 14px; color: var(--mid); }
+.footer-col a:hover { color: var(--forest); }
+.citations { border-top: 1px solid var(--rule); padding-top: 28px; margin-bottom: 28px; }
+.citations h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.cite-list { margin-left: 20px; }
+.cite-list li { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.cite-list a { color: var(--muted); text-decoration: underline; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid var(--rule); }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
+.footer-disclaimer { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">HowToStopJunkMail<span>.org</span><small>Free guides · Opt-out tools · Data removal</small></a>
+  <ul class="nav-links">
+    <li>
+      <a>Tools ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Free Tools</div>
+        <a href="/tools/opt-out-kit/">📋 Opt-Out Kit Generator</a>
+        <a href="/tools/identify-mail/">🔍 Identify Your Mail</a>
+        <a href="/tools/letter-generator/">✍️ Letter Generator</a>
+        <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
+        <hr class="nav-dropdown-divider">
+        <div class="nav-dropdown-label">Paid — $3.99</div>
+        <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
+      </div>
+    </li>
+    <li>
+      <a>Guides ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Opt-Out Guides</div>
+        <a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a>
+        <a href="/guides/return-junk-mail-to-sender/">Return to Sender</a>
+        <a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a>
+        <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
+        <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
+        <a href="/guides/stop-junk-mail-deceased-person/">Mail for a Deceased Person</a>
+        <a href="/guides/stop-military-junk-mail/">Stop Military Junk Mail</a>
+        <a href="/guides/stop-political-junk-mail/" style="color:var(--gold);">Stop Political Junk Mail</a>
+        <hr class="nav-dropdown-divider">
+        <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
+      </div>
+    </li>
+    <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
+    <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="content-hero">
+    <div class="breadcrumb"><a class="bc-link" href="/">Home</a> / <a class="bc-link" href="/guides/">Guides</a> / Stop Political Junk Mail</div>
+    <h1>How to Stop<em> Political Junk Mail</em></h1>
+    <p class="lead">Campaign mailers, PAC fundraising letters, and voter turnout postcards operate under completely different rules than commercial junk mail. There's no single opt-out registry — but you can still reduce it significantly.</p>
+  </div>
+
+  <div class="content-layout">
+    <div class="content-main">
+
+      <div class="reality-box">
+        <h3>The honest truth about political mail</h3>
+        <p>Political mail is specifically exempted from the CAN-SPAM Act, the DMA suppression list, and most state privacy laws. There is no government registry to opt out of it. Anyone with access to voter registration data — which is public record in most states — can legally mail you. This guide covers what actually reduces it, and what doesn't.</p>
+      </div>
+
+      <h2>Why Political Mail Is Harder to Stop</h2>
+      <p>Commercial junk mail is regulated. Political mail is not — or at least, not in the same way. Here's what political mailers are allowed to do that commercial mailers aren't:</p>
+      <ul>
+        <li>Use your voter registration data (name, address, party affiliation) without consent</li>
+        <li>Ignore DMA suppression lists and opt-out registries</li>
+        <li>Continue mailing even after you request removal from their list</li>
+        <li>Share and sell their mailing lists to other political organizations</li>
+        <li>Mail under "nonprofit" status, which bypasses many commercial mail regulations</li>
+      </ul>
+      <p>Despite this, political campaigns and PACs do typically honor direct opt-out requests — not because they have to, but because mailing someone who has explicitly asked to be removed is a waste of money and a potential donor-relations problem.</p>
+
+      <h2>Step 1: Contact Senders Directly</h2>
+      <p>The most reliable method for political mail is contacting the sending organization directly. Most campaign and PAC mailers include a return address or website. Send a brief written request or call their voter contact number.</p>
+
+      <p>What to say:</p>
+      <div style="background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--forest-lite);padding:20px 24px;margin:16px 0;font-size:15px;color:var(--charcoal);font-style:italic;">
+        "Please remove [Full Name] at [Full Address] from all your mailing lists. I do not wish to receive mail from your organization or any affiliated organizations. Please confirm removal."
+      </div>
+
+      <p>For active campaigns, look for an unsubscribe link in any email you've received from them — removing yourself from the email list usually removes you from the physical mail list as well, since they're maintained together.</p>
+
+      <h2>Step 2: Register with DMAchoice (Partial Coverage)</h2>
+      <p>The DMA suppression list doesn't cover all political mail, but it does cover political mail sent by companies operating under commercial mail rules — including some PACs and advocacy organizations that use commercial mail houses. It's worth registering regardless.</p>
+
+      <div class="tool-box">
+        <div class="tool-box-tag">$4 Admin Fee · Covers Commercial Political Mail · Valid 10 Years</div>
+        <h3>DMAchoice.org</h3>
+        <p>When registering, select "Political" under the mail categories you wish to suppress. This covers advocacy mail sent through commercial direct mail channels — it won't stop mail sent under nonprofit postal rates by the campaigns themselves, but it reduces the broader universe.</p>
+        <div class="tool-box-links">
+          <a class="tool-box-link" href="https://dmachoice.org" target="_blank" rel="nofollow noopener">Visit DMAchoice.org →</a>
+        </div>
+      </div>
+
+      <h2>Step 3: Remove Yourself from Data Broker Lists</h2>
+      <p>Political campaigns and PACs supplement voter registration data with commercially purchased data broker files — which add demographic information, consumer behavior, and contact details that public voter files don't include. Removing yourself from data brokers reduces the usefulness of your record to political targeters, which means fewer organizations buy lists that include you.</p>
+
+      <div class="paid-box">
+        <div class="paid-box-text">
+          <div class="paid-tag">⭐ Most Effective for Broker-Sourced Targeting — Affiliate Link</div>
+          <p><strong>Incogni</strong> sends removal requests to 180+ data broker databases on a quarterly basis. This won't remove you from voter rolls (which are public record), but it removes the appended commercial data that political targeters use to refine and prioritize their lists. ~$7/month billed annually.</p>
+          <div class="paid-box-aff">Affiliate link — we may earn a commission</div>
+        </div>
+        <a href="https://incogni.com" target="_blank" rel="nofollow noopener" class="paid-box-cta">Try Incogni →</a>
+      </div>
+
+      <h2>Step 4: Manage Your Voter Registration Visibility</h2>
+      <p>In most US states, voter registration records are public — meaning your name, address, and party affiliation are legally available to any political organization that wants them. However, several states offer confidentiality protections for certain voters:</p>
+
+      <h3>States with voter confidentiality programs</h3>
+      <p>If you qualify as a protected person (domestic violence survivors, law enforcement, judges, and certain public officials in many states), you may be able to register under a confidential address through your state's Address Confidentiality Program (ACP). This keeps your physical address out of the public voter file entirely.</p>
+
+      <p>Even without ACP eligibility, some states allow voters to suppress their address from commercial use of voter data. Check your state's Secretary of State website for "voter list commercial use" restrictions.</p>
+
+      <h3>Party registration and mail volume</h3>
+      <p>In states with party registration, your party affiliation is visible in the voter file and is used heavily for targeting. Registered Democrats receive Democratic mail; registered Republicans receive Republican mail; registered Independents/unaffiliated voters often receive mail from both sides. Changing to No Party Preference or Independent status can reduce total political mail volume, though it won't eliminate it.</p>
+
+      <div class="warn-box">
+        <strong>This is not political advice.</strong> Changing your party registration affects your eligibility to vote in closed primary elections in many states. Check your state's rules before making any changes.
+      </div>
+
+      <h2>What to Do During Election Season</h2>
+      <p>The last 60 days before a major election are the peak period for political mail — and the least responsive to opt-out requests, because campaigns are executing pre-planned mail programs with print runs already in production. The most practical approach:</p>
+      <ul>
+        <li>Don't bother contacting senders in the 30 days before an election — the mail is already printed and in the postal system</li>
+        <li>Keep a list of senders to contact <em>after</em> the election, when they're actively managing their lists for the next cycle</li>
+        <li>For candidates specifically: they're required to include their campaign address on all mail — write to them post-election and request removal from all affiliated lists</li>
+        <li>For PACs and super PACs: look up the organization's address on the FEC website (fec.gov) and send a written removal request</li>
+      </ul>
+
+      <h2>Can You Return Political Mail to Sender?</h2>
+      <p>You can write "Return to Sender — Remove from List" and drop it in a mailbox. Whether this actually removes you from the list depends on the mailer. Campaigns that use USPS "Address Service Requested" endorsements do receive returned mail and can update their lists — but many bulk political mailers use "EDDM" (Every Door Direct Mail) or non-forwardable classes that don't return undeliverable pieces.</p>
+
+      <p>Our <a href="/guides/return-junk-mail-to-sender/">Return to Sender guide</a> explains exactly which mail classes are returnable and the correct way to mark them.</p>
+
+      <h2>The Realistic Outcome</h2>
+      <p>With the steps above, you can expect to reduce political mail by 40–60% over one full election cycle. You will not eliminate it entirely — voter registration data is public and will continue to generate some targeting regardless of what you do. The combination of direct opt-outs, DMAchoice registration, and data broker removal addresses every lever that's actually within your control.</p>
+
+      <div class="note-box">
+        <div class="note-label">Related tools</div>
+        <p>The <a href="/tools/letter-generator/" style="color:var(--forest-lite)">Letter Generator</a> can produce a firm opt-out demand for any political organization still mailing after a direct request. The <a href="/tools/identify-mail/" style="color:var(--forest-lite)">Junk Mail Identifier</a> can help identify which organization sent an unmarked or confusingly-labeled political mailer.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is there a national do-not-mail list for political mail?</h3>
+      <p>No. Political mail is specifically exempted from the federal CAN-SPAM Act and most state direct mail regulations. There is no government-maintained opt-out registry equivalent to the Do Not Call list for political mail.</p>
+
+      <h3>Can I sue a campaign for continuing to mail me after I opt out?</h3>
+      <p>Generally, no — political organizations are not subject to the same legal obligations as commercial mailers. However, some state consumer protection laws may apply to mail sent by political consultants operating as commercial businesses. Consult a local attorney if you believe you have a specific case.</p>
+
+      <h3>Why do I get political mail from the other party?</h3>
+      <p>Opposition mail (mail from the opposing party trying to persuade or suppress your vote) is a deliberate strategy. Voter files are available to any registered political committee. Your party registration reduces but does not eliminate cross-party targeting.</p>
+
+      <h3>What about political text messages and calls — same rules?</h3>
+      <p>Yes, largely. Political calls and texts operate under different rules than commercial robocalls. This guide covers physical mail specifically — see the FCC's website for rules on political phone and text contact.</p>
+
+    </div>
+
+    <div class="content-sidebar">
+      <div class="sidebar-section-label">All Guides</div>
+      <ul class="sidebar-nav">
+        <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+        <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+        <li><a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a></li>
+        <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
+        <li><a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a></li>
+        <li><a href="/guides/stop-junk-mail-deceased-person/">Deceased Person</a></li>
+        <li><a href="/guides/stop-military-junk-mail/">Military Junk Mail</a></li>
+        <li><a href="/guides/stop-political-junk-mail/" style="color:var(--forest);font-weight:600;">↳ Political Junk Mail</a></li>
+      </ul>
+      <div class="sidebar-section-label" style="margin-top:24px;">Paid Options</div>
+      <div style="background:var(--forest);padding:24px;margin-bottom:12px;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">⭐ Best Overall</div>
+        <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--white);margin-bottom:8px;">Incogni</div>
+        <p style="font-size:12px;color:var(--sage-light);line-height:1.6;margin-bottom:14px;">180+ brokers, automated quarterly removal. ~$7/mo</p>
+        <a href="https://incogni.com" target="_blank" rel="nofollow noopener" style="display:block;background:var(--gold);color:var(--forest);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 16px;text-align:center;text-decoration:none;">Try Incogni →</a>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--sage);text-align:center;margin-top:6px;">Affiliate link</div>
+      </div>
+      <div style="background:var(--forest);padding:24px;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:8px;">Best Reporting</div>
+        <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--white);margin-bottom:8px;">DeleteMe</div>
+        <p style="font-size:12px;color:var(--sage-light);line-height:1.6;margin-bottom:14px;">Top 30+ brokers, quarterly reports. ~$9/mo</p>
+        <a href="https://joindeleteme.com" target="_blank" rel="nofollow noopener" style="display:block;background:transparent;color:var(--sage-light);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:9px 16px;text-align:center;text-decoration:none;border:1px solid rgba(255,255,255,0.15);">Try DeleteMe →</a>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--sage);text-align:center;margin-top:6px;">Affiliate link</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-logo">HowToStopJunkMail<span>.org</span></div><p class="footer-tagline">Free guides and tools for reclaiming your mailbox and your privacy.</p></div>
+      <div class="footer-col"><h4>More Guides</h4><ul>
+        <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+        <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
+        <li><a href="/guides/stop-junk-mail-deceased-person/">Deceased Person</a></li>
+        <li><a href="/guides/stop-military-junk-mail/">Military Junk Mail</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Free Tools</h4><ul>
+        <li><a href="/tools/opt-out-kit/">Opt-Out Kit Generator</a></li>
+        <li><a href="https://optoutprescreen.com" target="_blank" rel="nofollow noopener">OptOutPrescreen</a></li>
+        <li><a href="https://dmachoice.org" target="_blank" rel="nofollow noopener">DMAchoice</a></li>
+        <li><a href="https://fec.gov" target="_blank" rel="nofollow noopener">FEC (Political Orgs)</a></li>
+      </ul></div>
+    </div>
+    <div class="citations"><h4>Sources & Citations</h4><ol class="cite-list">
+      <li>CAN-SPAM political exemption: <a href="https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business" target="_blank" rel="nofollow noopener">FTC CAN-SPAM Guide</a></li>
+      <li>Voter file public record status: <a href="https://www.ncsl.org/elections-and-campaigns/access-to-and-use-of-voter-registration-lists" target="_blank" rel="nofollow noopener">NCSL Voter Registration Lists</a></li>
+      <li>DMAchoice political suppression: <a href="https://dmachoice.org" target="_blank" rel="nofollow noopener">DMAchoice.org</a></li>
+    </ol></div>
+    <div class="footer-bottom"><p class="footer-copy">© 2025 HowToStopJunkMail.org</p><p class="footer-disclaimer">Incogni and DeleteMe links are affiliate links.</p></div>
+  </footer>
+</div>
+</body>
+</html>

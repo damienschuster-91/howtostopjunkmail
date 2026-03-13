@@ -1096,6 +1096,30 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
   transition: background 0.15s;
 }
 .share-btn:hover { background: var(--gold-light); }
+.share-card-preview { margin-top: 16px; }
+.share-card-preview img { width: 100%; display: block; border: 1px solid var(--rule); }
+.share-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.share-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 18px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s;
+  background: var(--cream);
+  color: var(--forest);
+}
+.share-action-btn:hover { opacity: 0.85; }
+.share-action-btn.sa-x   { background: #000; color: #fff; }
+.share-action-btn.sa-fb  { background: #1877f2; color: #fff; }
+.share-action-btn.sa-nat { background: var(--sage); color: var(--forest); }
 
 /* ═══ CONTENT PAGES ═══ */
 .content-hero {
@@ -1468,7 +1492,18 @@ footer {
         <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--sage);">of paper — the weight of a baby grand piano</div>
       </div>
 
-      <button class="share-btn" onclick="shareResults()">📤 Share My Results</button>
+      <button class="share-btn" onclick="buildShareCard()">📤 Generate Share Image</button>
+      <canvas id="share-canvas" style="display:none;"></canvas>
+      <div class="share-card-preview" id="share-preview" style="display:none;">
+        <img id="share-img" alt="Your junk mail impact card">
+        <div class="share-actions">
+          <a id="share-download" class="share-action-btn" download="junk-mail-impact.png">⬇ Download</a>
+          <a id="share-twitter" class="share-action-btn sa-x" target="_blank" rel="noopener">𝕏 Post to X</a>
+          <a id="share-facebook" class="share-action-btn sa-fb" target="_blank" rel="noopener">f Share</a>
+          <button id="share-native" class="share-action-btn sa-nat" style="display:none;" onclick="nativeShare()">📲 Share</button>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:8px;font-family:'DM Mono',monospace;">Download the image, then upload it when posting to Instagram or Facebook.</p>
+      </div>
     </div>
   </div>
   <footer>
@@ -1531,16 +1566,156 @@ function updateCalc() {
   document.getElementById('calc-10yr').textContent    = yr10 + ' lbs';
 }
 
-function shareResults() {
-  const lbs = document.getElementById('calc-weight').textContent;
-  const text = `I generate ${lbs} lbs of junk mail per year. I just opted out at HowToStopJunkMail.org`;
-  if (navigator.share) {
-    navigator.share({ title: 'My Junk Mail Impact', text, url: 'https://howtostopjunkmail.org' });
-  } else {
-    navigator.clipboard.writeText(text + ' — https://howtostopjunkmail.org').then(() => {
-      alert('Results copied to clipboard — ready to share!');
-    });
-  }
+function buildShareCard() {
+  const canvas = document.getElementById('share-canvas');
+  canvas.width  = 1200;
+  canvas.height = 630;
+  const ctx = canvas.getContext('2d');
+
+  const lbs      = document.getElementById('calc-weight').textContent;
+  const trees    = document.getElementById('calc-trees').textContent;
+  const co2      = document.getElementById('calc-co2').textContent;
+  const pieces   = document.getElementById('calc-pieces').textContent;
+  const landfill = document.getElementById('calc-landfill').textContent;
+  const yr10     = document.getElementById('calc-10yr').textContent;
+
+  // ── Background
+  ctx.fillStyle = '#1a3a2a';
+  ctx.fillRect(0, 0, 1200, 630);
+
+  // ── Gold top bar
+  ctx.fillStyle = '#c8a84b';
+  ctx.fillRect(0, 0, 1200, 8);
+
+  // ── Left panel subtle tint
+  ctx.fillStyle = 'rgba(255,255,255,0.03)';
+  ctx.fillRect(0, 8, 575, 622);
+
+  // ── Vertical divider
+  ctx.fillStyle = 'rgba(122,171,142,0.2)';
+  ctx.fillRect(590, 30, 1, 570);
+
+  // ── Logo
+  ctx.fillStyle = '#7aab8e';
+  ctx.font = '500 12px monospace';
+  ctx.fillText('HOWTOSTOPJUNKMAIL.ORG', 56, 52);
+
+  // ── Headline
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold italic 50px Georgia, serif';
+  ctx.fillText('My Junk Mail', 56, 148);
+  ctx.fillStyle = '#c8a84b';
+  ctx.fillText('Impact.', 56, 208);
+
+  // ── Divider under headline
+  ctx.fillStyle = 'rgba(200,168,75,0.35)';
+  ctx.fillRect(56, 228, 180, 1);
+
+  // ── Big number
+  ctx.fillStyle = '#c8a84b';
+  ctx.font = 'bold 128px Georgia, serif';
+  ctx.fillText(lbs, 56, 395);
+
+  // ── Unit
+  ctx.fillStyle = '#b8d4c4';
+  ctx.font = '300 18px Georgia, serif';
+  ctx.fillText('pounds of junk mail per year', 56, 428);
+
+  // ── Right — 2×2 stat cards
+  const stats = [
+    { num: trees,               desc: 'trees consumed / yr' },
+    { num: co2 + ' lbs',       desc: 'CO\u2082 generated' },
+    { num: pieces,              desc: 'pieces of mail / yr' },
+    { num: landfill + ' lbs',  desc: 'landfilled unopened' },
+  ];
+  const cw = 258, ch = 110, gap = 12, rx = 614, ry = 38;
+  stats.forEach((s, i) => {
+    const col = i % 2, row = Math.floor(i / 2);
+    const cx = rx + col * (cw + gap);
+    const cy = ry + row * (ch + gap);
+    ctx.fillStyle = 'rgba(255,255,255,0.058)';
+    ctx.fillRect(cx, cy, cw, ch);
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 36px Georgia, serif';
+    ctx.fillText(s.num, cx + 18, cy + 52);
+    ctx.fillStyle = '#7aab8e';
+    ctx.font = '12px monospace';
+    ctx.fillText(s.desc, cx + 18, cy + 78);
+  });
+
+  // ── 10-year projection box
+  const py = 312, ph = 98;
+  ctx.fillStyle = 'rgba(200,168,75,0.1)';
+  ctx.fillRect(614, py, 544, ph);
+  ctx.strokeStyle = 'rgba(200,168,75,0.35)';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(614.5, py + 0.5, 543, ph - 1);
+  ctx.fillStyle = '#c8a84b';
+  ctx.font = '500 11px monospace';
+  ctx.fillText('OPT OUT TODAY — OVER 10 YEARS YOU SAVE:', 634, py + 30);
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold 34px Georgia, serif';
+  ctx.fillText(yr10 + ' of paper', 634, py + 74);
+
+  // ── Footnote
+  ctx.fillStyle = '#3d7a58';
+  ctx.font = '11px monospace';
+  ctx.fillText('Based on EPA, Sierra Club & FTC data  ·  Free tools at HowToStopJunkMail.org', 614, py + ph + 26);
+
+  // ── Bottom bar
+  ctx.fillStyle = '#0f2218';
+  ctx.fillRect(0, 572, 1200, 58);
+  ctx.fillStyle = '#7aab8e';
+  ctx.font = '12px monospace';
+  ctx.fillText('Stop junk mail permanently — free opt-out tools, guides & data removal', 56, 607);
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#c8a84b';
+  ctx.font = 'bold 12px monospace';
+  ctx.fillText('HowToStopJunkMail.org \u2192', 1144, 607);
+  ctx.textAlign = 'left';
+
+  // ── Show preview + wire up buttons
+  canvas.toBlob(blob => {
+    const url = URL.createObjectURL(blob);
+    document.getElementById('share-img').src = url;
+
+    const dl = document.getElementById('share-download');
+    dl.href = url;
+
+    const tweetText = encodeURIComponent(
+      `My household generates ${lbs} lbs of junk mail per year \u2014 ${trees} trees & ${co2} lbs CO\u2082. I just opted out. \uD83C\uDF32`
+    );
+    const tweetUrl = encodeURIComponent('https://howtostopjunkmail.org/tools/savings-calculator/');
+    document.getElementById('share-twitter').href =
+      `https://twitter.com/intent/tweet?text=${tweetText}&url=${tweetUrl}`;
+
+    document.getElementById('share-facebook').href =
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://howtostopjunkmail.org/tools/savings-calculator/')}`;
+
+    // native file share on mobile
+    const nativeBtn = document.getElementById('share-native');
+    if (navigator.canShare) {
+      const file = new File([blob], 'junk-mail-impact.png', { type: 'image/png' });
+      if (navigator.canShare({ files: [file] })) {
+        nativeBtn.style.display = 'inline-flex';
+        nativeBtn._blob = blob;
+      }
+    }
+
+    document.getElementById('share-preview').style.display = 'block';
+    document.getElementById('share-preview').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 'image/png');
+}
+
+function nativeShare() {
+  const blob = document.getElementById('share-native')._blob;
+  const lbs  = document.getElementById('calc-weight').textContent;
+  const file = new File([blob], 'junk-mail-impact.png', { type: 'image/png' });
+  navigator.share({
+    title: 'My Junk Mail Impact',
+    text: `I generate ${lbs} lbs of junk mail per year. I just opted out at HowToStopJunkMail.org`,
+    files: [file],
+  });
 }
 
 // init calc

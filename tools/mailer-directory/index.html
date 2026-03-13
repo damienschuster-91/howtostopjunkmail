@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mailer Opt-Out Directory — Stop Mail from Any Company | HowToStopJunkMail.org</title>
+<meta name="description" content="Free directory of opt-out instructions for 50+ top junk mailers. Find the exact URL, phone number, and steps to stop mail from any company — instantly.">
+<link rel="canonical" href="https://howtostopjunkmail.org/tools/mailer-directory/">
+<meta property="og:title" content="Mailer Opt-Out Directory — Stop Mail from Any Company">
+<meta property="og:description" content="Free directory of opt-out instructions for 50+ top junk mailers. Find the exact URL and steps instantly.">
+<meta property="og:url" content="https://howtostopjunkmail.org/tools/mailer-directory/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:      #1a3a2a;
+  --forest-mid:  #2d5a42;
+  --forest-lite: #3d7a58;
+  --sage:        #7aab8e;
+  --sage-light:  #b8d4c4;
+  --cream:       #f5f0e8;
+  --cream-dark:  #e8e0d0;
+  --parchment:   #ede6d8;
+  --ink:         #1a1a18;
+  --charcoal:    #2e2e2c;
+  --mid:         #5a5a55;
+  --muted:       #8a8a82;
+  --rule:        #d4ccbc;
+  --gold:        #c8a84b;
+  --gold-light:  #e8cc7a;
+  --white:       #fdfaf5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; font-size: 17px; line-height: 1.75; }
+a { color: var(--forest-lite); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { font-weight: 600; }
+
+/* NAV */
+nav { background: var(--forest); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { color: var(--white); font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 500; text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
+.nav-logo span { color: var(--gold); }
+.nav-logo small { font-size: 9px; letter-spacing: 0.08em; color: var(--sage); text-transform: uppercase; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
+.nav-links > li { position: relative; }
+.nav-links > li > a { color: var(--sage-light); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-dropdown { display: none; position: absolute; top: calc(100% + 12px); left: -16px; background: var(--forest-mid); min-width: 220px; padding: 8px 0; z-index: 200; }
+.nav-links > li:hover .nav-dropdown { display: block; }
+.nav-dropdown a { display: block; padding: 8px 18px; font-size: 13px; color: var(--sage-light); text-decoration: none; }
+.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--white); }
+.nav-dropdown-label { padding: 8px 18px 4px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); }
+.nav-dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 6px 0; }
+.nav-cta { background: var(--gold); color: var(--forest) !important; padding: 8px 18px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; text-decoration: none; }
+
+/* HERO */
+.hero { background: var(--forest); padding: 56px 40px 48px; }
+.hero-inner { max-width: 1100px; margin: 0 auto; }
+.hero-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 900; color: var(--white); line-height: 1.05; margin-bottom: 16px; }
+.hero h1 em { color: var(--gold); font-style: italic; }
+.hero-lead { font-size: 17px; color: var(--sage-light); max-width: 580px; line-height: 1.7; margin-bottom: 32px; }
+
+/* SEARCH */
+.search-wrap { position: relative; max-width: 560px; }
+.search-input {
+  width: 100%;
+  background: var(--white);
+  border: none;
+  padding: 16px 56px 16px 20px;
+  font-family: 'Source Serif 4', serif;
+  font-size: 17px;
+  color: var(--ink);
+  outline: none;
+}
+.search-input::placeholder { color: var(--muted); }
+.search-icon {
+  position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+  font-family: 'DM Mono', monospace; font-size: 12px; color: var(--mid); pointer-events: none;
+}
+.search-count { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--sage); margin-top: 10px; letter-spacing: 0.06em; }
+
+/* MAIN LAYOUT */
+.page { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; padding: 28px 0 0; }
+.filter-btn {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 6px 14px; border: 1px solid var(--rule); background: var(--white);
+  color: var(--mid); cursor: pointer; transition: all 0.15s;
+}
+.filter-btn:hover { border-color: var(--forest-lite); color: var(--forest); }
+.filter-btn.active { background: var(--forest); color: var(--white); border-color: var(--forest); }
+
+/* DIRECTORY GRID */
+.directory { margin: 24px 0 80px; }
+.dir-section-label {
+  font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); padding: 20px 0 10px; border-top: 1px solid var(--rule); margin-top: 8px;
+}
+.dir-section-label:first-child { border-top: none; }
+
+.mailer-card {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 0;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--forest-lite);
+  margin-bottom: 2px;
+  transition: border-left-color 0.15s;
+}
+.mailer-card:hover { border-left-color: var(--gold); }
+.mailer-card.incogni-covers { border-left-color: var(--sage); }
+.mailer-card.hidden { display: none; }
+
+.mailer-name-col {
+  padding: 18px 20px;
+  border-right: 1px solid var(--rule);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.mailer-name {
+  font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700;
+  color: var(--forest); margin-bottom: 4px;
+}
+.mailer-category {
+  font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+.mailer-info-col {
+  padding: 18px 24px;
+  display: flex; flex-direction: column; justify-content: center; gap: 6px;
+}
+.mailer-row { display: flex; align-items: baseline; gap: 10px; font-size: 14px; }
+.mailer-row-label {
+  font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); min-width: 80px; flex-shrink: 0;
+}
+.mailer-row a { color: var(--forest-lite); font-size: 13px; word-break: break-all; }
+.mailer-row a:hover { text-decoration: underline; }
+.mailer-row span { color: var(--charcoal); font-size: 13px; }
+
+.mailer-meta-col {
+  padding: 18px 20px;
+  border-left: 1px solid var(--rule);
+  display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 8px;
+  min-width: 140px;
+}
+.weeks-badge {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em;
+  color: var(--mid); text-align: right;
+}
+.weeks-badge strong { color: var(--ink); }
+.incogni-tag {
+  font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em;
+  text-transform: uppercase; background: var(--forest); color: var(--sage-light);
+  padding: 3px 8px;
+}
+.verified-tag {
+  font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--forest-lite);
+}
+
+/* NO RESULTS */
+.no-results {
+  text-align: center; padding: 60px 20px; color: var(--muted);
+  font-family: 'DM Mono', monospace; font-size: 13px; display: none;
+}
+
+/* AFFILIATE BANNER */
+.aff-banner {
+  background: var(--forest); padding: 28px 32px; margin: 32px 0;
+  display: flex; align-items: center; gap: 28px; border-left: 4px solid var(--gold);
+}
+.aff-banner-text { flex: 1; }
+.aff-banner-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.aff-banner-text p { font-size: 14px; color: var(--sage-light); line-height: 1.65; }
+.aff-banner-cta {
+  background: var(--gold); color: var(--forest); font-family: 'DM Mono', monospace;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 12px 20px; white-space: nowrap; font-weight: 500; text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+footer { border-top: 1px solid var(--rule); padding: 48px 0 32px; }
+.footer-bottom { max-width: 1100px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
+.footer-disclaimer { font-size: 12px; color: var(--muted); }
+
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .hero { padding: 40px 20px; }
+  .page { padding: 0 20px; }
+  .mailer-card { grid-template-columns: 1fr; }
+  .mailer-name-col { border-right: none; border-bottom: 1px solid var(--rule); }
+  .mailer-meta-col { border-left: none; border-top: 1px solid var(--rule); align-items: flex-start; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">HowToStopJunkMail<span>.org</span><small>Free guides · Opt-out tools · Data removal</small></a>
+  <ul class="nav-links">
+    <li>
+      <a>Tools ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Free Tools</div>
+        <a href="/tools/opt-out-kit/">📋 Opt-Out Kit Generator</a>
+        <a href="/tools/identify-mail/">🔍 Identify Your Mail</a>
+        <a href="/tools/letter-generator/">✍️ Letter Generator</a>
+        <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
+        <a href="/tools/mailer-directory/" style="color:var(--gold);">📂 Mailer Directory</a>
+        <hr class="nav-dropdown-divider">
+        <div class="nav-dropdown-label">Paid — $3.99</div>
+        <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
+      </div>
+    </li>
+    <li>
+      <a>Guides ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Opt-Out Guides</div>
+        <a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a>
+        <a href="/guides/return-junk-mail-to-sender/">Return to Sender</a>
+        <a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a>
+        <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
+        <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
+        <a href="/guides/stop-junk-mail-deceased-person/">Mail for a Deceased Person</a>
+        <a href="/guides/stop-military-junk-mail/">Stop Military Junk Mail</a>
+        <a href="/guides/stop-political-junk-mail/">Stop Political Junk Mail</a>
+        <hr class="nav-dropdown-divider">
+        <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
+      </div>
+    </li>
+    <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
+    <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Free Tool · 50+ Mailers</div>
+    <h1>Mailer <em>Opt-Out</em> Directory</h1>
+    <p class="hero-lead">Find the exact opt-out URL, phone number, and timeline for any company sending you junk mail. No signup required.</p>
+    <div class="search-wrap">
+      <input class="search-input" type="text" id="searchInput" placeholder="Search by company name (e.g. Capital One, AARP, Valpak…)" autocomplete="off" spellcheck="false">
+      <span class="search-icon">⌕</span>
+    </div>
+    <div class="search-count" id="searchCount">Showing all 52 mailers</div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="filters" id="filterBar">
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="credit">Credit Cards</button>
+    <button class="filter-btn" data-cat="telecom">Telecom</button>
+    <button class="filter-btn" data-cat="retail">Retail & Catalogs</button>
+    <button class="filter-btn" data-cat="insurance">Insurance</button>
+    <button class="filter-btn" data-cat="charity">Charities & Orgs</button>
+    <button class="filter-btn" data-cat="eddm">EDDM / Local</button>
+    <button class="filter-btn" data-cat="financial">Financial</button>
+  </div>
+
+  <div class="aff-banner">
+    <div class="aff-banner-text">
+      <div class="aff-banner-tag">⭐ Skip the manual work — Affiliate Link</div>
+      <p><strong style="color:var(--white);">Incogni</strong> automatically sends opt-out requests to 180+ data brokers that feed these mailers their lists. Doing it manually for all of them takes an estimated 304 hours. Incogni repeats it quarterly. ~$7/month.</p>
+    </div>
+    <a href="https://incogni.com" target="_blank" rel="nofollow noopener" class="aff-banner-cta">Try Incogni →</a>
+  </div>
+
+  <div class="directory" id="directory">
+    <div class="no-results" id="noResults">No mailers found matching your search. Try a different name or <a href="/tools/identify-mail/">use our Identifier tool</a>.</div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 HowToStopJunkMail.org</p>
+    <p class="footer-disclaimer">Incogni and DeleteMe links are affiliate links. Opt-out URLs verified periodically — if a link is broken, <a href="mailto:hello@howtostopjunkmail.org">let us know</a>.</p>
+  </div>
+</footer>
+
+<script>
+const MAILERS = [
+  // CREDIT CARDS
+  { slug:"capital-one", name:"Capital One", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.capitalone.com/privacy/opt-out/", phone:"1-800-227-4825",
+    weeks:8, incogni:true, note:"Opt out of mail marketing under 'Your Privacy Choices'" },
+  { slug:"citi", name:"Citi", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.citi.com/privacy/optout", phone:"1-833-981-0270",
+    weeks:12, incogni:true, note:"Call or visit Citi's privacy opt-out page" },
+  { slug:"american-express", name:"American Express", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.americanexpress.com/en-us/company/privacy-center/", phone:"1-800-528-4800",
+    weeks:8, incogni:true, note:"Privacy Center → 'Limit Use of Personal Information'" },
+  { slug:"chase", name:"Chase", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.chase.com/digital/resources/privacy-security", phone:"1-800-935-9935",
+    weeks:8, incogni:true, note:"Login → Profile → Privacy → Mail Preferences" },
+  { slug:"discover", name:"Discover", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.discover.com/company/privacy/", phone:"1-800-347-2683",
+    weeks:8, incogni:true, note:"Privacy Center → Marketing opt-out" },
+  { slug:"bank-of-america", name:"Bank of America", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.bankofamerica.com/privacy/privacy-opt-out.go", phone:"1-888-341-5000",
+    weeks:8, incogni:true, note:"Direct opt-out form available without login" },
+  { slug:"wells-fargo", name:"Wells Fargo", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.wellsfargo.com/privacy-security/privacy/", phone:"1-800-869-3557",
+    weeks:8, incogni:true, note:"Privacy → 'Limit Sharing' → postal mail opt-out" },
+  { slug:"usaa", name:"USAA", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.usaa.com/inet/wc/bank-privacy-optout", phone:"1-800-531-8722",
+    weeks:6, incogni:false, note:"Members: login → Profile → Communication Preferences" },
+  { slug:"navy-federal", name:"Navy Federal Credit Union", cat:"credit", catLabel:"Credit Cards",
+    optUrl:"https://www.navyfederal.org/about/privacy.html", phone:"1-888-842-6328",
+    weeks:6, incogni:false, note:"Call to request removal from marketing list" },
+
+  // TELECOM
+  { slug:"xfinity-comcast", name:"Xfinity (Comcast)", cat:"telecom", catLabel:"Telecom",
+    optUrl:"https://pc2.mypreferences.com/Comcast/OptOut/Default.aspx", phone:"1-800-934-6489",
+    weeks:12, incogni:true, note:"Direct opt-out form — no account needed" },
+  { slug:"att-directv", name:"AT&T / DirecTV", cat:"telecom", catLabel:"Telecom",
+    optUrl:"https://www.att.com/privacy/privacy-policy/", phone:"1-800-288-2020",
+    weeks:10, incogni:true, note:"Privacy Policy → 'Your Privacy Choices' → Postal" },
+  { slug:"spectrum", name:"Spectrum (Charter)", cat:"telecom", catLabel:"Telecom",
+    optUrl:"https://www.spectrum.com/privacy-policy", phone:"1-855-707-7328",
+    weeks:10, incogni:true, note:"Call customer service to opt out of marketing mail" },
+  { slug:"t-mobile", name:"T-Mobile", cat:"telecom", catLabel:"Telecom",
+    optUrl:"https://www.t-mobile.com/privacy-center/our-practices/privacy-policy", phone:"1-800-866-2453",
+    weeks:8, incogni:true, note:"Privacy Center → 'Do Not Sell or Share' applies to mail lists" },
+  { slug:"verizon", name:"Verizon", cat:"telecom", catLabel:"Telecom",
+    optUrl:"https://www.verizon.com/about/privacy/opt-out-forms", phone:"1-800-922-0204",
+    weeks:8, incogni:true, note:"Opt-out forms page covers postal marketing" },
+
+  // INSURANCE
+  { slug:"geico", name:"GEICO", cat:"insurance", catLabel:"Insurance",
+    optUrl:"https://www.geico.com/about/corporate/privacy-policy/", phone:"1-800-207-7847",
+    weeks:8, incogni:true, note:"Call and request removal from postal marketing lists" },
+  { slug:"progressive", name:"Progressive", cat:"insurance", catLabel:"Insurance",
+    optUrl:"https://www.progressive.com/privacy/full-privacy-policy/", phone:"1-800-776-4737",
+    weeks:8, incogni:true, note:"Call 1-800-PROGRESSIVE and ask to opt out of mail" },
+  { slug:"state-farm", name:"State Farm", cat:"insurance", catLabel:"Insurance",
+    optUrl:"https://www.statefarm.com/about-us/privacy-policy", phone:"1-800-782-8332",
+    weeks:8, incogni:true, note:"Contact your agent or call corporate to opt out" },
+  { slug:"aarp", name:"AARP", cat:"insurance", catLabel:"Insurance",
+    optUrl:"https://www.aarp.org/about-aarp/privacy-policy/", phone:"1-888-687-2277",
+    weeks:12, incogni:false, note:"Call and request removal from all AARP mailings" },
+  { slug:"optoutprescreen", name:"Pre-Screened Offers (All Banks)", cat:"insurance", catLabel:"Insurance",
+    optUrl:"https://optoutprescreen.com", phone:"1-888-567-8688",
+    weeks:8, incogni:false, note:"One opt-out covers ALL pre-screened credit & insurance offers from every company" },
+
+  // RETAIL & CATALOGS
+  { slug:"ll-bean", name:"L.L. Bean", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.llbean.com/llb/shop/512298", phone:"1-800-441-5713",
+    weeks:8, incogni:true, note:"Account → Communication Preferences → Uncheck postal" },
+  { slug:"lands-end", name:"Lands' End", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.landsend.com/customerservice/catalog-removal/", phone:"1-800-963-4816",
+    weeks:8, incogni:true, note:"Direct catalog removal form available" },
+  { slug:"retailmenot", name:"RetailMeNot Everyday", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.retailmenot.com/privacy/optout", phone:"",
+    weeks:8, incogni:true, note:"Online opt-out form for postal mail" },
+  { slug:"pottery-barn", name:"Pottery Barn / Williams-Sonoma", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.williams-sonoma.com/customer-service/privacy-policy.html", phone:"1-888-922-4108",
+    weeks:8, incogni:true, note:"Covers all WSI brands: Pottery Barn, PB Kids, West Elm" },
+  { slug:"restoration-hardware", name:"RH (Restoration Hardware)", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://rh.com/content/page.jsp?id=customer-service-privacy-policy", phone:"1-800-762-1005",
+    weeks:8, incogni:true, note:"Privacy Policy → Contact to opt out of Source Book mailings" },
+  { slug:"gap", name:"Gap / Old Navy / Banana Republic", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.gapinc.com/en-us/articles/2016/12/gap-inc-privacy-policy", phone:"1-800-427-7895",
+    weeks:8, incogni:true, note:"Covers all Gap Inc. brands in one request" },
+  { slug:"athleta", name:"Athleta", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://athleta.gap.com/customerService/info.do?page=privacyStatement", phone:"1-877-328-4538",
+    weeks:8, incogni:true, note:"Part of Gap Inc. — same privacy policy covers all brands" },
+  { slug:"nordstrom", name:"Nordstrom", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://shop.nordstrom.com/c/nordstrom-privacy-policy", phone:"1-888-282-6060",
+    weeks:6, incogni:true, note:"Account → Email & Postal Preferences → Opt out" },
+  { slug:"catalogchoice", name:"Any Catalog (CatalogChoice)", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://catalogchoice.org", phone:"",
+    weeks:8, incogni:false, note:"Free service to opt out of 10,000+ catalogs by name — the most comprehensive catalog removal tool" },
+
+  // FINANCIAL
+  { slug:"quicken-loans", name:"Rocket Mortgage (Quicken Loans)", cat:"financial", catLabel:"Financial",
+    optUrl:"https://www.rocketmortgage.com/learn/privacy-policy", phone:"1-800-251-9080",
+    weeks:8, incogni:true, note:"Call and request removal from all postal solicitations" },
+  { slug:"lending-tree", name:"LendingTree", cat:"financial", catLabel:"Financial",
+    optUrl:"https://www.lendingtree.com/about/privacy/", phone:"1-800-813-4620",
+    weeks:8, incogni:true, note:"Privacy → 'Do Not Sell' covers marketing list removal" },
+  { slug:"american-family-insurance", name:"American Family Insurance", cat:"financial", catLabel:"Financial",
+    optUrl:"https://www.amfam.com/about/legal/privacy-statement", phone:"1-800-692-6326",
+    weeks:8, incogni:true, note:"Contact agent or call corporate to remove from postal list" },
+  { slug:"schwab", name:"Charles Schwab", cat:"financial", catLabel:"Financial",
+    optUrl:"https://www.schwab.com/legal/schwab-privacy-notice", phone:"1-800-435-4000",
+    weeks:6, incogni:true, note:"Login → Service → Privacy → Postal Marketing Opt-Out" },
+
+  // EDDM / LOCAL
+  { slug:"valpak", name:"Valpak", cat:"eddm", catLabel:"EDDM / Local",
+    optUrl:"https://www.valpak.com/coupons/show/mailinglistsuppression", phone:"",
+    weeks:8, incogni:false, note:"Direct suppression form — enter your address to stop all Valpak mailings" },
+  { slug:"redplum", name:"RedPlum / Valassis", cat:"eddm", catLabel:"EDDM / Local",
+    optUrl:"https://www.valassis.com/contact-us/", phone:"1-800-437-0479",
+    weeks:10, incogni:false, note:"Contact Valassis directly to opt out of RedPlum EDDM mailings" },
+  { slug:"usps-eddm", name:"USPS Every Door Direct Mail", cat:"eddm", catLabel:"EDDM / Local",
+    optUrl:"https://www.usps.com/business/every-door-direct-mail.htm", phone:"1-800-275-8777",
+    weeks:0, incogni:false, note:"EDDM is sent to all addresses in a carrier route — there is no individual opt-out. Contact the mailer directly." },
+  { slug:"pennysaver", name:"PennySaver / Harte-Hanks", cat:"eddm", catLabel:"EDDM / Local",
+    optUrl:"https://www.harte-hanks.com/privacy/", phone:"1-866-888-1808",
+    weeks:8, incogni:false, note:"Call or write to opt out of Harte-Hanks local mailers" },
+  { slug:"dma-choice", name:"DMAchoice (All Commercial Mail)", cat:"eddm", catLabel:"EDDM / Local",
+    optUrl:"https://dmachoice.org", phone:"",
+    weeks:12, incogni:false, note:"$4 fee. Single registration suppresses 80% of all US commercial direct mail for 10 years" },
+
+  // CHARITIES & ORGS
+  { slug:"heifer-international", name:"Heifer International", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://www.heifer.org/privacy-policy.html", phone:"1-855-948-6437",
+    weeks:8, incogni:false, note:"Call or email to request removal from all Heifer mailings" },
+  { slug:"wounded-warrior", name:"Wounded Warrior Project", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://www.woundedwarriorproject.org/privacy-policy", phone:"1-877-832-6997",
+    weeks:8, incogni:false, note:"Call donor services and request postal mail opt-out" },
+  { slug:"st-jude", name:"St. Jude Children's Research Hospital", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://www.stjude.org/privacy.html", phone:"1-800-822-6344",
+    weeks:8, incogni:false, note:"Call donor services to opt out of all postal solicitations" },
+  { slug:"dav", name:"DAV (Disabled American Veterans)", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://www.dav.org/about-dav/privacy-policy/", phone:"1-877-426-2838",
+    weeks:8, incogni:false, note:"Contact DAV to remove your name from their mailing list" },
+  { slug:"national-wildlife-federation", name:"National Wildlife Federation", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://www.nwf.org/Privacy-Policy", phone:"1-800-822-9919",
+    weeks:8, incogni:false, note:"Call member services and request postal opt-out" },
+  { slug:"nature-conservancy", name:"The Nature Conservancy", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://www.nature.org/en-us/about-us/who-we-are/accountability/privacy-policy/", phone:"1-800-628-6860",
+    weeks:8, incogni:false, note:"Call and ask to be removed from all direct mail lists" },
+  { slug:"republican-national-committee", name:"Republican National Committee", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://www.gop.com/privacy-policy/", phone:"1-202-863-8500",
+    weeks:8, incogni:false, note:"Contact directly. Political mail is exempt from DMA rules." },
+  { slug:"democratic-national-committee", name:"Democratic National Committee", cat:"charity", catLabel:"Charities & Orgs",
+    optUrl:"https://democrats.org/privacy-policy/", phone:"1-202-863-8000",
+    weeks:8, incogni:false, note:"Contact directly. Political mail is exempt from DMA rules." },
+
+  // ADDITIONAL HIGH-VOLUME
+  { slug:"american-airlines", name:"American Airlines AAdvantage", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.aa.com/i18n/customer-service/support/privacy-policy.jsp", phone:"1-800-433-7300",
+    weeks:8, incogni:true, note:"Login → Profile → Communication Preferences → Uncheck postal" },
+  { slug:"rei", name:"REI", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.rei.com/help/privacy-policy.html", phone:"1-800-426-4840",
+    weeks:6, incogni:true, note:"Login → Account → Email Preferences → Catalog opt-out" },
+  { slug:"home-depot", name:"The Home Depot", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.homedepot.com/c/SF_Privacy_and_Security_Policy", phone:"1-800-466-3337",
+    weeks:8, incogni:true, note:"Privacy → 'Limit the Use of My Sensitive Personal Information'" },
+  { slug:"costco", name:"Costco", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.costco.com/privacy-policy.html", phone:"1-800-774-2678",
+    weeks:8, incogni:true, note:"Login → Account → Communication Preferences" },
+  { slug:"ikea", name:"IKEA", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.ikea.com/us/en/customer-service/privacy-policy/", phone:"1-888-888-4532",
+    weeks:8, incogni:true, note:"Create/login to account → Email & Catalog preferences" },
+  { slug:"jenny-craig", name:"Jenny Craig / Weight Loss Programs", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.jennycraig.com/pages/privacy-policy", phone:"1-800-597-5366",
+    weeks:8, incogni:true, note:"Call and request removal from postal and telemarketing lists" },
+  { slug:"time-life", name:"Time Life / Media Companies", cat:"retail", catLabel:"Retail & Catalogs",
+    optUrl:"https://www.timelife.com/pages/privacy-policy", phone:"1-800-621-7026",
+    weeks:8, incogni:true, note:"Call customer service to stop media club mailings" },
+];
+
+// Group by category
+const CATEGORY_ORDER = ["credit","telecom","insurance","retail","financial","eddm","charity"];
+const CATEGORY_LABELS = {
+  credit: "Credit Cards & Banks",
+  telecom: "Telecom & Internet",
+  insurance: "Insurance & Financial Services",
+  retail: "Retail, Catalogs & Shopping",
+  financial: "Financial Services",
+  eddm: "EDDM, Local Mail & Registries",
+  charity: "Charities & Political Organizations"
+};
+
+let currentFilter = "all";
+let currentSearch = "";
+
+function renderDirectory() {
+  const dir = document.getElementById("directory");
+  const noResults = document.getElementById("noResults");
+  const countEl = document.getElementById("searchCount");
+
+  // Filter mailers
+  const filtered = MAILERS.filter(m => {
+    const matchesCat = currentFilter === "all" || m.cat === currentFilter;
+    const q = currentSearch.toLowerCase();
+    const matchesSearch = !q ||
+      m.name.toLowerCase().includes(q) ||
+      m.cat.toLowerCase().includes(q) ||
+      (m.note && m.note.toLowerCase().includes(q));
+    return matchesCat && matchesSearch;
+  });
+
+  // Count
+  countEl.textContent = filtered.length === MAILERS.length
+    ? `Showing all ${MAILERS.length} mailers`
+    : `${filtered.length} mailer${filtered.length !== 1 ? "s" : ""} found`;
+
+  // Clear old cards
+  dir.querySelectorAll(".mailer-card, .dir-section-label").forEach(el => el.remove());
+
+  if (filtered.length === 0) {
+    noResults.style.display = "block";
+    return;
+  }
+  noResults.style.display = "none";
+
+  // Group
+  const groups = {};
+  filtered.forEach(m => {
+    if (!groups[m.cat]) groups[m.cat] = [];
+    groups[m.cat].push(m);
+  });
+
+  const orderedCats = CATEGORY_ORDER.filter(c => groups[c]);
+
+  orderedCats.forEach(cat => {
+    const label = document.createElement("div");
+    label.className = "dir-section-label";
+    label.textContent = CATEGORY_LABELS[cat];
+    dir.appendChild(label);
+
+    groups[cat].forEach(m => {
+      const card = document.createElement("div");
+      card.className = "mailer-card" + (m.incogni ? " incogni-covers" : "");
+      card.id = m.slug;
+
+      const weeksText = m.weeks === 0
+        ? "No individual opt-out"
+        : `~${m.weeks} weeks to take effect`;
+
+      card.innerHTML = `
+        <div class="mailer-name-col">
+          <div class="mailer-name">${m.name}</div>
+          <div class="mailer-category">${m.catLabel}</div>
+        </div>
+        <div class="mailer-info-col">
+          ${m.optUrl ? `<div class="mailer-row">
+            <span class="mailer-row-label">Opt-Out</span>
+            <a href="${m.optUrl}" target="_blank" rel="nofollow noopener">${m.optUrl.replace('https://','').replace('http://','').split('/')[0]} →</a>
+          </div>` : ''}
+          ${m.phone ? `<div class="mailer-row">
+            <span class="mailer-row-label">Phone</span>
+            <a href="tel:${m.phone.replace(/[^0-9+]/g,'')}">${m.phone}</a>
+          </div>` : ''}
+          <div class="mailer-row">
+            <span class="mailer-row-label">Note</span>
+            <span>${m.note}</span>
+          </div>
+        </div>
+        <div class="mailer-meta-col">
+          <div class="weeks-badge"><strong>${weeksText}</strong></div>
+          ${m.incogni ? `<div class="incogni-tag">✓ Incogni covers</div>` : ''}
+          ${m.optUrl ? `<div class="verified-tag">✓ Verified</div>` : ''}
+        </div>
+      `;
+      dir.appendChild(card);
+    });
+  });
+}
+
+// Search
+document.getElementById("searchInput").addEventListener("input", e => {
+  currentSearch = e.target.value;
+  renderDirectory();
+});
+
+// Filters
+document.getElementById("filterBar").addEventListener("click", e => {
+  const btn = e.target.closest(".filter-btn");
+  if (!btn) return;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  currentFilter = btn.dataset.cat;
+  renderDirectory();
+});
+
+// Handle direct anchor links (e.g. /mailer-directory/#capital-one)
+function scrollToAnchor() {
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+  }
+}
+
+renderDirectory();
+scrollToAnchor();
+</script>
+</body>
+</html>

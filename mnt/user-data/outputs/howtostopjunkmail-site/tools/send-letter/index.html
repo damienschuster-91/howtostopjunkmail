@@ -18,7 +18,7 @@
    HowToStopJunkMail.org — Shared Stylesheet
    Import this on every page
 ═══════════════════════════════════════════════════ */
-<style>
+
 :root {
   --forest:      #1a3a2a;
   --forest-mid:  #2d5a42;
@@ -1353,242 +1353,46 @@ footer {
 /* end shared.css */
 
 
-.send-hero {
-  background: var(--forest);
-  padding: 72px 80px 56px;
-  border-bottom: 2px solid var(--gold);
-  position: relative; overflow: hidden;
-}
-.send-hero::after {
-  content: '✉️';
-  position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
-  font-size: 130px; opacity: 0.07; pointer-events: none;
-}
-.send-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(44px,5vw,72px); font-weight:700; color:var(--white); line-height:1.0; margin:16px 0 20px; letter-spacing:-0.01em; }
-.send-hero h1 em { font-style:italic; color:var(--gold); }
-.send-hero p { font-size:16px; color:var(--sage-light); max-width:640px; line-height:1.75; }
-
-.send-trust-strip {
-  background: rgba(200,168,75,0.07);
-  border-bottom: 1px solid rgba(200,168,75,0.15);
-  padding: 13px 80px;
-  display: flex; gap: 36px; align-items: center; flex-wrap: wrap;
-}
-.send-trust-item {
-  display: flex; align-items: center; gap: 8px;
-  font-family: 'DM Mono', monospace; font-size: 10px;
-  letter-spacing: 0.07em; text-transform: uppercase; color: var(--sage);
-}
-.send-trust-dot { width:5px; height:5px; background:var(--gold); border-radius:50%; flex-shrink:0; }
-
-/* when to use banner */
-.when-to-use {
-  background: var(--parchment);
-  border-bottom: 1px solid var(--rule);
-  padding: 18px 80px;
-  display: flex; gap: 48px; align-items: flex-start;
-}
-.wtu-col { flex: 1; }
-.wtu-label {
-  font-family: 'DM Mono', monospace; font-size: 9px;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 8px;
-}
-.wtu-col ul { list-style: none; }
-.wtu-col ul li {
-  font-size: 13px; color: var(--charcoal); line-height: 1.6;
-  padding: 3px 0; padding-left: 16px; position: relative;
-}
-.wtu-col ul li::before { content: '→'; position:absolute; left:0; color:var(--forest-lite); font-size:11px; }
-.wtu-divider { width:1px; background:var(--rule); align-self:stretch; }
-
-/* main layout */
-.send-layout {
-  display: grid;
-  grid-template-columns: 440px 1fr;
-  min-height: 640px;
-}
-.send-form-panel {
-  background: var(--white);
-  padding: 52px 44px;
-  border-right: 1px solid var(--rule);
-}
-.send-preview-panel {
-  background: var(--cream-dark);
-  padding: 44px 52px;
-  display: flex; flex-direction: column;
-}
-
-/* tone row */
-.tone-row { display: flex; gap: 2px; margin-bottom: 20px; }
-.tone-chip {
-  flex: 1; padding: 10px 6px; text-align: center;
-  background: var(--cream); border: 1.5px solid var(--rule);
-  font-family: 'DM Mono', monospace; font-size: 10px;
-  letter-spacing: 0.04em; color: var(--mid); cursor: pointer;
-  transition: all 0.15s;
-}
-.tone-chip.active { background: var(--forest); border-color: var(--forest); color: var(--gold); }
-
-/* Envelope preview */
-.envelope-wrap {
-  background: var(--parchment);
-  border: 1px solid #c4b490;
-  border-radius: 1px;
-  padding: 14px 52px 14px 20px;
-  margin-bottom: 16px;
-  position: relative;
-  font-family: 'DM Mono', monospace;
-  box-shadow: 2px 2px 0 #d4c4a0;
-}
-.envelope-flap {
-  position: absolute; top:0; left:0; right:0;
-  height: 28px;
-  background: linear-gradient(135deg, var(--parchment) 50%, #ddd0b8 50%);
-  border-bottom: 1px solid #c4b490;
-  opacity: 0.6;
-}
-.envelope-from {
-  font-size: 10px; color: var(--muted); line-height: 1.6;
-  margin-top: 32px; margin-bottom: 12px;
-}
-.envelope-to {
-  font-size: 11px; color: var(--ink); line-height: 1.7; font-weight: 500;
-}
-.envelope-stamp {
-  position: absolute; right: 14px; top: 36px;
-  width: 38px; height: 48px;
-  background: var(--forest); border: 2px solid var(--gold);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 2px;
-}
-.envelope-stamp-icon { font-size: 16px; }
-.envelope-stamp-text {
-  font-family: 'DM Mono', monospace; font-size: 6px;
-  letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--gold); line-height: 1;
-}
-
-/* Letter paper */
-.letter-paper-preview {
-  background: var(--white);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 2px 2px 0 var(--rule);
-  flex: 1;
-  overflow: hidden;
-}
-.lpp-header {
-  background: var(--forest);
-  padding: 10px 24px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.lpp-header-left { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.07em; color:var(--sage); line-height:1.5; }
-.lpp-header-right { font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); }
-.lpp-body {
-  padding: 32px 36px;
-  font-family: 'Source Serif 4', serif; font-size: 13px;
-  line-height: 1.85; color: var(--ink);
-}
-.lpp-body .lpp-date { font-size:12px; color:var(--muted); margin-bottom:20px; }
-.lpp-body .lpp-to { font-size:12px; color:var(--charcoal); line-height:1.7; margin-bottom:20px; }
-.lpp-body .lpp-subject {
-  font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em;
-  text-transform:uppercase; color:var(--forest); border-bottom:1px solid var(--rule);
-  padding-bottom:10px; margin-bottom:16px;
-}
-.lpp-body .lpp-content p { margin-bottom:12px; }
-.lpp-body .lpp-sig { margin-top:20px; font-size:12px; }
-.lpp-body .lpp-footer {
-  font-family:'DM Mono',monospace; font-size:9px; color:var(--muted);
-  letter-spacing:0.07em; margin-top:16px; padding-top:10px;
-  border-top:1px solid var(--rule);
-}
-
-.preview-placeholder-msg {
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  min-height:380px; text-align:center; color:var(--muted); gap:12px; padding:40px;
-}
-.preview-placeholder-msg .ph-icon { font-size:52px; opacity:0.28; }
-.preview-placeholder-msg p { font-size:14px; max-width:240px; line-height:1.6; }
-
-/* checkout */
-.send-checkout-bar {
-  background: var(--parchment); border-top: 2px solid var(--rule);
-  padding: 24px 80px; display:flex; align-items:center;
-  justify-content:space-between; gap:24px;
-}
-.sco-price-num {
-  font-family:'Playfair Display',serif; font-size:44px;
-  font-weight:700; color:var(--forest); line-height:1;
-}
-.sco-price-label {
-  font-family:'DM Mono',monospace; font-size:10px;
-  letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-top:4px;
-}
-.sco-values { display:flex; flex-direction:column; gap:6px; max-width:340px; }
-.sco-value {
-  font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.05em;
-  color:var(--mid); display:flex; align-items:center; gap:8px;
-}
-.sco-value::before { content:'✓'; color:var(--forest-lite); font-weight:700; }
-.sco-send-btn {
-  background:var(--gold); color:var(--forest);
-  font-family:'DM Mono',monospace; font-size:13px; font-weight:500;
-  letter-spacing:0.1em; text-transform:uppercase;
-  padding:20px 44px; border:none; cursor:pointer;
-  transition:background 0.2s, transform 0.15s; white-space:nowrap;
-}
-.sco-send-btn:hover:not(:disabled) { background:var(--gold-light); transform:translateY(-1px); }
-.sco-send-btn:disabled { background:var(--rule); color:var(--muted); cursor:not-allowed; }
-.sco-send-btn.sending { background:var(--forest); color:var(--gold); animation:lobPulse 1s ease infinite; }
-@keyframes lobPulse { 0%,100%{opacity:1} 50%{opacity:0.65} }
-
-/* confirmation */
-.lob-confirm {
-  display:none; background:var(--forest); padding:80px; text-align:center;
-}
-.lob-confirm.show { display:block; }
-.lob-confirm h2 { font-family:'Playfair Display',serif; font-size:52px; font-weight:700; color:var(--gold); margin:16px 0; line-height:1; }
-.lob-confirm > p { font-size:16px; color:var(--sage-light); max-width:520px; margin:0 auto 36px; line-height:1.75; }
-.lob-confirm-detail {
-  display:inline-grid; grid-template-columns:auto auto;
-  gap:10px 32px; text-align:left; margin-bottom:36px;
-  background:rgba(255,255,255,0.06); padding:24px 32px;
-  border:1px solid rgba(255,255,255,0.08);
-}
-.lcd-l { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--sage); }
-.lcd-v { font-family:'DM Mono',monospace; font-size:12px; color:var(--gold); }
-.lob-next-steps {
-  max-width:560px; margin:0 auto 24px;
-  background:rgba(200,168,75,0.08); border:1px solid rgba(200,168,75,0.2);
-  padding:24px 28px; text-align:left;
-}
-.lob-next-steps h4 { font-family:'Playfair Display',serif; font-size:18px; color:var(--white); margin-bottom:12px; }
-.lob-next-steps ul { list-style:none; }
-.lob-next-steps li { font-size:13px; color:var(--sage-light); padding:7px 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:10px; line-height:1.55; }
-.lob-next-steps li::before { content:'→'; color:var(--gold); flex-shrink:0; }
-.lob-confirm-affiliate {
-  max-width:560px; margin:0 auto;
-  background:rgba(200,168,75,0.12); border:1px solid rgba(200,168,75,0.25);
-  border-left:4px solid var(--gold); padding:22px 26px; text-align:left;
-}
-.lob-confirm-affiliate .aff-tag { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
-.lob-confirm-affiliate p { font-size:13px; color:var(--sage-light); line-height:1.65; margin-bottom:12px; }
-.lob-confirm-affiliate a { display:inline-block; background:var(--gold); color:var(--forest); font-family:'DM Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; padding:10px 20px; text-decoration:none; transition:background 0.15s; }
-.lob-confirm-affiliate a:hover { background:var(--gold-light); }
-
-@media(max-width:960px) {
-  .send-layout { grid-template-columns:1fr; }
-  .send-form-panel { border-right:none; }
-  .send-checkout-bar { flex-direction:column; padding:24px 32px; }
-  .send-trust-strip, .when-to-use { padding:14px 32px; }
-  .send-hero { padding:56px 32px 44px; }
-  .when-to-use { flex-direction:column; gap:16px; }
-  .lob-confirm { padding:52px 32px; }
-}
-
 </style>
 </head>
 <body>
+<nav>
+  <a class="nav-logo" href="/">
+    HowToStopJunkMail<span>.org</span>
+    <small>Free guides · Opt-out tools · Data removal</small>
+  </a>
+  <ul class="nav-links">
+    <li>
+      <a>Tools ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Free Tools</div>
+        <a href="/tools/opt-out-kit/">📋 Opt-Out Kit Generator</a>
+        <a href="/tools/identify-mail/">🔍 Identify Your Mail</a>
+        <a href="/tools/letter-generator/">✍️ Letter Generator</a>
+        <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
+        <hr class="nav-dropdown-divider">
+        <div class="nav-dropdown-label">Paid — $3.99</div>
+        <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
+      </div>
+    </li>
+    <li>
+      <a>Guides ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Opt-Out Guides</div>
+        <a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a>
+        <a href="/guides/return-junk-mail-to-sender/">Return to Sender</a>
+        <a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a>
+        <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
+        <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
+        <hr class="nav-dropdown-divider">
+        <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
+      </div>
+    </li>
+    <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
+    <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
+  </ul>
+</nav>
+
 <nav>
   <a class="nav-logo" href="/">
     HowToStopJunkMail<span>.org</span>
@@ -1844,6 +1648,10 @@ footer {
   </div>
 </footer>
 </div>
+
+</body>
+</html>
+</html>
 <script>// ════════════════════════════════════
 // LOB PHYSICAL LETTER TOOL
 // ════════════════════════════════════
@@ -1972,5 +1780,4 @@ function resetLobTool() {
 
 </body></script>
 </body>
-</html>
 </html>

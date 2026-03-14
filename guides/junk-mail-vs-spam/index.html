@@ -3,20 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Stop Junk Mail — Free Tools, Opt-Out Guides & Revenge Tactics</title>
-<meta name="description" content="Free tools and guides to stop junk mail permanently. Opt-out kit, letter generator, mail identifier, and eco savings calculator. Works for all US addresses.">
-<link rel="canonical" href="https://howtostopjunkmail.org/">
-<meta property="og:title" content="How to Stop Junk Mail — Free Tools, Opt-Out Guides & Revenge Tactics">
-<meta property="og:description" content="Free tools and guides to stop junk mail permanently. Opt-out kit, letter generator, mail identifier, and eco savings calculator. Works for all US addresses.">
-<meta property="og:url" content="https://howtostopjunkmail.org/">
-<meta property="og:type" content="website">
+<title>Junk Mail vs Spam: What's the Difference? | HowToStopJunkMail.org</title>
+<meta name="description" content="Junk mail and spam are not the same thing. Here's the real difference between physical junk mail and email spam -- and how to stop both for good.">
+<link rel="canonical" href="https://howtostopjunkmail.org/guides/junk-mail-vs-spam/">
+<meta property="og:title" content="Junk Mail vs Spam: What's the Difference?">
+<meta property="og:description" content="Junk mail and spam are not the same thing. Here's the real difference -- and how to stop both for good.">
+<meta property="og:url" content="https://howtostopjunkmail.org/guides/junk-mail-vs-spam/">
+<meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Junk Mail vs Spam: What's the Difference?",
+      "description": "Junk mail is unsolicited physical mail. Spam is unsolicited email. They share intent but have different legal protections, opt-out mechanisms, and solutions.",
+      "url": "https://howtostopjunkmail.org/guides/junk-mail-vs-spam/",
+      "publisher": { "@type": "Organization", "name": "HowToStopJunkMail.org", "url": "https://howtostopjunkmail.org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is junk mail the same as spam?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Junk mail can be physical or unwanted email. Some email applications use junk or spam in place of one another. True spam is sent without your permission and oftentimes is a scam. Physical junk mail and email spam require different solutions to opt out." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Outlook call spam 'junk mail'?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Originally junk mail meant low-value bulk postal mail. Email providers borrowed the word for unwanted messages. Some use junk and spam interchangeably. Same folder, different word." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I stop physical junk mail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start with the three main registries: DMAchoice.org (most direct mail), OptOutPrescreen.com (credit card and insurance offers), and CatalogChoice.org (catalogs). For a full walkthrough, see HowToStopJunkMail.org or use the free opt-out kit." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it illegal to send junk mail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No; it is not illegal to send junk mail, so long as it complies with USPS regulations and is honest about its nature. Email spam is also fine as long as it follows CAN-SPAM rules. Deceptive spam is illegal." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<style>
+:root {
+  --forest:      #1a3a2a;
+  --forest-mid:  #2d5a42;
+  --forest-lite: #3d7a58;
+  --sage:        #7aab8e;
+  --sage-light:  #b8d4c4;
+  --cream:       #f5f0e8;
+  --cream-dark:  #e8e0d0;
+  --parchment:   #ede6d8;
+  --ink:         #1a1a18;
+  --charcoal:    #2e2e2c;
+  --mid:         #5a5a55;
+  --muted:       #8a8a82;
+  --rule:        #d4ccbc;
+  --gold:        #c8a84b;
+  --gold-light:  #e8cc7a;
+  --white:       #fdfaf5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+}
 
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  height: 62px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; background: var(--forest); border-bottom: 2px solid var(--gold);
+}
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--cream); letter-spacing: 0.02em; cursor: pointer; text-decoration: none; line-height: 1.2; flex-shrink: 0; }
+.nav-logo span { color: var(--gold); }
+.nav-logo small { display: block; font-size: 9px; font-family: 'DM Mono', monospace; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; }
+.nav-links { display: flex; gap: 0; list-style: none; align-items: center; }
+.nav-links > li { position: relative; }
+.nav-links > li > a { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); text-decoration: none; cursor: pointer; padding: 21px 14px; display: block; transition: color 0.2s; white-space: nowrap; }
+.nav-links > li > a:hover, .nav-links > li:hover > a { color: var(--cream); }
+.nav-dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--forest); border: 1px solid rgba(200,168,75,0.25); border-top: 2px solid var(--gold); z-index: 600; padding: 8px 0; }
+.nav-links > li:hover .nav-dropdown { display: block; }
+.nav-dropdown a { display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); padding: 10px 20px; cursor: pointer; text-decoration: none; transition: background 0.15s, color 0.15s; white-space: nowrap; }
+.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--cream); }
+.nav-dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 6px 0; }
+.nav-dropdown-label { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(122,171,142,0.5); padding: 8px 20px 4px; }
+.nav-cta { background: var(--gold) !important; color: var(--forest) !important; font-weight: 500 !important; padding: 9px 18px !important; margin-left: 8px; transition: background 0.2s !important; white-space: nowrap; }
+.nav-cta:hover { background: var(--gold-light) !important; }
+@media(max-width: 960px) { nav { padding: 0 24px; } .nav-links { display: none; } }
+
+/* PAGE */
+.page { display: block; padding-top: 62px; min-height: 100vh; }
+
+/* CONTENT HERO */
+.content-hero { background: var(--forest); padding: 72px 80px 60px; border-bottom: 2px solid rgba(200,168,75,0.3); position: relative; overflow: hidden; }
+.content-hero::after { content: attr(data-bg); position: absolute; right: -20px; bottom: -40px; font-family: 'Playfair Display', serif; font-size: 200px; font-weight: 900; color: rgba(255,255,255,0.03); pointer-events: none; line-height: 1; white-space: nowrap; letter-spacing: -5px; }
+.breadcrumb { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--sage); margin-bottom: 24px; }
+.bc-link { color: var(--gold); cursor: pointer; text-decoration: none; }
+.bc-link:hover { text-decoration: underline; }
+.content-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 5.5vw, 72px); font-weight: 700; color: var(--white); line-height: 1.0; max-width: 700px; margin-bottom: 24px; letter-spacing: -0.01em; }
+.content-hero h1 em { font-style: italic; color: var(--gold); }
+.content-hero .lead { font-size: 17px; color: var(--sage-light); max-width: 580px; line-height: 1.75; }
+
+/* LAYOUT */
+.content-layout { display: grid; grid-template-columns: minmax(0, 700px) 300px; }
+.content-main { padding: 72px 80px; border-right: 1px solid var(--rule); }
+.content-main p { font-size: 16px; color: var(--charcoal); line-height: 1.85; margin-bottom: 24px; }
+.content-main h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--forest); margin: 52px 0 18px; padding-bottom: 12px; border-bottom: 2px solid var(--cream-dark); letter-spacing: -0.01em; }
+.content-main ul { list-style: none; border: 1px solid var(--rule); margin-bottom: 28px; }
+.content-main ul li { padding: 13px 16px 13px 42px; border-bottom: 1px solid var(--rule); font-size: 15px; color: var(--charcoal); line-height: 1.65; position: relative; }
+.content-main ul li:last-child { border-bottom: none; }
+.content-main ul li::before { content: '→'; position: absolute; left: 16px; color: var(--forest-lite); font-size: 13px; }
+.content-main a { color: var(--forest-lite); }
+.content-main a:hover { color: var(--forest); }
+sup.cite { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--gold); vertical-align: super; margin-left: 1px; }
+
+/* COMPARISON TABLE */
+.compare-wrap { margin: 28px 0; overflow-x: auto; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.compare-table thead th { background: var(--forest); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; padding: 14px 18px; text-align: left; }
+.compare-table thead th:first-child { background: var(--forest-mid); width: 28%; }
+.compare-table tbody td { padding: 13px 18px; border-bottom: 1px solid var(--rule); font-size: 14px; color: var(--charcoal); line-height: 1.6; vertical-align: top; }
+.compare-table tbody tr:nth-child(even) td { background: var(--parchment); }
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.compare-table .row-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); background: var(--parchment) !important; }
+.compare-table tbody tr:nth-child(even) .row-label { background: var(--cream-dark) !important; }
+
+/* SIDEBAR */
+.content-sidebar { padding: 60px 36px; background: var(--parchment); }
+.sidebar-section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--forest); }
+.sidebar-nav { list-style: none; margin-bottom: 32px; }
+.sidebar-nav li { border-bottom: 1px solid var(--rule); }
+.sidebar-nav a { display: block; padding: 11px 0; font-size: 14px; color: var(--mid); text-decoration: none; cursor: pointer; transition: color 0.15s; }
+.sidebar-nav a:hover { color: var(--forest); }
+
+/* TOOL BOX */
+.tool-box { background: var(--white); border: 1px solid var(--rule); border-left: 4px solid var(--forest); padding: 28px 32px; margin: 28px 0; }
+.tool-box-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.tool-box h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--forest); margin-bottom: 8px; }
+.tool-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
+.tool-box-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.tool-box-link { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--forest-lite); text-decoration: none; border-bottom: 1px solid var(--forest-lite); padding-bottom: 1px; letter-spacing: 0.04em; transition: opacity 0.15s; }
+.tool-box-link:hover { opacity: 0.65; }
+
+/* PAID BOX */
+.paid-box { background: var(--forest); border-left: 4px solid var(--gold); padding: 28px 32px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.paid-box-text p { font-size: 14px; color: var(--sage-light); line-height: 1.65; margin: 0; }
+.paid-box-text strong { color: var(--white); font-weight: 600; }
+.paid-tag { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); margin-bottom: 8px; }
+.paid-box-cta { background: var(--gold); color: var(--forest); font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 22px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.15s; display: inline-block; }
+.paid-box-cta:hover { background: var(--gold-light); }
+.paid-box-aff { font-size: 9px; color: var(--sage); letter-spacing: 0.08em; margin-top: 6px; font-family: 'DM Mono', monospace; }
+
+/* NOTE BOX */
+.note-box { background: var(--parchment); border: 1px solid var(--rule); border-left: 4px solid var(--forest-lite); padding: 18px 24px; margin: 24px 0; }
+.note-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--forest-lite); margin-bottom: 6px; }
+.note-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
+
+/* FAQ */
+.faq-item { border-top: 1px solid var(--rule); padding: 28px 0; }
+.faq-item:last-child { border-bottom: 1px solid var(--rule); }
+.faq-q { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px; color: var(--forest); margin-bottom: 12px; }
+.faq-a { font-size: 15px; line-height: 1.8; color: var(--charcoal); }
+
+/* FOOTER */
+footer { background: var(--forest); border-top: 3px solid var(--gold); padding: 72px 80px 44px; }
+.footer-grid { display: grid; grid-template-columns: 2.5fr 1fr 1fr; gap: 64px; margin-bottom: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
+.footer-logo span { color: var(--gold); }
+.footer-logo small { display: block; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; margin-top: 3px; }
+.footer-tagline { font-size: 13px; color: var(--sage); line-height: 1.7; max-width: 300px; margin-top: 14px; }
+.footer-col h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; cursor: pointer; transition: color 0.15s; }
+.footer-col ul li a:hover { color: var(--cream); }
+.citations { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.citations h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+.cite-list { list-style: none; counter-reset: cite; }
+.cite-list li { counter-increment: cite; font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; margin-bottom: 6px; padding-left: 22px; position: relative; }
+.cite-list li::before { content: '[' counter(cite) ']'; position: absolute; left: 0; color: var(--gold); opacity: 0.7; font-family: 'DM Mono', monospace; }
+.cite-list li a { color: rgba(255,255,255,0.3); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.cite-list li a:hover { color: var(--cream); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.2); }
+.footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.2); max-width: 480px; text-align: right; line-height: 1.6; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.fu  { animation: fadeUp 0.5s ease both; }
+.fu2 { animation: fadeUp 0.5s 0.08s ease both; }
+.fu3 { animation: fadeUp 0.5s 0.16s ease both; }
+
+@media (max-width: 960px) {
+  .content-layout { grid-template-columns: 1fr; }
+  .content-main { padding: 40px 24px; border-right: none; }
+  .content-sidebar { padding: 40px 24px; }
+  .content-hero { padding: 56px 24px 44px; }
+  footer { padding: 48px 24px 36px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; }
+  .footer-disclaimer { text-align: left; max-width: 100%; }
+  .paid-box { flex-direction: column; }
+}
+</style>
 </head>
 <body>
+
 <nav>
   <a class="nav-logo" href="/">
     HowToStopJunkMail<span>.org</span>
@@ -32,7 +247,7 @@
         <a href="/tools/letter-generator/">✍️ Letter Generator</a>
         <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
         <hr class="nav-dropdown-divider">
-        <div class="nav-dropdown-label">Paid — $3.99</div>
+        <div class="nav-dropdown-label">Paid -- $3.99</div>
         <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
       </div>
     </li>
@@ -45,6 +260,7 @@
         <a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a>
         <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
         <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
+        <a href="/guides/junk-mail-vs-spam/" style="color:var(--gold);">Junk Mail vs Spam</a>
         <hr class="nav-dropdown-divider">
         <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
       </div>
@@ -55,483 +271,240 @@
 </nav>
 
 <div class="page">
-<section class="hero">
-    <div class="hero-left">
-      <p class="hero-kicker fu">The complete guide to stopping junk mail</p>
-      <h1 class="hero-h1 fu2">Stop Junk Mail<em>For Good.</em></h1>
-      <p class="hero-sub fu3">
-        <strong>41 pounds of paper.</strong> Sent to your home every year. Uninvited.
-        Here's everything you need to stop it — free opt-out tools, data removal guides, and four tools we built to make it effortless.
-      </p>
-      <div class="hero-actions fu4">
-        <button class="btn-gold" href="/tools/opt-out-kit/">Start My Opt-Out Kit →</button>
-        <button class="btn-outline-cream" onclick="document.getElementById('tools-section').scrollIntoView({behavior:'smooth'})">See All Tools ↓</button>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-stat-grid">
-        <div class="hero-stat">
-          <div class="hero-stat-num">41<span style="font-size:22px"> lbs</a></div>
-          <div class="hero-stat-label">junk mail per household per year <sup class="cite">[1]</sup></div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">100<span style="font-size:22px">M</a></div>
-          <div class="hero-stat-label">trees cut annually for junk mail <sup class="cite">[2]</sup></div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">44<span style="font-size:22px">%</a></div>
-          <div class="hero-stat-label">goes to landfill unopened <sup class="cite">[4]</sup></div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">304<span style="font-size:22px">h</a></div>
-          <div class="hero-stat-label">to manually opt out of all data brokers <sup class="cite">[5]</sup></div>
-        </div>
-      </div>
-      <div class="hero-tools-label">Four free tools on this site</div>
-      <ul class="hero-tool-list">
-        <li href="/tools/opt-out-kit/">Opt-Out Kit Generator — fill once, cover everything</li>
-        <li href="/tools/identify-mail/">Junk Mail Identifier — who sent it & how to stop it</li>
-        <li href="/tools/letter-generator/">Return Letter Generator — stuff & send with authority</li>
-        <li href="/tools/savings-calculator/">Savings Calculator — see your real environmental impact</li>
-      </ul>
-    </div>
-  </section>
 
-  <div class="ticker">
-    <div class="ticker-track">
-      <!-- doubled for seamless loop -->
-      <span class="ticker-item">41 lbs of junk mail per household per year <sup>[1]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">100 million trees cut annually <sup>[2]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">51.5 million metric tons of CO₂ per year <sup>[3]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">44% goes to landfill unopened <sup>[4]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">304 hours to manually opt out of all data brokers <sup>[5]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">$0 — what it costs to opt out of pre-screened offers</a><span class="ticker-item ticker-sep">◆</span>
-      <!-- repeat -->
-      <span class="ticker-item">41 lbs of junk mail per household per year <sup>[1]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">100 million trees cut annually <sup>[2]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">51.5 million metric tons of CO₂ per year <sup>[3]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">44% goes to landfill unopened <sup>[4]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">304 hours to manually opt out of all data brokers <sup>[5]</sup></a><span class="ticker-item ticker-sep">◆</span>
-      <span class="ticker-item">$0 — what it costs to opt out of pre-screened offers</a><span class="ticker-item ticker-sep">◆</span>
+  <div class="content-hero" data-bg="Spam">
+    <div class="breadcrumb">
+      <a class="bc-link" href="/">Home</a> / <a class="bc-link" href="/guides/">Guides</a> / Junk Mail vs Spam
     </div>
+    <h1 class="fu">Junk Mail vs Spam:<em> What's the Difference?</em></h1>
+    
   </div>
 
-  <section class="section section-parch" id="tools-section">
-    <span class="section-eyebrow">Four tools, one mission</span>
-    <h2 class="display">Pick Your<em> Weapon</em></h2>
-    <p style="max-width:540px; color:var(--mid); margin-top:12px; margin-bottom:0; font-size:16px; line-height:1.75;">Start with the Opt-Out Kit if you're new. Use the Identifier when a specific mailer keeps showing up. Use the Letter Generator before you stuff a BRM envelope. Run the Savings Calculator and share it.</p>
-    <div class="tools-grid">
-      <!-- PAID - featured first and more prominent -->
-      <div class="tool-card paid" href="/tools/opt-out-kit/">
-        <div class="tool-card-badge paid-badge">⭐ Most Effective</div>
-        <span class="tool-card-icon">📬</span>
-        <h3>Opt-Out Kit Generator</h3>
-        <p>Enter your info once. Get a personalized step-by-step checklist covering every major opt-out service — OptOutPrescreen, DMAchoice, CatalogChoice, and data broker removal — with your details pre-filled and ready to copy.</p>
-        <div class="tool-card-cta">Launch tool →</div>
-      </div>
-      <div class="tool-card paid" href="/tools/identify-mail/">
-        <div class="tool-card-badge paid-badge">⭐ Quick Win</div>
-        <span class="tool-card-icon">🔍</span>
-        <h3>Junk Mail Identifier</h3>
-        <p>Describe the mail you received and get an instant answer: who's responsible, which opt-out registry covers it, and the exact steps to make it stop — including whether a paid data removal service is your best option.</p>
-        <div class="tool-card-cta">Identify my mail →</div>
-      </div>
-      <div class="tool-card" href="/tools/letter-generator/">
-        <div class="tool-card-badge free">Free Tool</div>
-        <span class="tool-card-icon">✉️</span>
-        <h3>Return Letter Generator</h3>
-        <p>Generate a formatted opt-out demand letter to stuff inside their prepaid Business Reply Mail envelope. They pay the postage. You file the opt-out. Pick your tone: professional, firm, or maximum spite.</p>
-        <div class="tool-card-cta">Generate a letter →</div>
-      </div>
-      <div class="tool-card" href="/tools/savings-calculator/">
-        <div class="tool-card-badge free">Free Tool</div>
-        <span class="tool-card-icon">🌲</span>
-        <h3>Junk Mail Savings Calculator</h3>
-        <p>See exactly how much paper, CO₂, and landfill space your household generates from junk mail — and how much you'd save by opting out. Shareable results for maximum environmental guilt-tripping.</p>
-        <div class="tool-card-cta">Calculate my impact →</div>
-      </div>
-    </div>
-  </section>
+  <div class="content-layout">
+    <div class="content-main">
 
-  <section class="section section-forest">
-    <span class="section-eyebrow">Paid options</span>
-    <h2 class="display">The Fast-Track:<em> Data Removal</em></h2>
-    <p style="max-width:580px; color:var(--sage-light); margin-top:12px; font-size:16px; line-height:1.8;">Free tools stop 70–80% of junk mail. The rest originates from data brokers who sell your address indefinitely. Removing yourself from their databases stops mail at the source — and takes 5 minutes instead of 304 hours.<sup class="cite" style="color:var(--gold)">[5]</sup></p>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:48px; max-width:900px;">
-      <div style="background:rgba(200,168,75,0.08); border:1px solid rgba(200,168,75,0.2); border-top:4px solid var(--gold); padding:40px 36px;">
-        <div style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Best Overall · Affiliate Link</div>
-        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:var(--white); margin-bottom:12px;">Incogni</h3>
-        <p style="font-size:14px; color:var(--sage-light); line-height:1.7; margin-bottom:24px;">Sends opt-out requests to 180+ data broker databases and repeats every quarter — because brokers routinely re-list removed data. ~$7/month billed annually.</p>
-        <a href="https://incogni.com" target="_blank" rel="nofollow noopener" class="btn-gold" style="display:inline-flex;">Try Incogni →</a>
+      <p>There are key differences between the two, each with its own challenges and solutions. The good news is that there are immediate steps you can take right now to reduce any unwanted marketing that comes your way.</p>
+
+      <p>To make it confusing, email applications (like Gmail, Yahoo, etc.) refer to unwanted email as spam. Sometimes they even label it as junk -- which adds to the confusion. Email providers borrowed the word "junk mail" because physical mail predates email. As a result, people sometimes use the words interchangeably.</p>
+
+      <h2>Digital Junk Mail</h2>
+
+      <p>Digital junk mail is mail you receive electronically because you opted in at some point in time with your email. This could be from a purchase, newsletter, or a form filled out on a website. This isn't necessarily "spam" because you opted into receiving email from these providers.</p>
+
+      <h2>Digital Spam</h2>
+
+      <p>On the other hand, spam is considered to be digital content (usually email) that you did not authorize or subscribe to. Spam is even more frustrating than junk mail because you never gave permission to be contacted in the first place. In other words, you didn't opt in. Oftentimes spam's intent is to deceive. This could be in the form of phishing or deceptive offers to scam or extort.</p>
+
+      <h2>The Short Answer</h2>
+
+      <p>Simply put, junk mail can be unwanted physical mail. When you go to your mailbox and see the literal physical mail that covers the mail you actually want -- that's junk mail. However, junk mail can also refer to the digital version of snail mail. When you check your inbox and see the unwanted emails that clutter your digital space -- that's also junk mail.</p>
+
+      <p>Then, there's spam. The objective is typically deceptive and sent without your permission. See below for a comparison and concise overview.</p>
+
+      <h2>The Comparison</h2>
+
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Junk Mail</th>
+              <th>Junk / Spam (Email)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-label">Channel</td>
+              <td>Physical mail (USPS)</td>
+              <td>Email</td>
+            </tr>
+            <tr>
+              <td class="row-label">Governed by</td>
+              <td>FTC / USPS regulations</td>
+              <td>CAN-SPAM Act (2003)</td>
+            </tr>
+            <tr>
+              <td class="row-label">Legal?</td>
+              <td>Yes, mostly</td>
+              <td>Yes if compliant -- illegal if deceptive</td>
+            </tr>
+            <tr>
+              <td class="row-label">Who sends it</td>
+              <td>Mailers, retailers, credit bureaus</td>
+              <td>Email marketers, scammers</td>
+            </tr>
+            <tr>
+              <td class="row-label">How to stop</td>
+              <td>DMAchoice, OptOutPrescreen, data removal</td>
+              <td>Unsubscribe link, spam filter, email block</td>
+            </tr>
+            <tr>
+              <td class="row-label">How fast it stops</td>
+              <td>30–90 days</td>
+              <td>Hours to days</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-top:4px solid var(--sage); padding:40px 36px;">
-        <div style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--sage); margin-bottom:16px;">Best Reporting · Affiliate Link</div>
-        <h3 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:var(--white); margin-bottom:12px;">DeleteMe</h3>
-        <p style="font-size:14px; color:var(--sage-light); line-height:1.7; margin-bottom:24px;">Removes you from the 30+ highest-risk broker sites with detailed quarterly reports showing exactly what was found and removed. ~$9/month annually.</p>
-        <a href="https://joindeleteme.com" target="_blank" rel="nofollow noopener" class="btn-outline-cream" style="display:inline-flex;">Try DeleteMe →</a>
+
+      <h2>How to Stop Physical Junk Mail</h2>
+
+      <p>Physical junk mail requires physical solutions. The three registries that cover the vast majority of it:</p>
+
+      <div class="tool-box">
+        <div class="tool-box-tag">Free · 5 Minutes · Covers Most Direct Mail</div>
+        <h3>DMAchoice.org</h3>
+        <p>Run by the Data & Marketing Association. Registering removes you from the mailing lists of most major retailers, catalogs, and direct marketers.</p>
+        <div class="tool-box-links">
+          <a class="tool-box-link" href="https://dmachoice.org" target="_blank" rel="nofollow noopener">Visit DMAchoice.org →</a>
+        </div>
       </div>
-    </div>
-  </section>
+
+      <div class="tool-box">
+        <div class="tool-box-tag">Free · 2 Minutes · Stops Credit Card & Insurance Offers</div>
+        <h3>OptOutPrescreen.com</h3>
+        <p>Run jointly by the four major credit bureaus. Removes you from pre-screened credit card and insurance offer lists -- one of the biggest sources of mailbox clutter. Free, federally backed, takes 30–60 days to take effect.</p>
+        <div class="tool-box-links">
+          <a class="tool-box-link" href="https://optoutprescreen.com" target="_blank" rel="nofollow noopener">Visit OptOutPrescreen.com →</a>
+        </div>
+      </div>
+
+      <div class="tool-box">
+        <div class="tool-box-tag">Free · Stops Catalogs</div>
+        <h3>CatalogChoice.org</h3>
+        <p>Opt out of specific catalogs by name. Search for the catalog you're receiving and submit a removal request directly to the mailer. Free. Takes 6–12 weeks depending on the company.</p>
+        <div class="tool-box-links">
+          <a class="tool-box-link" href="https://catalogchoice.org" target="_blank" rel="nofollow noopener">Visit CatalogChoice.org →</a>
+        </div>
+      </div>
+
+      <p>For the full step-by-step process, see our <a href="/guides/how-to-stop-junk-mail/">complete guide to stopping junk mail</a>.</p>
+
+      <h2>How to Stop Junk and Spam Email</h2>
+
+      <p>The best course of action to take against junk email is simply to click unsubscribe in the footer (bottom part) of the email. It might be small and hard to find. However, email marketing campaigns are legally required to provide it under CAN-SPAM regulations.<sup class="cite">[1]</sup></p>
+
+      <p>If you can't find the unsubscribe link in the email, then you have two options: email them and ask to be removed as a subscriber or block the sender.</p>
+
+      <p>Most email providers have spam filters in place already to detect and limit spam messages. If you've ever checked your spam/junk folder, then you have already seen how much is sent out every day. For spam messages, your best course of action is to not engage, block the sender, and/or mark as spam/junk in your email client.</p>
+
+      <p>Now, if you have junk email coming in daily, you may need to use a service like <strong>Unroll.me</strong>. They specialize in mass unsubscribing you from emails you no longer wish to receive. This is helpful if you don't mind some marketing emails, but have become overwhelmed and no longer interested in a majority of them.</p>
+
+      <h2>The Overlap: Data Brokers</h2>
+
+      <p>Now, onto data brokers: this is where junk email and junk mail collide. Data brokers sell your personal information to both physical mailers and email marketers. As a result, they can serve ads tailored to your online behavior and interests. They also comb through data online as well as publicly available information to reach you.</p>
+
+      <p>Data brokers are a big business, unfortunately. And there are hundreds in the United States. Removing your personal information from them is truly a big task. Each data broker has their own privacy policy and it is very cumbersome to opt out from each one.</p>
+
+      <p>Fortunately, for Californians, there is a promising solution. Enter the California Privacy Protection Agency (CalPrivacy), which debuted the Delete Request and Opt-Out Platform (DROP). This is a free public service that sends a single deletion request to every registered data broker in California. However, its scope is limited to data brokers in California and not other U.S. states.</p>
+
+      <p>One opt-out service, like Incogni, covers both channels and automagically helps you fight data brokers that sell your data for profit. This saves you a ton of time and headaches, freeing you from manually reaching out to data brokers one by one. They also monitor your information on an ongoing basis to protect you from new data broker listings.</p>
+
+      <div class="paid-box">
+        <div class="paid-box-text">
+          <div class="paid-tag">Best Overall -- Affiliate Link</div>
+          <p><strong>Incogni</strong> contacts 180+ data brokers on your behalf and requests removal -- automatically, every quarter. One subscription cuts off both physical junk mail and email spam at the source.</p>
+          <div class="paid-box-aff">Affiliate link -- we may earn a commission at no cost to you</div>
+        </div>
+        <a href="https://incogni.com" target="_blank" rel="nofollow noopener" class="paid-box-cta">Try Incogni →</a>
+      </div>
+
+      <div class="paid-box">
+        <div class="paid-box-text">
+          <div class="paid-tag">Also Good -- Affiliate Link</div>
+          <p><strong>DeleteMe</strong> focuses on the top 30+ consumer data broker sites with detailed quarterly reports showing exactly what was removed and from where.</p>
+          <div class="paid-box-aff">Affiliate link -- we may earn a commission at no cost to you</div>
+        </div>
+        <a href="https://joindeleteme.com" target="_blank" rel="nofollow noopener" class="paid-box-cta">Try DeleteMe →</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Is junk mail the same as spam?</div>
+        <div class="faq-a">Not necessarily. As covered above, "junk mail" can be physical or unwanted email. Some email applications use junk or spam in place of one another. True spam is sent without your permission and oftentimes is a scam. Physical junk mail and email spam require different solutions to opt out.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Why does Outlook call spam "junk mail"?</div>
+        <div class="faq-a">Originally "junk mail" meant low-value bulk postal mail. Email providers borrowed the word for unwanted messages. Some use junk and spam interchangeably. Same folder, different word.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I stop physical junk mail?</div>
+        <div class="faq-a">Check out our <a href="/guides/how-to-stop-junk-mail/">full guide to stopping junk mail</a>. Or use our <a href="/tools/opt-out-kit/">free opt-out kit</a>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is it illegal to send junk mail?</div>
+        <div class="faq-a">No; it is not illegal to send junk mail, so long as it complies with USPS regulations and is honest about its nature. Email spam is also fine as long as it follows CAN-SPAM rules. Deceptive spam is illegal.</div>
+      </div>
+
+    </div><!-- /content-main -->
+
+    <div class="content-sidebar">
+      <div class="sidebar-section-label">All Guides</div>
+      <ul class="sidebar-nav">
+        <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+        <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+        <li><a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a></li>
+        <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
+        <li><a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a></li>
+        <li><a href="/guides/junk-mail-vs-spam/" style="color:var(--forest);font-weight:600;">↳ Junk Mail vs Spam</a></li>
+      </ul>
+
+      <div class="sidebar-section-label" style="margin-top:8px;">Quick Action</div>
+      <div style="background:var(--forest);padding:24px;margin-bottom:24px;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Free · 5 Minutes</div>
+        <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white);margin-bottom:8px;">Stop Physical Junk Mail</div>
+        <p style="font-size:12px;color:var(--sage-light);line-height:1.6;margin-bottom:14px;">Our opt-out kit walks you through every registry with your info pre-filled. One pass, covers everything.</p>
+        <a href="/tools/opt-out-kit/" style="display:block;background:var(--gold);color:var(--forest);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 16px;text-align:center;text-decoration:none;">Get the Opt-Out Kit →</a>
+      </div>
+
+      <div style="background:var(--parchment);border:1px solid var(--rule);padding:20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Related Guides</div>
+        <ul style="list-style:none;">
+          <li style="border-bottom:1px solid var(--rule);"><a href="/guides/stop-credit-card-mail/" style="display:block;padding:10px 0;font-size:13px;color:var(--mid);text-decoration:none;">Stop Credit Card Mail</a></li>
+          <li style="border-bottom:1px solid var(--rule);"><a href="/guides/opt-out-services-compared/" style="display:block;padding:10px 0;font-size:13px;color:var(--mid);text-decoration:none;">Opt-Out Services Compared</a></li>
+          <li><a href="/guides/return-junk-mail-to-sender/" style="display:block;padding:10px 0;font-size:13px;color:var(--mid);text-decoration:none;">Return to Sender Guide</a></li>
+        </ul>
+      </div>
+    </div><!-- /content-sidebar -->
+
+  </div><!-- /content-layout -->
 
   <footer>
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">HowToStopJunkMail<span>.org</a><small>Free opt-out guides & tools</small></div>
-        <p class="footer-tagline">Free guides, tools, and resources for eliminating junk mail, protecting your privacy, and reclaiming your mailbox — permanently.</p>
+      <div>
+        <div class="footer-logo">HowToStopJunkMail<span>.org</span><small>Free opt-out guides &amp; tools</small></div>
+        <p class="footer-tagline">Free guides and tools for reclaiming your mailbox and your privacy.</p>
       </div>
-      <div class="footer-col"><h4>Tools</h4><ul>
-        <li><a href="/tools/opt-out-kit/">Opt-Out Kit Generator</a></li>
-        <li><a href="/tools/identify-mail/">Junk Mail Identifier</a></li>
-        <li><a href="/tools/letter-generator/">Letter Generator</a></li>
-        <li><a href="/tools/savings-calculator/">Savings Calculator</a></li>
+      <div class="footer-col"><h4>More Guides</h4><ul>
+        <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+        <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+        <li><a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a></li>
+        <li><a href="/guides/opt-out-services-compared/">Opt-Out Services</a></li>
       </ul></div>
-      <div class="footer-col"><h4>Free Resources</h4><ul>
-        <li><a href="https://optoutprescreen.com" target="_blank" rel="nofollow noopener">OptOutPrescreen.com</a></li>
-        <li><a href="https://dmachoice.org" target="_blank" rel="nofollow noopener">DMAchoice.org</a></li>
-        <li><a href="https://catalogchoice.org" target="_blank" rel="nofollow noopener">CatalogChoice.org</a></li>
-        <li><a href="https://consumer.ftc.gov" target="_blank" rel="nofollow noopener">FTC Consumer Advice</a></li>
-        <li><a href="https://reportfraud.ftc.gov" target="_blank" rel="nofollow noopener">FTC Fraud Report</a></li>
+      <div class="footer-col"><h4>Free Tools</h4><ul>
+        <li><a href="/tools/opt-out-kit/">Opt-Out Kit Generator</a></li>
+        <li><a href="/tools/identify-mail/">Identify Your Mail</a></li>
+        <li><a href="https://optoutprescreen.com" target="_blank" rel="nofollow noopener">OptOutPrescreen</a></li>
+        <li><a href="https://dmachoice.org" target="_blank" rel="nofollow noopener">DMAchoice</a></li>
       </ul></div>
     </div>
     <div class="citations">
-      <h4>Sources & Citations</h4>
+      <h4>Sources &amp; Citations</h4>
       <ol class="cite-list">
-        <li>41 lbs per household/year: <a href="https://www.sierraclub.org/sierra/let-s-ban-junk-mail-already" target="_blank" rel="nofollow noopener">Sierra Club, "Let's Ban Junk Mail Already"</a></li>
-        <li>100M trees cut annually: <a href="https://www.sierraclub.org/sierra/let-s-ban-junk-mail-already" target="_blank" rel="nofollow noopener">Sierra Club, "Let's Ban Junk Mail Already"</a></li>
-        <li>51.5M metric tons CO₂: <a href="https://archive.nytimes.com/green.blogs.nytimes.com/2009/03/16/reducing-the-junk-mail-footprint/" target="_blank" rel="nofollow noopener">NYT Green Blog, March 2009</a></li>
-        <li>44% landfilled unopened: <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling" target="_blank" rel="nofollow noopener">U.S. EPA, Materials, Waste and Recycling</a></li>
-        <li>304 hrs to manually opt out of data brokers: <a href="https://blog.incogni.com/stop-spam-junk-mail/" target="_blank" rel="nofollow noopener">Incogni Research, 2024</a></li>
-        <li>BRM postage rules: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">USPS Domestic Mail Manual §507</a></li>
-        <li>DMAchoice ~80% coverage: <a href="https://dmachoice.org" target="_blank" rel="nofollow noopener">DMAchoice.org</a></li>
-        <li>FCRA opt-out right / OptOutPrescreen: <a href="https://consumer.ftc.gov/articles/prescreened-credit-insurance-offers" target="_blank" rel="nofollow noopener">FTC, "Prescreened Credit and Insurance Offers"</a></li>
-        <li>Data brokers as origin of mailing lists: <a href="https://www.ftc.gov/reports/data-brokers-call-transparency-accountability-report-federal-trade-commission-may-2014" target="_blank" rel="nofollow noopener">FTC Report on Data Brokers, May 2014</a></li>
-        <li>Free credit freeze right: <a href="https://consumer.ftc.gov/articles/credit-freeze-faqs" target="_blank" rel="nofollow noopener">FTC, "Credit Freeze FAQs"</a></li>
+        <li>CAN-SPAM Act requirements including unsubscribe mechanism: <a href="https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business" target="_blank" rel="nofollow noopener">FTC, "CAN-SPAM Act: A Compliance Guide for Business"</a></li>
+        <li>Data broker industry and consumer data sales: <a href="https://www.ftc.gov/reports/data-brokers-call-transparency-accountability" target="_blank" rel="nofollow noopener">FTC, "Data Brokers: A Call for Transparency and Accountability"</a></li>
       </ol>
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© 2025 HowToStopJunkMail.org</p>
-      <p class="footer-disclaimer">Some links are affiliate links. We earn a commission if you purchase through them, at no cost to you. This keeps all tools and guides free.</p>
+      <p class="footer-disclaimer">Incogni and DeleteMe links are affiliate links. We may earn a commission at no cost to you.</p>
     </div>
   </footer>
-</div>
-</div>
-<script>// ── PAGE ROUTING ──
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const t = document.getElementById('page-' + id);
-  if (t) { t.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-}
 
-// ── KIT GENERATOR ──
-let doneSteps = new Set();
-
-function generateKit() {
-  const name = document.getElementById('kit-name').value || 'Your Name';
-  const first = document.getElementById('kit-first').value || name.split(' ')[0];
-  const addr  = document.getElementById('kit-addr').value || 'Your Address';
-  const city  = document.getElementById('kit-city').value || 'City';
-  const state = document.getElementById('kit-state').value || 'State';
-  const zip   = document.getElementById('kit-zip').value || 'ZIP';
-  const full  = addr + ', ' + city + ', ' + state + ' ' + zip;
-
-  document.getElementById('kit-clip-1').textContent = name + ' | DOB: ' + (document.getElementById('kit-dob').value || 'your-date') + ' | ' + full;
-  document.getElementById('kit-clip-3').textContent = full;
-
-  document.getElementById('kit-placeholder').style.display = 'none';
-  document.getElementById('kit-results').classList.add('show');
-  toggleStep(1);
-  updateProgress();
-}
-
-function updateKit() {
-  if (document.getElementById('kit-results').classList.contains('show')) generateKit();
-}
-
-function toggleStep(n) {
-  document.querySelectorAll('.kit-step-body').forEach((b,i) => {
-    if (i+1 !== n) b.classList.remove('open');
-  });
-  const body = document.getElementById('step-body-' + n);
-  if (body) body.classList.toggle('open');
-}
-
-function markDone(n) {
-  doneSteps.add(n);
-  const step = document.getElementById('step-' + n);
-  step.classList.add('done');
-  // close it
-  document.getElementById('step-body-' + n).classList.remove('open');
-  updateProgress();
-  // open next
-  if (n < 5) { setTimeout(() => toggleStep(n+1), 300); }
-}
-
-function updateProgress() {
-  const pct = (doneSteps.size / 5) * 100;
-  document.getElementById('progress-bar').style.width = pct + '%';
-  document.getElementById('progress-label').textContent = doneSteps.size + ' of 5 steps completed';
-}
-
-function copyToClip(id, btn) {
-  const text = document.getElementById(id).textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = 'Copied!';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-
-// ── IDENTIFIER ──
-let selectedType = null;
-const mailData = {
-  credit: {
-    title: 'Pre-Screened Credit Card / Loan Offer',
-    priority: true,
-    who: 'Sent by banks and lenders using data purchased from credit bureaus (Equifax, Experian, TransUnion, Innovis).',
-    stop: 'OptOutPrescreen.com (free, 2 minutes, covers all credit and insurance offers simultaneously)',
-    also: 'Data broker removal via Incogni or DeleteMe to prevent future re-listing',
-    link: 'https://optoutprescreen.com',
-    linkText: 'OptOutPrescreen.com',
-    paidLink: 'https://incogni.com',
-    paidText: 'Try Incogni →'
-  },
-  insurance: {
-    title: 'Pre-Screened Insurance Offer',
-    priority: true,
-    who: 'Sent by insurance companies using pre-screened lists from credit bureaus — same mechanism as credit card offers.',
-    stop: 'OptOutPrescreen.com (covers both credit AND insurance offers with one opt-out)',
-    also: 'Data broker removal to stop re-listing',
-    link: 'https://optoutprescreen.com',
-    linkText: 'OptOutPrescreen.com',
-    paidLink: 'https://incogni.com',
-    paidText: 'Try Incogni →'
-  },
-  catalog: {
-    title: 'Catalog / Retail Mailer',
-    priority: false,
-    who: 'Sent by retailers using purchased mailing lists. You may have ordered from them once, or your address was sold by another retailer.',
-    stop: 'CatalogChoice.org for this specific catalog, then DMAchoice.org to block future catalogs broadly',
-    also: 'Data broker removal to stop your address being re-sold to other retailers',
-    link: 'https://catalogchoice.org',
-    linkText: 'CatalogChoice.org',
-    paidLink: 'https://incogni.com',
-    paidText: 'Try Incogni →'
-  },
-  charity: {
-    title: 'Charity / Nonprofit Appeal',
-    priority: false,
-    who: 'Nonprofits often share or sell donor lists. If you\'ve donated to any charity, your address may be on hundreds of lists.',
-    stop: 'DMAchoice.org (has a nonprofit category opt-out). Contact the specific charity directly too.',
-    also: 'Data broker removal limits how widely your address circulates',
-    link: 'https://dmachoice.org',
-    linkText: 'DMAchoice.org',
-    paidLink: 'https://incogni.com',
-    paidText: 'Try Incogni →'
-  },
-  political: {
-    title: 'Political Mail',
-    priority: false,
-    who: 'Political mail is largely exempt from direct mail suppression registries. Campaigns purchase voter rolls from state election authorities, which are public records.',
-    stop: 'Limited options — contact the campaign directly and request removal. Political mail cannot be fully stopped via standard opt-outs.',
-    also: 'Consider a P.O. Box for sensitive mail to separate it from your home address',
-    link: 'https://dmachoice.org',
-    linkText: 'DMAchoice.org (partial coverage)',
-    paidLink: 'https://incogni.com',
-    paidText: 'Reduce exposure with Incogni →'
-  },
-  realestate: {
-    title: 'Real Estate / Mortgage Solicitation',
-    priority: true,
-    who: 'Sent by mortgage companies and real estate agents using public property records and credit bureau data about homeowners.',
-    stop: 'OptOutPrescreen.com for mortgage pre-screens. DMAchoice.org for general real estate marketing mail.',
-    also: 'Data broker removal reduces how widely your homeownership data circulates',
-    link: 'https://optoutprescreen.com',
-    linkText: 'OptOutPrescreen.com',
-    paidLink: 'https://incogni.com',
-    paidText: 'Try Incogni →'
-  },
-  local: {
-    title: 'Local Business / Restaurant / EDDM Mailer',
-    priority: false,
-    who: 'Local businesses use USPS Every Door Direct Mail (EDDM), which delivers to every address in a ZIP code or carrier route. No list required — so no opt-out registry can stop it.',
-    stop: 'Contact the business directly. Ask your local post office about EDDM opt-out options for your specific carrier route.',
-    also: 'No major registry covers EDDM — your best option is direct contact with the sender',
-    link: 'https://faq.usps.com',
-    linkText: 'USPS FAQ',
-    paidLink: null
-  },
-  generic: {
-    title: 'Unknown / General Junk Mail',
-    priority: false,
-    who: 'If you\'re not sure who sent it, start with the broadest opt-outs — they cover the majority of cases.',
-    stop: 'Start with OptOutPrescreen.com + DMAchoice.org + CatalogChoice.org in that order. Cover 70–80% of junk mail.',
-    also: 'Data broker removal covers the remaining 20–30%',
-    link: 'https://optoutprescreen.com',
-    linkText: 'OptOutPrescreen.com (start here)',
-    paidLink: 'https://incogni.com',
-    paidText: 'Try Incogni →'
-  }
-};
-
-function selectMailType(btn, type) {
-  document.querySelectorAll('.mail-type-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  selectedType = type;
-}
-
-function identifyMail() {
-  if (!selectedType) { alert('Please select a mail type first.'); return; }
-  const d = mailData[selectedType];
-  document.getElementById('id-placeholder').style.display = 'none';
-  const r = document.getElementById('id-result');
-  r.classList.add('show');
-  r.innerHTML = `
-    <div class="id-result-card ${d.priority ? 'priority' : ''}">
-      <div class="id-result-type">Mail Type Identified</div>
-      <h3>${d.title}</h3>
-      <p><strong>Who's responsible:</strong> ${d.who}</p>
-      <p><strong>How to stop it:</strong> ${d.stop}</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
-        <a href="${d.link}" target="_blank" rel="nofollow noopener" class="kit-link-btn">Go to ${d.linkText} →</a>
-        ${d.paidLink ? `<a href="${d.paidLink}" target="_blank" rel="nofollow noopener" class="kit-link-btn paid-link">${d.paidText}</a>` : ''}
-      </div>
-    </div>
-    ${d.paidLink ? `
-    <div class="id-result-card priority" style="background:var(--forest);">
-      <div class="id-result-type" style="color:var(--gold);">⭐ Recommended: Stop It at the Source</div>
-      <h3 style="color:var(--gold);">Data Broker Removal</h3>
-      <p style="color:var(--sage-light);">${d.also}. Automated removal takes 5 minutes instead of 304 hours.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
-        <a href="https://incogni.com" target="_blank" rel="nofollow noopener" class="kit-link-btn paid-link">Try Incogni (Affiliate) →</a>
-        <a href="https://joindeleteme.com" target="_blank" rel="nofollow noopener" class="kit-link-btn" style="color:var(--sage-light);border-color:var(--forest-lite)">Try DeleteMe (Affiliate) →</a>
-      </div>
-    </div>` : ''}
-    <div style="margin-top:16px;">
-      <a class="identify-btn" href="/tools/opt-out-kit/" style="background:var(--forest);display:inline-block;">Get Full Opt-Out Kit →</button>
-    </div>
-  `;
-}
-
-// ── LETTER GENERATOR ──
-let selectedTone = 'professional';
-function selectTone(el, tone) {
-  document.querySelectorAll('.letter-type-item').forEach(i => i.classList.remove('active'));
-  el.classList.add('active');
-  selectedTone = tone;
-}
-
-function generateLetter() {
-  const name    = document.getElementById('letter-name').value || '[YOUR NAME]';
-  const addr    = document.getElementById('letter-addr').value || '[YOUR ADDRESS]';
-  const company = document.getElementById('letter-company').value || 'Your Organization';
-  const today   = new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'});
-
-  const bodies = {
-    professional: `<p>Dear ${company} Marketing Department,</p>
-<p>I am writing to formally request that you immediately and permanently remove my name and mailing address from all of your mailing lists, promotional databases, and any lists you share with or sell to third-party organizations.</p>
-<p>Please ensure this removal is reflected across all current and future marketing campaigns. I do not wish to receive any unsolicited mail of any kind from your organization or its affiliates.</p>
-<p>Thank you for your prompt attention to this matter. I expect all mailings to cease within 30 days of receipt of this letter.</p>`,
-    stern: `<p>To Whom It May Concern at ${company}:</p>
-<p>This letter constitutes formal notice to immediately cease all unsolicited mailings to the address below. You are hereby required to remove my name, address, and all associated personal data from every mailing list, prospect database, and any affiliated, partner, or purchased list you use or supply.</p>
-<p>Under the FTC's guidelines on direct mail and applicable state privacy laws, you are required to honor opt-out requests in a timely manner. Failure to do so may result in a complaint filed with the Federal Trade Commission at reportfraud.ftc.gov.</p>
-<p>Consider this your one and final notice. Confirm removal upon request.</p>`,
-    spite: `<p>To the Marketing Department at ${company},</p>
-<p>Congratulations — you are reading this letter because I took the time to stuff it into the prepaid envelope you kindly provided, at your expense. I hope the postage was worth it.</p>
-<p>I have no interest in anything your organization is selling, has ever sold, or will sell in the future. Please remove me — permanently, completely, and irrevocably — from every list, database, and data broker you work with.</p>
-<p>I have also filed with OptOutPrescreen.com, DMAchoice.org, and am in the process of removing my data from the brokers who sold you my address in the first place. You will not be hearing from my mailbox again. Kindly return the favor.</p>
-<p>Do not write back.</p>`
-  };
-
-  const html = `<div class="letter-paper" id="printable-letter">
-    <div class="letter-date">${today}</div>
-    <div class="letter-addr">
-      <strong>${name}</strong><br>
-      ${addr}
-    </div>
-    <div class="letter-addr" style="margin-top:20px;">
-      <strong>${company}</strong><br>
-      Marketing Department
-    </div>
-    <div class="letter-body" style="margin-top:24px;">
-      ${bodies[selectedTone]}
-    </div>
-    <div class="letter-sig">
-      <p>Sincerely,</p>
-      <p style="margin-top:28px;"><strong>${name}</strong></p>
-      <p style="font-size:12px;color:var(--muted);">${addr}</p>
-    </div>
-  </div>`;
-
-  document.getElementById('letter-output').innerHTML = html;
-  document.getElementById('letter-actions').style.display = 'block';
-}
-
-function printLetter() {
-  const content = document.getElementById('printable-letter');
-  if (!content) return;
-  const w = window.open('', '', 'width=800,height=600');
-  w.document.write('<html><head><title>Opt-Out Letter</title><style>body{font-family:Georgia,serif;padding:60px;font-size:14px;line-height:1.8;color:#1c1c1c;}.letter-sig{margin-top:32px;}</style></head><body>' + content.outerHTML + '</body></html>');
-  w.document.close();
-  w.print();
-}
-
-// ── CALCULATOR ──
-let hasCredit = true;
-const shopLabels = ['Rarely','Monthly','Weekly','Very Often'];
-
-function setCredit(val) {
-  hasCredit = val;
-  document.getElementById('toggle-yes').classList.toggle('active', val);
-  document.getElementById('toggle-no').classList.toggle('active', !val);
-  updateCalc();
-}
-
-function updateCalc() {
-  const size  = parseInt(document.getElementById('calc-size').value);
-  const years = parseInt(document.getElementById('calc-years').value);
-  const shop  = parseInt(document.getElementById('calc-shop').value);
-
-  document.getElementById('calc-size-val').textContent  = size + (size === 1 ? ' person' : ' people');
-  document.getElementById('calc-years-val').textContent = years + ' year' + (years === 1 ? '' : 's');
-  document.getElementById('calc-shop-val').textContent  = shopLabels[shop - 1];
-
-  // base: 41 lbs/household. Scale by size, shopping, credit
-  const base    = 41;
-  const sizeM   = 0.6 + size * 0.2;
-  const shopM   = 0.8 + shop * 0.15;
-  const creditM = hasCredit ? 1.2 : 1.0;
-  const lbs     = Math.round(base * sizeM * shopM * creditM);
-  const pieces  = Math.round(lbs * 10);
-  const trees   = (lbs / 50).toFixed(1);
-  const co2     = Math.round(lbs * 2.3);
-  const landfill= Math.round(lbs * 0.44);
-  const yr10    = (lbs * 10).toLocaleString();
-
-  document.getElementById('calc-weight').textContent  = lbs;
-  document.getElementById('calc-pieces').textContent  = pieces;
-  document.getElementById('calc-trees').textContent   = trees;
-  document.getElementById('calc-co2').textContent     = co2;
-  document.getElementById('calc-landfill').textContent= landfill;
-  document.getElementById('calc-10yr').textContent    = yr10 + ' lbs';
-}
-
-function shareResults() {
-  const lbs = document.getElementById('calc-weight').textContent;
-  const text = `I generate ${lbs} lbs of junk mail per year. I just opted out at HowToStopJunkMail.org`;
-  if (navigator.share) {
-    navigator.share({ title: 'My Junk Mail Impact', text, url: 'https://howtostopjunkmail.org' });
-  } else {
-    navigator.clipboard.writeText(text + ' — https://howtostopjunkmail.org').then(() => {
-      alert('Results copied to clipboard — ready to share!');
-    });
-  }
-}
-
-// init calc
-updateCalc();
-
-
-
-<!-- ═══════════════════════ SEND OPT-OUT LETTER TOOL (Lob + USPS) ═══════════════════════ --></script>
+</div><!-- /page -->
 </body>
 </html>

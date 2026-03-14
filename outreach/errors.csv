@@ -1,0 +1,14 @@
+url,error
+https://www.epa.gov/recycle/paper-recycling,HTTP 404
+https://archive.epa.gov/epawaste/conserve/smm/wastewise/web/html/prevent.html,Connection error
+https://www.mass.gov/guides/consumer-guide-to-stopping-junk-mail,HTTP 403
+https://www.sanjoseca.gov/your-government/departments-offices/environmental-services/recycling-garbage/waste-reduction/stop-junk-mail,HTTP 403
+https://www.carvercountymn.gov/departments/public-services/environmental-services/reduce/junk-mail,HTTP 403
+https://clallamcountywa.gov/DocumentCenter/View/4782/Informational-Bulletin-on-Opting-out-of-Unsolicited-Offers-PDF,PDF
+https://news.d.umn.edu/umd/articles/junk-mail,HTTP 403
+https://blogs.colgate.edu/sustainability/2016/09/15/is-unsolicited-campus-mail-getting-you-down-heres-what-you-can-do/,HTTP 404
+https://facsustainability.uncg.edu/action-areas/waste-reduction-and-recycling/,Connection error
+https://green.harvard.edu/news/get-less-junk-mail,HTTP 404
+https://greenprograms.cornell.edu/tips/reduce-junk-mail,Connection error
+https://www.sustainability.pitt.edu/action-guides/,Connection error
+https://extension.unh.edu/blog/2016/01/reduce-your-junk-mail,HTTP 404

@@ -27,6 +27,7 @@ HowToStopJunkMail.org provides step-by-step guides, opt-out tools, and resources
 - [Opt-Out Services Compared](https://howtostopjunkmail.org/guides/opt-out-services-compared/) — Side-by-side comparison of DMAchoice, PaperKarma, Catalog Choice, and others
 - [What Is a BRM Envelope?](https://howtostopjunkmail.org/guides/what-is-a-brm-envelope/) — Explains Business Reply Mail and how mailers pay return postage
 - [Junk Mail vs Spam](https://howtostopjunkmail.org/guides/junk-mail-vs-spam/) — Differences between physical junk mail and email spam, and how to stop both
+- [Can You Recycle Junk Mail?](https://howtostopjunkmail.org/guides/can-you-recycle-junk-mail/) — What types of junk mail are recyclable, what isn't, and how to reduce it at the source
 
 ## Key Facts
 

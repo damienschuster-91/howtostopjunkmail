@@ -1319,6 +1319,18 @@ footer {
 .fu4 { animation: fadeUp 0.5s 0.24s ease both; }
 
 /* RESPONSIVE */
+
+/* ═══ MOBILE HAMBURGER ═══ */
+.nav-hamburger { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; padding: 4px 8px; line-height: 1; flex-shrink: 0; }
+@media (max-width: 960px) {
+  .nav-hamburger { display: block; }
+  .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 62px; left: 0; right: 0; background: var(--forest); border-top: 2px solid var(--gold); padding: 8px 0; z-index: 600; gap: 0; }
+  .nav-links.open > li > a { padding: 12px 20px; }
+  .nav-links.open .nav-dropdown { display: block; position: static; background: transparent; border: none; padding: 0 0 8px 20px; box-shadow: none; min-width: 0; }
+  .nav-links.open .nav-dropdown a { padding: 6px 20px; }
+  .nav-links.open .nav-cta { margin: 8px 20px 4px; display: inline-block; }
+}
+
 @media (max-width: 960px) {
   nav { padding: 0 24px; }
   .nav-links { display: none; }

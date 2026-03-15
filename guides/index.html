@@ -1353,6 +1353,17 @@ footer {
 /* end shared.css */
 
 
+
+/* MOBILE HAMBURGER */
+.nav-hamburger { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; padding: 4px 8px; line-height: 1; }
+@media (max-width: 768px) {
+  .nav-hamburger { display: block; }
+  .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--forest); padding: 8px 0; z-index: 300; gap: 0; }
+  .nav-links.open > li > a { padding: 12px 20px; }
+  .nav-links.open .nav-dropdown { display: block; position: static; background: transparent; border: none; padding: 0 0 8px 20px; box-shadow: none; min-width: 0; }
+  .nav-links.open .nav-dropdown a { padding: 6px 20px; }
+  .nav-links.open .nav-cta { margin: 8px 20px 4px; display: inline-block; }
+}
 </style>
 </head>
 <body>
@@ -1396,6 +1407,7 @@ footer {
     <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
     <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
   </ul>
+<button class="nav-hamburger" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')" aria-label="Open menu">&#9776;</button>
 </nav>
 
 <div class="page">

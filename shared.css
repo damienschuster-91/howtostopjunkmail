@@ -1087,6 +1087,7 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
 .share-btn:hover { background: var(--gold-light); }
 
 /* ═══ CONTENT PAGES ═══ */
+.content-main a { text-decoration: underline; }
 .content-hero {
   background: var(--forest);
   padding: 72px 80px 60px;

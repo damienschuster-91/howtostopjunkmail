@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Is Junk Mail Recyclable? | HowToStopJunkMail.org</title>
 <meta name="description" content="Yes -- most junk mail is paper and recyclable. Here's what you can recycle, what you can't, and how to reduce junk mail before it reaches your bin.">
-<link rel="canonical" href="https://howtostopjunkmail.org/guides/is-junk-mail-recyclable/">
+<link rel="canonical" href="https://howtostopjunkmail.org/guides/can-you-recycle-junk-mail/">
 <meta property="og:title" content="Is Junk Mail Recyclable? | HowToStopJunkMail.org">
 <meta property="og:description" content="Yes -- most junk mail is paper and recyclable. Here's what you can recycle, what you can't, and how to reduce junk mail before it reaches your bin.">
-<meta property="og:url" content="https://howtostopjunkmail.org/guides/is-junk-mail-recyclable/">
+<meta property="og:url" content="https://howtostopjunkmail.org/guides/can-you-recycle-junk-mail/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -20,7 +20,7 @@
       "@type": "Article",
       "headline": "Is Junk Mail Recyclable?",
       "description": "Most junk mail is paper and recyclable. This guide explains what can and cannot be recycled, including bubble mailers, plastic cards, thermal receipts, and styrofoam.",
-      "url": "https://howtostopjunkmail.org/guides/is-junk-mail-recyclable/",
+      "url": "https://howtostopjunkmail.org/guides/can-you-recycle-junk-mail/",
       "publisher": { "@type": "Organization", "name": "HowToStopJunkMail.org", "url": "https://howtostopjunkmail.org" }
     },
     {
@@ -1390,6 +1390,17 @@ footer {
   .cite-list { columns: 1; }
   .tools-grid { grid-template-columns: 1fr; }
 }
+
+/* MOBILE HAMBURGER */
+.nav-hamburger { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; padding: 4px 8px; line-height: 1; }
+@media (max-width: 768px) {
+  .nav-hamburger { display: block; }
+  .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--forest); padding: 8px 0; z-index: 300; gap: 0; }
+  .nav-links.open > li > a { padding: 12px 20px; }
+  .nav-links.open .nav-dropdown { display: block; position: static; background: transparent; border: none; padding: 0 0 8px 20px; box-shadow: none; min-width: 0; }
+  .nav-links.open .nav-dropdown a { padding: 6px 20px; }
+  .nav-links.open .nav-cta { margin: 8px 20px 4px; display: inline-block; }
+}
 </style>
 </head>
 <body>
@@ -1422,7 +1433,7 @@ footer {
         <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
         <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
         <a href="/guides/junk-mail-vs-spam/">Junk Mail vs Spam</a>
-        <a href="/guides/is-junk-mail-recyclable/" style="color:var(--gold);">Is Junk Mail Recyclable?</a>
+        <a href="/guides/can-you-recycle-junk-mail/" style="color:var(--gold);">Is Junk Mail Recyclable?</a>
         <hr class="nav-dropdown-divider">
         <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
       </div>
@@ -1430,6 +1441,7 @@ footer {
     <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
     <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
   </ul>
+<button class="nav-hamburger" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')" aria-label="Open menu">&#9776;</button>
 </nav>
 
 <div class="page">
@@ -1520,7 +1532,7 @@ footer {
       <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
       <li><a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a></li>
       <li><a href="/guides/junk-mail-vs-spam/">Junk Mail vs Spam</a></li>
-      <li><a href="/guides/is-junk-mail-recyclable/" style="color:var(--forest);font-weight:600;">↳ Is Junk Mail Recyclable?</a></li>
+      <li><a href="/guides/can-you-recycle-junk-mail/" style="color:var(--forest);font-weight:600;">↳ Is Junk Mail Recyclable?</a></li>
     </ul>
 
     <div class="sidebar-section-label" style="margin-top:24px;">Quick Action</div>

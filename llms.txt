@@ -1,0 +1,41 @@
+# HowToStopJunkMail.org
+
+> Free guides and tools to help people stop unwanted physical junk mail in the United States.
+
+## About
+
+HowToStopJunkMail.org provides step-by-step guides, opt-out tools, and resources for reducing or eliminating unsolicited direct mail. All core tools are free. The site covers USPS mail, credit card offers, political mailers, mail for deceased persons, and more.
+
+## Tools
+
+- [Opt-Out Kit](https://howtostopjunkmail.org/tools/opt-out-kit/) — Personalized checklist of opt-out steps based on the types of mail you receive
+- [Identify My Mail](https://howtostopjunkmail.org/tools/identify-mail/) — Helps users identify what kind of junk mail they have and how to stop it
+- [Letter Generator](https://howtostopjunkmail.org/tools/letter-generator/) — Generates printable opt-out letters to send to mailers
+- [Savings Calculator](https://howtostopjunkmail.org/tools/savings-calculator/) — Estimates time and money saved by stopping junk mail
+- [Send a Letter](https://howtostopjunkmail.org/tools/send-letter/) — Paid service to send opt-out letters on the user's behalf
+- [Mailer Directory](https://howtostopjunkmail.org/tools/mailer-directory/) — Directory of major direct mailers with opt-out contact info
+
+## Guides
+
+- [How to Stop Junk Mail](https://howtostopjunkmail.org/guides/how-to-stop-junk-mail/) — Comprehensive guide to stopping all types of unsolicited mail
+- [Stop Credit Card Mail](https://howtostopjunkmail.org/guides/stop-credit-card-mail/) — How to opt out of pre-screened credit card and insurance offers via OptOutPrescreen.com
+- [Stop Mail for a Deceased Person](https://howtostopjunkmail.org/guides/stop-junk-mail-deceased-person/) — Steps to stop junk mail addressed to someone who has died
+- [Stop Military Junk Mail](https://howtostopjunkmail.org/guides/stop-military-junk-mail/) — Guide for active duty and veterans dealing with targeted direct mail
+- [Stop Political Junk Mail](https://howtostopjunkmail.org/guides/stop-political-junk-mail/) — Options for reducing political campaign mailers
+- [Return Junk Mail to Sender](https://howtostopjunkmail.org/guides/return-junk-mail-to-sender/) — Legal methods for returning unwanted mail
+- [Junk Mail Revenge](https://howtostopjunkmail.org/guides/junk-mail-revenge/) — Creative and legal ways to fight back against junk mailers
+- [Opt-Out Services Compared](https://howtostopjunkmail.org/guides/opt-out-services-compared/) — Side-by-side comparison of DMAchoice, PaperKarma, Catalog Choice, and others
+- [What Is a BRM Envelope?](https://howtostopjunkmail.org/guides/what-is-a-brm-envelope/) — Explains Business Reply Mail and how mailers pay return postage
+- [Junk Mail vs Spam](https://howtostopjunkmail.org/guides/junk-mail-vs-spam/) — Differences between physical junk mail and email spam, and how to stop both
+
+## Key Facts
+
+- Americans receive an estimated 100 billion pieces of junk mail per year
+- The average household gets 848 pieces of junk mail annually
+- Stopping junk mail can save 70+ hours per year
+- Opt-out registries include: DMAchoice, OptOutPrescreen.com, Catalog Choice, USPS Mail Preferences, deceased mail registries
+- Most opt-outs take effect within 30–90 days
+
+## Sitemap
+
+https://howtostopjunkmail.org/sitemap.xml

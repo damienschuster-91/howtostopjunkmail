@@ -11,6 +11,7 @@
 <meta property="og:url" content="https://howtostopjunkmail.org/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1a3a2a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -660,13 +661,7 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
 .impact-high { background: var(--gold); color: var(--forest); }
 .impact-med { background: var(--sage-light); color: var(--forest); }
 
-.kit-step-body {
-  display: none;
-  padding: 0 24px 24px 66px;
-  font-size: 14px;
-  color: var(--charcoal);
-  line-height: 1.7;
-}
+.kit-step-body { display: none; padding: 0 24px 24px 66px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
 .kit-step-body.open { display: block; }
 .kit-step-body p { margin-bottom: 14px; }
 
@@ -1276,7 +1271,7 @@ footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 64px;
   margin-bottom: 56px;
   padding-bottom: 56px;
@@ -1379,7 +1374,131 @@ body{font-family:Georgia,serif;padding:60px;font-size:14px;line-height:1.8;color
   .trust-strip { padding: 11px 24px; gap: 14px; }
   .trust-item { white-space: normal; }
 }
+
+/* ── WIRECUTTER POLISH ── */
+.content-main h2 {
+  border-left: 3px solid var(--gold);
+  padding-left: 16px;
+}
+.cite-list li a::after {
+  content: ' ↗';
+  font-size: 9px;
+  opacity: 0.5;
+}
+.tool-card {
+  box-shadow: 0 2px 8px rgba(26,58,42,0.06);
+}
+sup.cite { font-size: 8px; color: var(--gold); opacity: 0.7; }
+@media print {
+  nav, .content-sidebar, footer, .paid-box, .trust-strip { display: none; }
+  body { background: white; color: black; font-size: 12pt; }
+  .content-main { padding: 0; max-width: 100%; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  h1, h2, h3 { page-break-after: avoid; }
+}
+/* University collab teaser */
+.collab-teaser-section {
+  background: var(--forest);
+  padding: 56px 80px;
+  text-align: center;
+  border-top: 1px solid rgba(200,168,75,0.15);
+}
+.collab-teaser-section .section-eyebrow {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.collab-placeholders {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 28px 0 20px;
+  opacity: 0.45;
+}
+.collab-placeholder {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  border: 1px solid rgba(122,171,142,0.3);
+  padding: 8px 16px;
+}
+@media(max-width:768px) {
+  .collab-teaser-section { padding: 48px 24px; }
+  .collab-placeholders { gap: 16px; }
+}
+
+/* ── WIRECUTTER-LEVEL POLISH ── */
+
+/* H2 gold left accent in content areas */
+.content-main h2 {
+  border-left: 3px solid var(--gold);
+  padding-left: 14px;
+}
+
+/* Citation link arrows */
+.cite-list li a::after {
+  content: ' ↗';
+  font-size: 9px;
+  opacity: 0.45;
+}
+
+/* Tool cards subtle depth */
+.tool-card {
+  box-shadow: 0 2px 12px rgba(26,58,42,0.07);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.tool-card:hover {
+  box-shadow: 0 4px 20px rgba(26,58,42,0.13);
+  transform: translateY(-2px);
+}
+
+/* Tighter stat numbers */
+.hero-stat-num {
+  letter-spacing: -0.03em;
+}
+
+/* Theme color for browser tab */
+
+/* Note boxes more official */
+.note-box {
+  border-left-width: 4px;
+  border-radius: 0;
+}
+.warn-box {
+  border-left-width: 4px;
+  border-radius: 0;
+}
+
+/* Print styles */
+@media print {
+  nav, .content-sidebar, footer, .paid-box, .trust-strip, .ticker-wrap { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .content-main { max-width: 100% !important; padding: 0 !important; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 10px; color: #666; }
+  .page { padding-top: 0 !important; }
+}
+
+/* Guide H2 styling for authority feel */
+.guide-h2-accent {
+  border-left: 3px solid var(--gold);
+  padding-left: 14px;
+}
+
+/* Responsive testimonials */
+@media(max-width: 768px) {
+  .testimonials-inner-grid { grid-template-columns: 1fr !important; }
+}
+
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"HowToStopJunkMail.org","url":"https://howtostopjunkmail.org","description":"Free guides, opt-out tools, and data removal resources for stopping physical junk mail and protecting personal privacy.","founder":{"@type":"Person","name":"Damien Schuster","url":"https://howtostopjunkmail.org/about/"},"contactPoint":{"@type":"ContactPoint","email":"contact@howtostopjunkmail.org","contactType":"customer support"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"HowToStopJunkMail.org","url":"https://howtostopjunkmail.org","potentialAction":{"@type":"SearchAction","target":"https://howtostopjunkmail.org/tools/identify-mail/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
 </head>
 <body>
 <nav>
@@ -1421,21 +1540,21 @@ body{font-family:Georgia,serif;padding:60px;font-size:14px;line-height:1.8;color
 <button class="nav-hamburger" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')" aria-label="Open menu">&#9776;</button>
 </nav>
 <div class="trust-strip">
-  <div class="trust-item"><span class="trust-icon">✓</span><span>FCRA-compliant guidance</span></div>
   <div class="trust-item"><span class="trust-icon">✓</span><span>No account required</span></div>
   <div class="trust-item"><span class="trust-icon">✓</span><span>No data sold. Ever.</span></div>
   <div class="trust-item"><span class="trust-icon">✓</span><span>All tools are free</span></div>
-  <div class="trust-item"><span class="trust-icon">✓</span><span>Independent — not affiliated with any bureau or agency</span></div>
+  <div class="trust-item"><span class="trust-icon">✓</span><span>Guides backed by primary sources</span></div>
+  <div class="trust-item"><span class="trust-icon">✓</span><span>Independent, not affiliated with any bureau or agency</span></div>
 </div>
 
-<div class="page">
+<div class="page" style="width:100%;overflow-x:hidden;">
 <section class="hero">
     <div class="hero-left">
       <p class="hero-kicker fu">The complete guide to stopping junk mail</p>
       <h1 class="hero-h1 fu2">Stop Junk Mail<em>For Good.</em></h1>
       <p class="hero-sub fu3">
         <strong>41 pounds of paper.</strong> Sent to your home every year. Uninvited.
-        Here's everything you need to stop it — free opt-out tools, data removal guides, and four tools we built to make it effortless.
+        Here's everything you need to stop it: free opt-out tools, data removal guides, and four tools we built to make it effortless.
       </p>
       <div class="hero-actions fu4">
         <button class="btn-gold" href="/tools/opt-out-kit/">Start My Opt-Out Kit →</button>
@@ -1548,6 +1667,17 @@ body{font-family:Georgia,serif;padding:60px;font-size:14px;line-height:1.8;color
   </section>
 
   
+  <div class="collab-teaser-section">
+    <div class="section-eyebrow" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;justify-content:center;"><span style="width:24px;height:1px;background:var(--gold);display:inline-block;"></span>Research &amp; collaboration<span style="width:24px;height:1px;background:var(--gold);display:inline-block;"></span></div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--white);margin-bottom:12px;line-height:1.15;">Built on real data.<em style="font-style:italic;color:var(--gold);"> Growing with real researchers.</em></h2>
+    <p style="font-size:15px;color:var(--sage-light);line-height:1.8;max-width:580px;margin:0 auto;">We are actively developing partnerships with professors and graduate researchers in environmental science, consumer privacy, and data policy to bring peer-reviewed depth to our guides and tools.</p>
+    <div class="collab-placeholders">
+      <div class="collab-placeholder">[University Partner]</div>
+      <div class="collab-placeholder">[Research Institution]</div>
+      <div class="collab-placeholder">[Coming 2026]</div>
+    </div>
+    <p style="font-size:12px;color:var(--sage);font-family:'DM Mono',monospace;letter-spacing:0.08em;">Researcher or professor? <a href="/contact/" style="color:var(--gold);text-decoration:none;">Get in touch →</a></p>
+  </div>
   <div style="background:var(--cream-dark);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:72px 80px;">
     <div style="max-width:1100px;margin:0 auto;">
       <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:12px;"><span style="width:24px;height:1px;background:var(--forest-lite);display:inline-block;"></span>What people are saying</div>
@@ -1556,12 +1686,12 @@ body{font-family:Georgia,serif;padding:60px;font-size:14px;line-height:1.8;color
         <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--forest);padding:24px;">
           <div style="color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:12px;">★★★★★</div>
           <p style="font-size:14px;color:var(--charcoal);line-height:1.75;font-style:italic;margin-bottom:14px;">"Used the opt-out kit and within six weeks my mailbox went from overflowing to basically just actual mail. The credit card offers alone were insane."</p>
-          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;">Sarah M. — Portland, OR</div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;">Sarah M., Portland OR</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--forest);padding:24px;">
           <div style="color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:12px;">★★★★★</div>
           <p style="font-size:14px;color:var(--charcoal);line-height:1.75;font-style:italic;margin-bottom:14px;">"I had no idea I could stop my late mother's junk mail from still arriving. The deceased person guide was exactly what I needed."</p>
-          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;">James T. — via email</div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;">James T., via email</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--forest);padding:24px;">
           <div style="color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:12px;">★★★★★</div>
@@ -1569,6 +1699,20 @@ body{font-family:Georgia,serif;padding:60px;font-size:14px;line-height:1.8;color
           <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;">Reddit user, r/personalfinance</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="collab-teaser-section" style="background:var(--forest);padding:56px 80px;text-align:center;">
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:12px;"><span style="width:24px;height:1px;background:var(--gold);display:inline-block;"></span>Research &amp; collaboration<span style="width:24px;height:1px;background:var(--gold);display:inline-block;"></span></div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--white);margin-bottom:14px;line-height:1.1;">Built on real data. <em style="font-style:italic;color:var(--gold);">Growing with real researchers.</em></h2>
+      <p style="font-size:15px;color:var(--sage-light);line-height:1.8;max-width:580px;margin:0 auto 28px;">We are actively developing partnerships with professors and graduate researchers in environmental science, consumer privacy, and data policy to bring peer-reviewed depth to our guides and tools.</p>
+      <div class="collab-placeholders" style="display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap;opacity:0.45;margin-bottom:24px;">
+        <span style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--sage);text-transform:uppercase;border:1px solid rgba(255,255,255,0.15);padding:8px 18px;">[University Partner]</span>
+        <span style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--sage);text-transform:uppercase;border:1px solid rgba(255,255,255,0.15);padding:8px 18px;">[Research Institution]</span>
+        <span style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--sage);text-transform:uppercase;border:1px solid rgba(255,255,255,0.15);padding:8px 18px;">[Coming 2026]</span>
+      </div>
+      <p style="font-size:12px;color:var(--sage);font-family:'DM Mono',monospace;letter-spacing:0.06em;">Researcher or professor? <a href="/contact/" style="color:var(--gold);text-decoration:none;">Get in touch →</a></p>
     </div>
   </div>
   <footer>

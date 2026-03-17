@@ -342,8 +342,6 @@ sup.cite { font-size: 8px; color: var(--gold); opacity: 0.7; }
 }
 .hero-tool-list li:hover { color: var(--gold); }
 .hero-tool-list li::before { content: '→'; color: var(--gold); font-family: 'DM Mono', monospace; font-size: 12px; flex-shrink: 0; }
-.hero-tool-list li a { color: inherit; text-decoration: none; display: contents; }
-.hero-tool-list li a:hover { color: var(--gold); }
 
 /* TICKER */
 .ticker {
@@ -427,9 +425,6 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
   transition: background 0.2s;
   position: relative;
   overflow: hidden;
-  display: block;
-  color: inherit;
-  text-decoration: none;
 }
 .tool-card::before {
   content: '';
@@ -649,13 +644,7 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
 .impact-high { background: var(--gold); color: var(--forest); }
 .impact-med { background: var(--sage-light); color: var(--forest); }
 
-.kit-step-body {
-  display: none;
-  padding: 0 24px 24px 66px;
-  font-size: 14px;
-  color: var(--charcoal);
-  line-height: 1.7;
-}
+.kit-step-body { display: none; padding: 0 24px 24px 66px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
 .kit-step-body.open { display: block; }
 .kit-step-body p { margin-bottom: 14px; }
 
@@ -1087,7 +1076,6 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
 .share-btn:hover { background: var(--gold-light); }
 
 /* ═══ CONTENT PAGES ═══ */
-.content-main a { color: var(--forest-lite); text-decoration: underline; }
 .content-hero {
   background: var(--forest);
   padding: 72px 80px 60px;
@@ -1320,18 +1308,6 @@ footer {
 .fu4 { animation: fadeUp 0.5s 0.24s ease both; }
 
 /* RESPONSIVE */
-
-/* ═══ MOBILE HAMBURGER ═══ */
-.nav-hamburger { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; padding: 4px 8px; line-height: 1; flex-shrink: 0; }
-@media (max-width: 960px) {
-  .nav-hamburger { display: block; }
-  .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 62px; left: 0; right: 0; background: var(--forest); border-top: 2px solid var(--gold); padding: 8px 0; z-index: 600; gap: 0; }
-  .nav-links.open > li > a { padding: 12px 20px; }
-  .nav-links.open .nav-dropdown { display: block; position: static; background: transparent; border: none; padding: 0 0 8px 20px; box-shadow: none; min-width: 0; }
-  .nav-links.open .nav-dropdown a { padding: 6px 20px; }
-  .nav-links.open .nav-cta { margin: 8px 20px 4px; display: inline-block; }
-}
-
 @media (max-width: 960px) {
   nav { padding: 0 24px; }
   .nav-links { display: none; }
@@ -1353,3 +1329,18 @@ footer {
   .hero-stat-grid { grid-template-columns: 1fr 1fr; }
 }
 /* end shared.css */
+
+/* ── HAMBURGER NAV: desktop hidden, mobile visible ── */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--sage);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+@media(max-width: 960px) {
+  .nav-hamburger { display: block; }
+}

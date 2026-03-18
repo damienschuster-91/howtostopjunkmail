@@ -1,0 +1,16 @@
+{
+  "guides": [
+    { "slug": "how-to-stop-junk-mail", "title": "How to Stop Junk Mail", "desc": "The complete playbook. Free methods, paid options, and services ranked by effectiveness." },
+    { "slug": "return-junk-mail-to-sender", "title": "Return Junk Mail to Sender", "desc": "How Business Reply Mail works and how to make junk mailers pay their own postage back." },
+    { "slug": "junk-mail-revenge", "title": "Junk Mail Revenge", "desc": "Legal tactics for making senders regret mailing you." },
+    { "slug": "stop-credit-card-mail", "title": "Stop Credit Card Mail", "desc": "OptOutPrescreen and beyond. Stop pre-screened offers for good." },
+    { "slug": "opt-out-services-compared", "title": "Opt-Out Services Compared", "desc": "DMAchoice vs Incogni vs DeleteMe vs CatalogChoice, ranked honestly." },
+    { "slug": "stop-junk-mail-deceased-person", "title": "Stop Mail for a Deceased Person", "desc": "How to stop mail arriving for someone who has passed away." },
+    { "slug": "stop-military-junk-mail", "title": "Stop Military Junk Mail", "desc": "Opt-out options specific to military personnel and veterans." },
+    { "slug": "stop-political-junk-mail", "title": "Stop Political Junk Mail", "desc": "Why political mail is different and what you can actually do about it." },
+    { "slug": "junk-mail-vs-spam", "title": "Junk Mail vs. Spam", "desc": "What counts as junk mail, what counts as spam, and why it matters for opting out." },
+    { "slug": "can-you-recycle-junk-mail", "title": "Can You Recycle Junk Mail?", "desc": "What goes in the bin and what does not, by mail type." },
+    { "slug": "what-is-a-brm-envelope", "title": "What Is a BRM Envelope?", "desc": "Business Reply Mail explained, including how senders are charged." },
+    { "slug": "how-to-stop-unwanted-mail-from-previous-owner", "title": "Stop Mail from Previous Owner", "desc": "Keep getting mail for the previous resident? Here is what to do legally." }
+  ]
+}

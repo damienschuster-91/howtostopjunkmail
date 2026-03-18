@@ -1141,6 +1141,20 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
 .content-hero h1 em { font-style: italic; color: var(--gold); }
 .content-hero .lead { font-size: 17px; color: var(--sage-light); max-width: 580px; line-height: 1.75; }
 
+.guides-index-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 80px 56px;
+  border-bottom: 1px solid var(--rule);
+}
+.guides-index-grid > p {
+  font-size: 16px;
+  color: var(--charcoal);
+  line-height: 1.85;
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+
 .content-layout {
   display: grid;
   grid-template-columns: minmax(0, 700px) 300px;
@@ -1341,6 +1355,7 @@ footer {
   .kit-form-panel, .identifier-left, .letter-form-panel, .calc-left, .content-main { border-right: none; }
   .content-sidebar { padding: 40px 32px; }
   .content-hero, .kit-hero { padding: 56px 32px 44px; }
+  .guides-index-grid { padding: 40px 32px; }
   footer { padding: 48px 32px 36px; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; }
@@ -1419,11 +1434,10 @@ footer {
     <h1>Stop Junk Mail:<em> Complete Guides</em></h1>
     <p class="lead">Step-by-step instructions for every type of junk mail — free methods, paid options, and legal tactics for getting satisfaction.</p>
   </div>
-  <div class="content-layout">
-    <div class="content-main">
-      <p>Whether you want to eliminate all junk mail permanently or just stop a specific type, start with a guide below. Each one covers a single angle in depth — free methods, paid options, legal tactics, and the environmental case for opting out.</p>
+  <div class="guides-index-grid">
+    <p>Whether you want to eliminate all junk mail permanently or just stop a specific type, start with a guide below. Each one covers a single angle in depth — free methods, paid options, legal tactics, and the environmental case for opting out.</p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule);border:1px solid var(--rule);margin:32px 0 48px;">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1100px;margin:0 auto;">
         <a href="/guides/how-to-stop-junk-mail/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--forest);padding:36px 32px;cursor:pointer;border-top:3px solid var(--gold);">
           <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">⭐ Start Here</div>
           <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px;">How to Stop Junk Mail</div>
@@ -1454,7 +1468,7 @@ footer {
           <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Keep getting mail for the previous resident? Here is what to do legally -- and what not to.</p>
           <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
         </div></a>
-        <a href="/guides/opt-out-services-compared/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);grid-column:1/-1;">
+        <a href="/guides/opt-out-services-compared/" style="text-decoration:none;display:block;color:inherit;grid-column:1/-1;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
           <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Honest Comparison</div>
           <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Opt-Out Services Compared: Free vs. Paid</div>
           <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Free tools vs. paid services — what actually works, what's worth paying for, and when Incogni or DeleteMe makes sense.</p>
@@ -1496,8 +1510,10 @@ footer {
           <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Business Reply Mail explained, including how senders are charged.</p>
           <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
         </div></a>
-      </div>
-
+    </div>
+  </div>
+  <div class="content-layout">
+    <div class="content-main">
       <h2>Step 1 — Stop Pre-Screened Credit &amp; Insurance Offers</h2>
       <p>These are the most common type and the easiest to stop. One registration at OptOutPrescreen.com covers every credit card company and insurer in the US simultaneously — for free, under your rights as a consumer under the Fair Credit Reporting Act.<sup class="cite">[4]</sup></p>
       <div class="tool-box">
@@ -1636,16 +1652,6 @@ footer {
     </div>
   </footer>
 </div>
-
-<!-- ═══════════════ GUIDE INDEX CARDS (appended to guides page intro) ═══════════════ -->
-<!-- injected as separate pages below; guides page links out to them -->
-
-<!-- ═══════════════ GUIDE: HOW TO STOP JUNK MAIL ═══════════════ -->
-</div>
-
-</body>
-</html>
-</html>
 
 </body>
 </html>

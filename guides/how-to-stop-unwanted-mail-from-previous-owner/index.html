@@ -31,187 +31,86 @@
   --gold:        #c8a84b;
   --gold-light:  #e8cc7a;
   --white:       #fdfaf5;
+  --paid-bg:     #1a3a2a;
+  --paid-accent: #c8a84b;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 300;
-  line-height: 1.65;
-  overflow-x: hidden;
-}
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9998;
-}
+body { background: var(--cream); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.75; }
+a { color: var(--forest-lite); text-decoration: underline; }
+a:hover { text-decoration: underline; }
+strong { font-weight: 600; }
+sup.cite { font-size: 11px; color: var(--muted); vertical-align: super; }
 
 /* NAV */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 500;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 48px;
-  background: var(--forest);
-  border-bottom: 2px solid var(--gold);
-}
-.nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--cream); letter-spacing: 0.02em; cursor: pointer; text-decoration: none; line-height: 1.2; flex-shrink: 0; }
+nav { background: var(--forest); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { color: var(--white); font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 500; text-decoration: none; display: block; line-height: 1.2; }
 .nav-logo span { color: var(--gold); }
-.nav-logo small { display: block; font-size: 9px; font-family: 'DM Mono', monospace; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; }
-.nav-links { display: flex; gap: 0; list-style: none; align-items: center; }
+.nav-logo small { display: block; font-size: 9px; letter-spacing: 0.08em; color: var(--sage); text-transform: uppercase; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
 .nav-links > li { position: relative; }
-.nav-links > li > a { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); text-decoration: none; cursor: pointer; padding: 21px 14px; display: block; transition: color 0.2s; white-space: nowrap; }
-.nav-links > li > a:hover, .nav-links > li:hover > a { color: var(--cream); }
-.nav-dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--forest); border: 1px solid rgba(200,168,75,0.25); border-top: 2px solid var(--gold); z-index: 600; padding: 8px 0; }
+.nav-links > li > a { color: var(--sage-light); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-dropdown { display: none; position: absolute; top: 100%; margin-top: 2px; left: -16px; background: var(--forest-mid); min-width: 220px; padding: 8px 0; z-index: 200; }
 .nav-links > li:hover .nav-dropdown { display: block; }
-.nav-dropdown a { display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); padding: 10px 20px; cursor: pointer; text-decoration: none; transition: background 0.15s, color 0.15s; white-space: nowrap; }
-.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--cream); }
-.nav-dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 6px 0; }
-.nav-dropdown-label { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(122,171,142,0.5); padding: 8px 20px 4px; }
-.nav-cta { background: var(--gold) !important; color: var(--forest) !important; font-weight: 500 !important; padding: 9px 18px !important; margin-left: 8px; transition: background 0.2s !important; white-space: nowrap; }
-.nav-cta:hover { background: var(--gold-light) !important; }
-/* MOBILE HAMBURGER */
-.nav-hamburger { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; padding: 4px 8px; line-height: 1; }
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .nav-hamburger { display: block; }
-  .nav-links { display: none; }
-  .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 62px; left: 0; right: 0; background: var(--forest); padding: 8px 0; z-index: 300; gap: 0; }
-  .nav-links.open > li > a { padding: 12px 20px; }
-  .nav-links.open .nav-dropdown { display: block; position: static; background: transparent; border: none; padding: 0 0 8px 20px; box-shadow: none; min-width: 0; }
-}
+.nav-dropdown a { display: block; padding: 8px 18px; font-size: 13px; color: var(--sage-light); text-decoration: none; }
+.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--white); }
+.nav-dropdown-label { padding: 8px 18px 4px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); }
+.nav-dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 6px 0; }
+.nav-cta { background: var(--gold); color: var(--forest) !important; padding: 8px 18px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; text-decoration: none; }
+.nav-cta:hover { background: var(--gold-light); }
 
 /* PAGE */
-.page { display: block; padding-top: 62px; min-height: 100vh; }
-
-/* CONTENT HERO */
-.content-hero {
-  background: var(--forest);
-  padding: 72px 80px 60px;
-  border-bottom: 2px solid rgba(200,168,75,0.3);
-  position: relative;
-  overflow: hidden;
-}
-.content-hero::after {
-  content: attr(data-bg);
-  position: absolute;
-  right: -20px; bottom: -40px;
-  font-family: 'Playfair Display', serif;
-  font-size: 200px;
-  font-weight: 900;
-  color: rgba(255,255,255,0.03);
-  pointer-events: none;
-  line-height: 1;
-  white-space: nowrap;
-  letter-spacing: -5px;
-}
-.breadcrumb { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--sage); margin-bottom: 24px; }
-.bc-link { color: var(--gold); cursor: pointer; text-decoration: none; }
-.bc-link:hover { text-decoration: underline; }
-.content-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(44px, 5vw, 76px); font-weight: 700; color: var(--white); line-height: 1.0; max-width: 700px; margin-bottom: 24px; letter-spacing: -0.01em; }
+.page { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+.content-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--rule); margin-bottom: 48px; }
+.breadcrumb { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+.bc-link { color: var(--muted); text-decoration: none; }
+.bc-link:hover { color: var(--forest-lite); }
+.content-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 900; line-height: 1.05; color: var(--forest); margin-bottom: 20px; }
 .content-hero h1 em { font-style: italic; color: var(--gold); }
-.content-hero .lead { font-size: 17px; color: var(--sage-light); max-width: 580px; line-height: 1.75; }
-
-/* LAYOUT */
-.content-layout { display: grid; grid-template-columns: minmax(0, 700px) 300px; }
-.content-main { padding: 72px 80px; border-right: 1px solid var(--rule); }
-.content-main p { font-size: 16px; color: var(--charcoal); line-height: 1.85; margin-bottom: 24px; }
-.content-main h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--forest); margin: 52px 0 18px; padding-bottom: 12px; border-bottom: 2px solid var(--cream-dark); letter-spacing: -0.01em; }
-.content-main ul { list-style: none; border: 1px solid var(--rule); margin-bottom: 28px; }
-.content-main ul li { padding: 13px 16px 13px 42px; border-bottom: 1px solid var(--rule); font-size: 15px; color: var(--charcoal); line-height: 1.65; position: relative; }
-.content-main ul li:last-child { border-bottom: none; }
-.content-main ul li::before { content: '→'; position: absolute; left: 16px; color: var(--forest-lite); font-size: 13px; }
+.lead { font-size: 19px; color: var(--mid); line-height: 1.7; max-width: 680px; font-weight: 300; }
+.content-layout { display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+.content-main h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--forest); margin: 48px 0 16px; padding-top: 48px; border-top: 1px solid var(--rule); }
+.content-main h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.content-main h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--forest); margin: 28px 0 10px; }
+.content-main a { color: var(--forest-lite); text-decoration: underline; }
+.content-main p { margin-bottom: 20px; color: var(--charcoal); }
+.content-main ul, .content-main ol { margin: 16px 0 24px 24px; color: var(--charcoal); }
+.content-main li { margin-bottom: 8px; line-height: 1.65; }
 
 /* STEP BOXES */
-.step-box {
-  border: 1px solid var(--rule);
-  border-left: 4px solid var(--forest);
-  background: var(--white);
-  margin: 0 0 16px;
-  padding: 28px 32px 28px 80px;
-  position: relative;
-}
-.step-num {
-  position: absolute;
-  left: 24px;
-  top: 28px;
-  width: 36px;
-  height: 36px;
-  background: var(--forest);
-  color: var(--gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.step-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--forest);
-  margin-bottom: 10px;
-}
+.step-box { border: 1px solid var(--rule); border-left: 3px solid var(--forest); background: var(--white); margin: 0 0 16px; padding: 24px 24px 24px 76px; position: relative; }
+.step-num { position: absolute; left: 20px; top: 24px; width: 36px; height: 36px; background: var(--forest); color: var(--gold); font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.step-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--forest); margin-bottom: 8px; }
 .step-box p { font-size: 15px; color: var(--charcoal); line-height: 1.75; margin: 0; }
 .step-box p + p { margin-top: 10px; }
 
-/* SIDEBAR */
-.content-sidebar { padding: 60px 36px; background: var(--parchment); }
-.sidebar-section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--forest); }
-.sidebar-nav { list-style: none; margin-bottom: 32px; }
-.sidebar-nav li { border-bottom: 1px solid var(--rule); }
-.sidebar-nav a { display: block; padding: 11px 0; font-size: 14px; color: var(--mid); text-decoration: none; cursor: pointer; transition: color 0.15s; }
-.sidebar-nav a:hover { color: var(--forest); }
-
-/* TOOL BOX */
-.tool-box { background: var(--white); border: 1px solid var(--rule); border-left: 4px solid var(--forest); padding: 28px 32px; margin: 28px 0; }
-.tool-box-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-.tool-box h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--forest); margin-bottom: 8px; }
-.tool-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
-.tool-box-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
-.tool-box-link { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--forest-lite); text-decoration: none; border-bottom: 1px solid var(--forest-lite); padding-bottom: 1px; letter-spacing: 0.04em; transition: opacity 0.15s; }
-.tool-box-link:hover { opacity: 0.65; }
-
-/* WARN / NOTE */
-.warn-box { background: #fdf8ec; border: 1px solid #ddd0a0; border-left: 4px solid #b8960c; padding: 18px 24px; margin: 24px 0; }
-.warn-box p { font-size: 13px; color: #5a4a10; line-height: 1.65; margin: 0; }
-.warn-box p + p { margin-top: 8px; }
-.note-box { background: var(--parchment); border: 1px solid var(--rule); border-left: 4px solid var(--forest-lite); padding: 18px 24px; margin: 24px 0; }
-.note-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--forest-lite); margin-bottom: 6px; }
-.note-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
-
-/* PAID BOX */
-.paid-box { background: var(--forest); border-left: 4px solid var(--gold); padding: 28px 32px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.paid-box-text p { font-size: 14px; color: var(--sage-light); line-height: 1.65; margin: 0; }
-.paid-box-text strong { color: var(--white); font-weight: 600; }
-.paid-box-text .paid-tag { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); margin-bottom: 8px; }
-.paid-box-cta { background: var(--gold); color: var(--forest); font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 22px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.15s; display: inline-block; }
+/* BOXES */
+.tool-box { background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--forest-lite); padding: 24px 28px; margin: 24px 0; }
+.tool-box-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--forest-lite); margin-bottom: 10px; }
+.tool-box h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--forest); margin-bottom: 8px; }
+.tool-box p { font-size: 15px; margin-bottom: 14px; }
+.tool-box-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.tool-box-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--forest-lite); border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+.paid-box { background: var(--forest); padding: 24px 28px; margin: 24px 0; display: flex; align-items: center; gap: 24px; }
+.paid-box-text { flex: 1; }
+.paid-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.paid-box-text p { font-size: 14px; color: var(--sage-light); margin-bottom: 6px; }
+.paid-box-cta { background: var(--gold); color: var(--forest); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 18px; white-space: nowrap; font-weight: 500; text-decoration: none; display: inline-block; }
 .paid-box-cta:hover { background: var(--gold-light); }
+.warn-box { background: #fdf6e8; border-left: 3px solid var(--gold); padding: 18px 22px; margin: 28px 0; font-size: 15px; color: var(--charcoal); }
+.warn-box p { margin-bottom: 10px; }
+.warn-box p:last-child { margin-bottom: 0; }
+.note-box { background: var(--parchment); border-left: 3px solid var(--sage); padding: 18px 22px; margin: 28px 0; font-size: 15px; }
+.note-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); margin-bottom: 6px; }
 
-/* TRUST */
-.last-updated { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
-.last-updated span { color: var(--forest-lite); }
-.author-bio { background: var(--parchment); border: 1px solid var(--rule); border-left: 4px solid var(--forest); padding: 28px 32px; margin: 48px 0 32px; }
-.author-bio-inner { display: flex; gap: 20px; align-items: flex-start; }
-.author-avatar-placeholder { width: 72px; height: 72px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gold); flex-shrink: 0; }
-.author-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-.author-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--forest); margin-bottom: 2px; }
-.author-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--mid); margin-bottom: 10px; }
-.author-desc { font-size: 14px; color: var(--charcoal); line-height: 1.7; }
-.author-desc a { color: var(--forest-lite); text-decoration: none; }
-@media(max-width:600px){ .author-bio-inner { flex-direction: column; } }
+/* SIDEBAR */
+.content-sidebar { position: sticky; top: 80px; }
+.sidebar-section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.sidebar-nav { list-style: none; border-left: 2px solid var(--rule); padding-left: 16px; margin-bottom: 28px; }
+.sidebar-nav li { margin-bottom: 10px; }
+.sidebar-nav a { font-size: 14px; color: var(--mid); text-decoration: none; }
+.sidebar-nav a:hover { color: var(--forest); }
 
 /* FOOTER */
 footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40px; }
@@ -226,27 +125,36 @@ footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40
 .footer-col a:hover { color: var(--forest); }
 .citations { border-top: 1px solid var(--rule); padding-top: 28px; margin-bottom: 28px; }
 .citations h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-.cite-list { list-style: none; counter-reset: cite; }
-.cite-list li { counter-increment: cite; font-size: 13px; color: var(--muted); margin-bottom: 6px; padding-left: 22px; position: relative; }
-.cite-list li::before { content: '[' counter(cite) ']'; position: absolute; left: 0; color: var(--gold); font-family: 'DM Mono', monospace; font-size: 11px; }
-.cite-list li a { color: var(--muted); text-decoration: underline; }
+.cite-list { margin-left: 20px; }
+.cite-list li { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.cite-list a { color: var(--muted); text-decoration: underline; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid var(--rule); }
 .footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
 .footer-disclaimer { font-size: 12px; color: var(--muted); }
 
-@media (max-width: 960px) {
-  nav { padding: 0 24px; }
-  .nav-links { display: none; }
-  .content-layout { grid-template-columns: 1fr; }
-  .content-main { border-right: none; padding: 48px 28px; }
-  .content-sidebar { padding: 40px 28px; }
-  .content-hero { padding: 56px 28px 44px; }
-  footer { padding: 48px 28px 36px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
-  .footer-bottom { flex-direction: column; }
-  .paid-box { flex-direction: column; }
-  .step-box { padding: 24px 24px 24px 72px; }
+/* MOBILE HAMBURGER */
+.nav-hamburger { display: none; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; padding: 4px 8px; line-height: 1; }
+@media (max-width: 768px) {
+  .nav-hamburger { display: block; }
+  .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--forest); padding: 8px 0; z-index: 300; gap: 0; }
+  .nav-links.open > li > a { padding: 12px 20px; }
+  .nav-links.open .nav-dropdown { display: block; position: static; background: transparent; border: none; padding: 0 0 8px 20px; box-shadow: none; min-width: 0; }
+  .nav-links.open .nav-dropdown a { padding: 6px 20px; }
+  .nav-links.open .nav-cta { margin: 8px 20px 4px; display: inline-block; }
 }
+
+.last-updated { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8a82; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid #d4ccbc; }
+.last-updated span { color: #3d7a58; }
+.author-bio { background: #ede6d8; border: 1px solid #d4ccbc; border-left: 4px solid #1a3a2a; padding: 28px 32px; margin: 48px 0 32px; }
+.author-bio-inner { display: flex; gap: 20px; align-items: flex-start; }
+.author-avatar-placeholder { width: 72px; height: 72px; border-radius: 50%; background: #1a3a2a; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #c8a84b; flex-shrink: 0; }
+.author-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8a82; margin-bottom: 4px; }
+.author-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #1a3a2a; margin-bottom: 2px; }
+.author-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #5a5a55; margin-bottom: 10px; }
+.author-desc { font-size: 14px; color: #2e2e2c; line-height: 1.7; }
+.author-desc a { color: #3d7a58; text-decoration: none; }
+@media(max-width:600px) { .author-bio-inner { flex-direction: column; } }
+
 </style>
 </head>
 <body>
@@ -265,7 +173,7 @@ footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40
         <a href="/tools/letter-generator/">✍️ Letter Generator</a>
         <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
         <hr class="nav-dropdown-divider">
-        <div class="nav-dropdown-label">Paid -- $3.99</div>
+        <div class="nav-dropdown-label">Paid — $3.99</div>
         <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
       </div>
     </li>
@@ -295,11 +203,8 @@ footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40
 </nav>
 
 <div class="page">
-
-  <div class="content-hero" data-bg="Previous">
-    <div class="breadcrumb">
-      <a class="bc-link" href="/">Home</a> / <a class="bc-link" href="/guides/">Guides</a> / Stop Mail from Previous Owner
-    </div>
+  <div class="content-hero">
+    <div class="breadcrumb"><a class="bc-link" href="/">Home</a> / <a class="bc-link" href="/guides/">Guides</a> / Stop Mail from Previous Owner</div>
     <h1>How to Stop Unwanted Mail from the <em>Previous Owner</em></h1>
     <p class="lead">You moved in. Their mail did not move out. Here is exactly what to do, and what not to do, to stop it legally and for good.</p>
   </div>
@@ -341,7 +246,7 @@ footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40
       <div class="step-box">
         <div class="step-num">5</div>
         <div class="step-title">File PS Form 1500 for persistent senders</div>
-        <p>If one specific company keeps sending to the previous resident despite everything else, file <strong>PS Form 1500</strong> at your post office. Attach the piece of mail, hand it to a clerk, and once it is processed -- usually 30 to 45 days -- it becomes a federal offense for that mailer to send to your address again. That is not a warning. That is law. <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener" style="color:var(--forest-lite);font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.06em;">Download PS Form 1500 from USPS</a></p>
+        <p>If one specific company keeps sending to the previous resident despite everything else, file <strong>PS Form 1500</strong> at your post office. Attach the piece of mail, hand it to a clerk, and once it is processed -- usually 30 to 45 days -- it becomes a federal offense for that mailer to send to your address again. That is not a warning. That is law. <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener">Download PS Form 1500 from USPS</a></p>
       </div>
 
       <h2>What Not to Do</h2>
@@ -368,7 +273,7 @@ footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40
 
       <div class="note-box">
         <div class="note-label">Related Guide</div>
-        <p>If the previous owner is deceased, the process is slightly different. See our guide: <a href="/guides/stop-junk-mail-deceased-person/" style="color:var(--forest-lite);">How to Stop Junk Mail for a Deceased Person →</a></p>
+        <p>If the previous owner is deceased, the process is slightly different. See our guide: <a href="/guides/stop-junk-mail-deceased-person/">How to Stop Junk Mail for a Deceased Person →</a></p>
       </div>
 
       <div class="paid-box">
@@ -378,59 +283,45 @@ footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40
         </div>
         <a class="paid-box-cta" href="/tools/opt-out-kit/">Free Opt-Out Kit →</a>
       </div>
-
-      <div class="author-bio">
-        <div class="author-bio-inner">
-          <div class="author-avatar-placeholder">DS</div>
-          <div class="author-info">
-            <div class="author-label">Written &amp; maintained by</div>
-            <div class="author-name">Damien Schuster</div>
-            <div class="author-title">Privacy advocate &amp; tool builder &middot; Austin, TX</div>
-            <div class="author-desc">Damien built HowToStopJunkMail.org after spending too long trying to stop the same credit card offers arriving every week. He writes guides, builds free opt-out tools, and has strong opinions about how much paper Americans receive against their will. <a href="/about/">Read more &rarr;</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="citations">
-        <h4>Sources &amp; Citations</h4>
-        <ol class="cite-list">
-          <li>Federal law on mail obstruction: <a href="https://www.law.cornell.edu/uscode/text/18/1702" target="_blank" rel="nofollow noopener">18 U.S.C. § 1702 — Obstruction of correspondence</a></li>
-          <li>PS Form 1500, Application for Listing and/or Prohibitory Order: <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener">USPS.com</a></li>
-          <li>USPS Change of Address process: <a href="https://moversguide.usps.com/" target="_blank" rel="nofollow noopener">USPS Mover's Guide</a></li>
-          <li>USPS mail carrier flagging and address management: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">USPS Domestic Mail Manual §507</a></li>
-        </ol>
-      </div>
-
-    </div><!-- /content-main -->
-
-    <div class="content-sidebar">
-      <div class="sidebar-section-label">On This Page</div>
-      <ul class="sidebar-nav">
-        <li><a href="#steps">5 Steps to Stop It</a></li>
-        <li><a href="#what-not-to-do">What Not to Do</a></li>
-        <li><a href="#current-resident">Current Resident Mail</a></li>
-      </ul>
-
-      <div class="sidebar-section-label">Related Guides</div>
-      <ul class="sidebar-nav">
-        <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
-        <li><a href="/guides/stop-junk-mail-deceased-person/">Mail for a Deceased Person</a></li>
-        <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
-        <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
-        <li><a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a></li>
-      </ul>
-
-      <div class="tool-box" style="margin-top:0;">
-        <div class="tool-box-tag">Free Tool</div>
-        <h3>Opt-Out Kit</h3>
-        <p>Personalized plan to stop junk mail at your address. Free, takes 20 minutes.</p>
-        <div class="tool-box-links">
-          <a class="tool-box-link" href="/tools/opt-out-kit/">Get started →</a>
-        </div>
-      </div>
     </div>
 
-  </div><!-- /content-layout -->
+    <div class="content-sidebar">
+      <div class="sidebar-section-label">All Guides</div>
+      <ul class="sidebar-nav">
+        <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+        <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+        <li><a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a></li>
+        <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
+        <li><a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a></li>
+        <li><a href="/guides/stop-junk-mail-deceased-person/">Stop Mail for Deceased</a></li>
+        <li><a href="/guides/stop-military-junk-mail/">Stop Military Junk Mail</a></li>
+        <li><a href="/guides/stop-political-junk-mail/">Stop Political Mail</a></li>
+        <li><a href="/guides/junk-mail-vs-spam/">Junk Mail vs. Spam</a></li>
+        <li><a href="/guides/can-you-recycle-junk-mail/">Can You Recycle Junk Mail?</a></li>
+        <li><a href="/guides/what-is-a-brm-envelope/">What Is a BRM Envelope?</a></li>
+        <li><a href="/guides/how-to-stop-unwanted-mail-from-previous-owner/" style="color:var(--forest);font-weight:600;">↳ Previous Owner Mail</a></li>
+      </ul>
+      <div class="sidebar-section-label" style="margin-top:24px;">Related Tool</div>
+      <div style="background:var(--forest);padding:24px;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Free Tool</div>
+        <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--white);margin-bottom:8px;">Opt-Out Kit</div>
+        <p style="font-size:12px;color:var(--sage-light);line-height:1.6;margin-bottom:14px;">Personalized plan to stop your own junk mail. Covers DMAchoice, OptOutPrescreen, CatalogChoice, and more.</p>
+        <a href="/tools/opt-out-kit/" style="display:block;background:var(--gold);color:var(--forest);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 16px;text-align:center;text-decoration:none;cursor:pointer;">Get Started →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="author-bio">
+    <div class="author-bio-inner">
+      <div class="author-avatar-placeholder">DS</div>
+      <div class="author-info">
+        <div class="author-label">Written &amp; maintained by</div>
+        <div class="author-name">Damien Schuster</div>
+        <div class="author-title">Privacy advocate &amp; tool builder &middot; Austin, TX</div>
+        <div class="author-desc">Damien built HowToStopJunkMail.org after spending too long trying to stop the same credit card offers arriving every week. He writes guides, builds free opt-out tools, and has strong opinions about how much paper Americans receive against their will. <a href="/about/">Read more &rarr;</a></div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-grid">
@@ -450,23 +341,15 @@ footer { border-top: 1px solid var(--rule); margin-top: 80px; padding: 60px 0 40
         <li><a href="/tools/send-letter/">Send a Letter</a></li>
       </ul></div>
     </div>
-
-    <div class="citations">
-      <h4>Sources &amp; Citations</h4>
-      <ol class="cite-list">
-        <li>Federal law on mail obstruction: <a href="https://www.law.cornell.edu/uscode/text/18/1702" target="_blank" rel="nofollow noopener">18 U.S.C. § 1702 — Obstruction of correspondence</a></li>
-        <li>PS Form 1500, Application for Listing and/or Prohibitory Order: <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener">USPS.com</a></li>
-        <li>USPS Change of Address process: <a href="https://moversguide.usps.com/" target="_blank" rel="nofollow noopener">USPS Mover's Guide</a></li>
-        <li>USPS mail carrier flagging and address management: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">USPS Domestic Mail Manual §507</a></li>
-      </ol>
-    </div>
-
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> HowToStopJunkMail.org</p>
-      <p class="footer-disclaimer">Incogni and DeleteMe links are affiliate links. We may earn a commission at no cost to you.</p>
-    </div>
+    <div class="citations"><h4>Sources &amp; Citations</h4><ol class="cite-list">
+      <li>Federal law on mail obstruction: <a href="https://www.law.cornell.edu/uscode/text/18/1702" target="_blank" rel="nofollow noopener">18 U.S.C. § 1702 — Obstruction of correspondence</a></li>
+      <li>PS Form 1500, Application for Listing and/or Prohibitory Order: <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener">USPS.com</a></li>
+      <li>USPS Change of Address process: <a href="https://moversguide.usps.com/" target="_blank" rel="nofollow noopener">USPS Mover's Guide</a></li>
+      <li>USPS mail carrier flagging and address management: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">USPS Domestic Mail Manual §507</a></li>
+    </ol></div>
+    <div class="footer-bottom"><p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> HowToStopJunkMail.org</p><p class="footer-disclaimer">Incogni and DeleteMe links are affiliate links. We may earn a commission at no cost to you.</p></div>
   </footer>
+</div>
 
-</div><!-- /page -->
 </body>
 </html>

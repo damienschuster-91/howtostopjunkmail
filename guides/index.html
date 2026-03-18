@@ -1326,7 +1326,7 @@ footer {
 
 .citations { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
 .citations h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
-.cite-list { list-style: none; counter-reset: cite; columns: 2; column-gap: 40px; }
+.cite-list { list-style: none; counter-reset: cite; columns: 1; }
 .cite-list li { counter-increment: cite; font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; margin-bottom: 6px; padding-left: 22px; position: relative; break-inside: avoid; }
 .cite-list li::before { content: '[' counter(cite) ']'; position: absolute; left: 0; color: var(--gold); opacity: 0.7; font-family: 'DM Mono', monospace; }
 .cite-list li a { color: rgba(255,255,255,0.3); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -1361,7 +1361,6 @@ footer {
   .footer-bottom { flex-direction: column; }
   .footer-disclaimer { text-align: left; max-width: 100%; }
   .paid-box { flex-direction: column; }
-  .cite-list { columns: 1; }
   .tools-grid { grid-template-columns: 1fr; }
   .hero-stat-grid { grid-template-columns: 1fr 1fr; }
 }

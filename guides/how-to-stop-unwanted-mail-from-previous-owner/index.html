@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Stop Unwanted Mail from the Previous Owner | HowToStopJunkMail.org</title>
+<meta name="description" content="Keep getting mail for the previous resident? Here's exactly what to do and what not to do to stop it legally and permanently.">
+<link rel="canonical" href="https://howtostopjunkmail.org/guides/stop-mail-previous-owner/">
+<meta property="og:title" content="How to Stop Unwanted Mail from the Previous Owner | HowToStopJunkMail.org">
+<meta property="og:description" content="Keep getting mail for the previous resident? Here's exactly what to do and what not to do to stop it legally and permanently.">
+<meta property="og:url" content="https://howtostopjunkmail.org/guides/stop-mail-previous-owner/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:      #1a3a2a;
+  --forest-mid:  #2d5a42;
+  --forest-lite: #3d7a58;
+  --sage:        #7aab8e;
+  --sage-light:  #b8d4c4;
+  --cream:       #f5f0e8;
+  --cream-dark:  #e8e0d0;
+  --parchment:   #ede6d8;
+  --ink:         #1a1a18;
+  --charcoal:    #2e2e2c;
+  --mid:         #5a5a55;
+  --muted:       #8a8a82;
+  --rule:        #d4ccbc;
+  --gold:        #c8a84b;
+  --gold-light:  #e8cc7a;
+  --white:       #fdfaf5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: var(--forest);
+  border-bottom: 2px solid var(--gold);
+}
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--cream); letter-spacing: 0.02em; cursor: pointer; text-decoration: none; line-height: 1.2; flex-shrink: 0; }
+.nav-logo span { color: var(--gold); }
+.nav-logo small { display: block; font-size: 9px; font-family: 'DM Mono', monospace; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; }
+.nav-links { display: flex; gap: 0; list-style: none; align-items: center; }
+.nav-links > li { position: relative; }
+.nav-links > li > a { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); text-decoration: none; cursor: pointer; padding: 21px 14px; display: block; transition: color 0.2s; white-space: nowrap; }
+.nav-links > li > a:hover, .nav-links > li:hover > a { color: var(--cream); }
+.nav-dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 220px; background: var(--forest); border: 1px solid rgba(200,168,75,0.25); border-top: 2px solid var(--gold); z-index: 600; padding: 8px 0; }
+.nav-links > li:hover .nav-dropdown { display: block; }
+.nav-dropdown a { display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); padding: 10px 20px; cursor: pointer; text-decoration: none; transition: background 0.15s, color 0.15s; white-space: nowrap; }
+.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--cream); }
+.nav-dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 6px 0; }
+.nav-dropdown-label { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(122,171,142,0.5); padding: 8px 20px 4px; }
+.nav-cta { background: var(--gold) !important; color: var(--forest) !important; font-weight: 500 !important; padding: 9px 18px !important; margin-left: 8px; transition: background 0.2s !important; white-space: nowrap; }
+.nav-cta:hover { background: var(--gold-light) !important; }
+@media(max-width: 768px) { nav { padding: 0 20px; } .nav-links { display: none; } }
+
+/* PAGE */
+.page { display: block; padding-top: 62px; min-height: 100vh; }
+
+/* CONTENT HERO */
+.content-hero {
+  background: var(--forest);
+  padding: 72px 80px 60px;
+  border-bottom: 2px solid rgba(200,168,75,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.content-hero::after {
+  content: attr(data-bg);
+  position: absolute;
+  right: -20px; bottom: -40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.03);
+  pointer-events: none;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -5px;
+}
+.breadcrumb { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--sage); margin-bottom: 24px; }
+.bc-link { color: var(--gold); cursor: pointer; text-decoration: none; }
+.bc-link:hover { text-decoration: underline; }
+.content-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(44px, 5vw, 76px); font-weight: 700; color: var(--white); line-height: 1.0; max-width: 700px; margin-bottom: 24px; letter-spacing: -0.01em; }
+.content-hero h1 em { font-style: italic; color: var(--gold); }
+.content-hero .lead { font-size: 17px; color: var(--sage-light); max-width: 580px; line-height: 1.75; }
+
+/* LAYOUT */
+.content-layout { display: grid; grid-template-columns: minmax(0, 700px) 300px; }
+.content-main { padding: 72px 80px; border-right: 1px solid var(--rule); }
+.content-main p { font-size: 16px; color: var(--charcoal); line-height: 1.85; margin-bottom: 24px; }
+.content-main h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--forest); margin: 52px 0 18px; padding-bottom: 12px; border-bottom: 2px solid var(--cream-dark); letter-spacing: -0.01em; }
+.content-main ul { list-style: none; border: 1px solid var(--rule); margin-bottom: 28px; }
+.content-main ul li { padding: 13px 16px 13px 42px; border-bottom: 1px solid var(--rule); font-size: 15px; color: var(--charcoal); line-height: 1.65; position: relative; }
+.content-main ul li:last-child { border-bottom: none; }
+.content-main ul li::before { content: '→'; position: absolute; left: 16px; color: var(--forest-lite); font-size: 13px; }
+
+/* STEP BOXES */
+.step-box {
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--forest);
+  background: var(--white);
+  margin: 0 0 16px;
+  padding: 28px 32px 28px 80px;
+  position: relative;
+}
+.step-num {
+  position: absolute;
+  left: 24px;
+  top: 28px;
+  width: 36px;
+  height: 36px;
+  background: var(--forest);
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.step-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+.step-box p { font-size: 15px; color: var(--charcoal); line-height: 1.75; margin: 0; }
+.step-box p + p { margin-top: 10px; }
+
+/* SIDEBAR */
+.content-sidebar { padding: 60px 36px; background: var(--parchment); }
+.sidebar-section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--forest); }
+.sidebar-nav { list-style: none; margin-bottom: 32px; }
+.sidebar-nav li { border-bottom: 1px solid var(--rule); }
+.sidebar-nav a { display: block; padding: 11px 0; font-size: 14px; color: var(--mid); text-decoration: none; cursor: pointer; transition: color 0.15s; }
+.sidebar-nav a:hover { color: var(--forest); }
+
+/* TOOL BOX */
+.tool-box { background: var(--white); border: 1px solid var(--rule); border-left: 4px solid var(--forest); padding: 28px 32px; margin: 28px 0; }
+.tool-box-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.tool-box h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--forest); margin-bottom: 8px; }
+.tool-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
+.tool-box-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.tool-box-link { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--forest-lite); text-decoration: none; border-bottom: 1px solid var(--forest-lite); padding-bottom: 1px; letter-spacing: 0.04em; transition: opacity 0.15s; }
+.tool-box-link:hover { opacity: 0.65; }
+
+/* WARN / NOTE */
+.warn-box { background: #fdf8ec; border: 1px solid #ddd0a0; border-left: 4px solid #b8960c; padding: 18px 24px; margin: 24px 0; }
+.warn-box p { font-size: 13px; color: #5a4a10; line-height: 1.65; margin: 0; }
+.warn-box p + p { margin-top: 8px; }
+.note-box { background: var(--parchment); border: 1px solid var(--rule); border-left: 4px solid var(--forest-lite); padding: 18px 24px; margin: 24px 0; }
+.note-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--forest-lite); margin-bottom: 6px; }
+.note-box p { font-size: 14px; color: var(--mid); line-height: 1.7; margin: 0; }
+
+/* PAID BOX */
+.paid-box { background: var(--forest); border-left: 4px solid var(--gold); padding: 28px 32px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.paid-box-text p { font-size: 14px; color: var(--sage-light); line-height: 1.65; margin: 0; }
+.paid-box-text strong { color: var(--white); font-weight: 600; }
+.paid-box-text .paid-tag { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); margin-bottom: 8px; }
+.paid-box-cta { background: var(--gold); color: var(--forest); font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 22px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.15s; display: inline-block; }
+.paid-box-cta:hover { background: var(--gold-light); }
+
+/* TRUST */
+.last-updated { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+.last-updated span { color: var(--forest-lite); }
+.author-bio { background: var(--parchment); border: 1px solid var(--rule); border-left: 4px solid var(--forest); padding: 28px 32px; margin: 48px 0 32px; }
+.author-bio-inner { display: flex; gap: 20px; align-items: flex-start; }
+.author-avatar-placeholder { width: 72px; height: 72px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+.author-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.author-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--forest); margin-bottom: 2px; }
+.author-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--mid); margin-bottom: 10px; }
+.author-desc { font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+.author-desc a { color: var(--forest-lite); text-decoration: none; }
+@media(max-width:600px){ .author-bio-inner { flex-direction: column; } }
+
+/* FOOTER */
+footer { background: var(--forest); border-top: 3px solid var(--gold); padding: 72px 80px 44px; }
+.footer-grid { display: grid; grid-template-columns: 2.5fr 1fr 1fr; gap: 64px; margin-bottom: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
+.footer-logo span { color: var(--gold); }
+.footer-logo small { display: block; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; margin-top: 3px; }
+.footer-tagline { font-size: 13px; color: var(--sage); line-height: 1.7; max-width: 300px; margin-top: 14px; }
+.footer-col h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; cursor: pointer; transition: color 0.15s; }
+.footer-col ul li a:hover { color: var(--cream); }
+.citations { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.citations h4 { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+.cite-list { list-style: none; counter-reset: cite; columns: 2; column-gap: 40px; }
+.cite-list li { counter-increment: cite; font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; margin-bottom: 6px; padding-left: 22px; position: relative; break-inside: avoid; }
+.cite-list li::before { content: '[' counter(cite) ']'; position: absolute; left: 0; color: var(--gold); opacity: 0.7; font-family: 'DM Mono', monospace; }
+.cite-list li a { color: rgba(255,255,255,0.3); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.cite-list li a:hover { color: var(--cream); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.2); }
+.footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.2); max-width: 480px; text-align: right; line-height: 1.6; }
+
+@media (max-width: 960px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .content-layout { grid-template-columns: 1fr; }
+  .content-main { border-right: none; padding: 48px 28px; }
+  .content-sidebar { padding: 40px 28px; }
+  .content-hero { padding: 56px 28px 44px; }
+  footer { padding: 48px 28px 36px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; }
+  .footer-disclaimer { text-align: left; max-width: 100%; }
+  .paid-box { flex-direction: column; }
+  .cite-list { columns: 1; }
+  .step-box { padding: 24px 24px 24px 72px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">
+    HowToStopJunkMail<span>.org</span>
+    <small>Free guides · Opt-out tools · Data removal</small>
+  </a>
+  <ul class="nav-links">
+    <li>
+      <a>Tools ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Free Tools</div>
+        <a href="/tools/opt-out-kit/">📋 Opt-Out Kit Generator</a>
+        <a href="/tools/identify-mail/">🔍 Identify Your Mail</a>
+        <a href="/tools/letter-generator/">✍️ Letter Generator</a>
+        <a href="/tools/savings-calculator/">🌳 Savings Calculator</a>
+        <hr class="nav-dropdown-divider">
+        <div class="nav-dropdown-label">Paid -- $3.99</div>
+        <a href="/tools/send-letter/" style="color:var(--gold);">✉️ We'll Mail It For You</a>
+      </div>
+    </li>
+    <li>
+      <a>Guides ▾</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-label">Opt-Out Guides</div>
+        <a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a>
+        <a href="/guides/return-junk-mail-to-sender/">Return to Sender</a>
+        <a href="/guides/junk-mail-revenge/">Junk Mail Revenge</a>
+        <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
+        <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
+        <hr class="nav-dropdown-divider">
+        <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
+      </div>
+    </li>
+    <li><a href="/tools/send-letter/" style="color:var(--gold);">✉️ Send a Letter</a></li>
+    <li><a href="/tools/opt-out-kit/" class="nav-cta">Get Started →</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <div class="content-hero" data-bg="Previous">
+    <div class="breadcrumb">
+      <a class="bc-link" href="/">Home</a> / <a class="bc-link" href="/guides/">Guides</a> / Stop Mail from Previous Owner
+    </div>
+    <h1>How to Stop Unwanted Mail from the <em>Previous Owner</em></h1>
+    <p class="lead">You moved in. Their mail did not move out. Here is exactly what to do, and what not to do, to stop it legally and for good.</p>
+  </div>
+
+  <div class="content-layout">
+    <div class="content-main">
+      <div class="last-updated"><span>Last reviewed:</span> March 2026</div>
+
+      <p>You moved in. The previous owner's mail did not. This is a common problem, and it is annoying -- but before you do anything, know this: throwing away someone else's mail is a federal offense. Even if it is junk mail. It is called "obstruction of correspondence" and it carries real legal weight.</p>
+
+      <p>So here is what you actually do.</p>
+
+      <h2>What to Do</h2>
+
+      <div class="step-box">
+        <div class="step-num">1</div>
+        <div class="step-title">Leave a note for your mail carrier</div>
+        <p>Put a note inside your mailbox that reads: <em>"[Name] no longer lives here."</em> You can also write your own name on the mailbox itself. Carriers can flag your address in their system, which stops future deliveries for that name before they even sort. Most carriers pick this up within a week or two.</p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-num">2</div>
+        <div class="step-title">Mark the mail as "Not at this address"</div>
+        <p>Write "Not at this address" directly on the envelope and drop it back in your mailbox with the flag up. Your carrier returns it to the sender. The barcode trick: cross out the barcode on the envelope too. USPS sorts by barcode, and crossing it out forces a manual review, which gets the message across faster.</p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-num">3</div>
+        <div class="step-title">Contact the previous resident if possible</div>
+        <p>If you have any way to reach the previous resident, ask them to file a Change of Address Form. They should have done it before leaving -- many people forget. It is the most complete fix because it redirects their mail at the source across every sender at once. If you have no way to reach them, skip to Step 4.</p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-num">4</div>
+        <div class="step-title">Visit your local post office</div>
+        <p>Go in person and talk to a clerk. Tell them you keep getting mail for a previous resident and Steps 1 and 2 are not cutting it. They can flag it in their system and pass it to your carrier directly. Worth doing if the problem has dragged on more than a few weeks.</p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-num">5</div>
+        <div class="step-title">File PS Form 1500 for persistent senders</div>
+        <p>If one specific company keeps sending to the previous resident despite everything else, file <strong>PS Form 1500</strong> at your post office. Attach the piece of mail, hand it to a clerk, and once it is processed -- usually 30 to 45 days -- it becomes a federal offense for that mailer to send to your address again. That is not a warning. That is law. <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener" style="color:var(--forest-lite);font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.06em;">Download PS Form 1500 from USPS</a></p>
+      </div>
+
+      <h2>What Not to Do</h2>
+
+      <div class="warn-box">
+        <p><strong>Do not open it.</strong> Even opening someone else's mail by mistake can create problems. Doing it intentionally is a federal offense under 18 U.S.C. § 1702.</p>
+        <p><strong>Do not throw it away.</strong> Same law. Tossing someone else's mail -- junk or otherwise -- is obstruction of correspondence.</p>
+        <p><strong>Do not file a Change of Address Form for them.</strong> Only the recipient can do that. Submitting one on their behalf is mail fraud.</p>
+        <p><strong>Do not ignore it.</strong> It will not stop on its own. Mailing lists get resold and recycled for years.</p>
+      </div>
+
+      <h2>What About "Current Resident" Mail?</h2>
+
+      <p>Mail addressed to "Current Resident" or "Occupant" is actually addressed to you. You are the current resident. You do not need to return it or flag it as misdelivered -- it is yours to deal with. To cut down on that kind of mass marketing mail, use our opt-out kit.</p>
+
+      <div class="tool-box">
+        <div class="tool-box-tag">Free Tool</div>
+        <h3>Opt-Out Kit Generator</h3>
+        <p>Enter your address and get a personalized step-by-step plan to opt out of junk mail, credit offers, catalogs, and marketing lists — for free.</p>
+        <div class="tool-box-links">
+          <a class="tool-box-link" href="/tools/opt-out-kit/">Get your free kit →</a>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <div class="note-label">Related Guide</div>
+        <p>If the previous owner is deceased, the process is slightly different. See our guide: <a href="/guides/stop-junk-mail-deceased-person/" style="color:var(--forest-lite);">How to Stop Junk Mail for a Deceased Person →</a></p>
+      </div>
+
+      <div class="paid-box">
+        <div class="paid-box-text">
+          <div class="paid-tag">Also dealing with your own junk mail?</div>
+          <p><strong>Get the free opt-out kit</strong> -- a personalized checklist covering DMAchoice, OptOutPrescreen, CatalogChoice, and more. Takes 20 minutes. Works for years.</p>
+        </div>
+        <a class="paid-box-cta" href="/tools/opt-out-kit/">Free Opt-Out Kit →</a>
+      </div>
+
+      <div class="author-bio">
+        <div class="author-bio-inner">
+          <div class="author-avatar-placeholder">DS</div>
+          <div class="author-info">
+            <div class="author-label">Written &amp; maintained by</div>
+            <div class="author-name">Damien Schuster</div>
+            <div class="author-title">Privacy advocate &amp; tool builder &middot; Austin, TX</div>
+            <div class="author-desc">Damien built HowToStopJunkMail.org after spending too long trying to stop the same credit card offers arriving every week. He writes guides, builds free opt-out tools, and has strong opinions about how much paper Americans receive against their will. <a href="/about/">Read more &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="citations">
+        <h4>Sources &amp; Citations</h4>
+        <ol class="cite-list">
+          <li>Federal law on mail obstruction: <a href="https://www.law.cornell.edu/uscode/text/18/1702" target="_blank" rel="nofollow noopener">18 U.S.C. § 1702 — Obstruction of correspondence</a></li>
+          <li>PS Form 1500, Application for Listing and/or Prohibitory Order: <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener">USPS.com</a></li>
+          <li>USPS Change of Address process: <a href="https://moversguide.usps.com/" target="_blank" rel="nofollow noopener">USPS Mover's Guide</a></li>
+          <li>USPS mail carrier flagging and address management: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">USPS Domestic Mail Manual §507</a></li>
+        </ol>
+      </div>
+
+    </div><!-- /content-main -->
+
+    <div class="content-sidebar">
+      <div class="sidebar-section-label">On This Page</div>
+      <ul class="sidebar-nav">
+        <li><a href="#steps">5 Steps to Stop It</a></li>
+        <li><a href="#what-not-to-do">What Not to Do</a></li>
+        <li><a href="#current-resident">Current Resident Mail</a></li>
+      </ul>
+
+      <div class="sidebar-section-label">Related Guides</div>
+      <ul class="sidebar-nav">
+        <li><a href="/guides/how-to-stop-junk-mail/">How to Stop Junk Mail</a></li>
+        <li><a href="/guides/stop-junk-mail-deceased-person/">Mail for a Deceased Person</a></li>
+        <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+        <li><a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a></li>
+        <li><a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a></li>
+      </ul>
+
+      <div class="tool-box" style="margin-top:0;">
+        <div class="tool-box-tag">Free Tool</div>
+        <h3>Opt-Out Kit</h3>
+        <p>Personalized plan to stop junk mail at your address. Free, takes 20 minutes.</p>
+        <div class="tool-box-links">
+          <a class="tool-box-link" href="/tools/opt-out-kit/">Get started →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content-layout -->
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">HowToStopJunkMail<span>.org</span><small>Free guides · Opt-out tools · Data removal</small></div>
+        <p class="footer-tagline">An independent public resource. No ads. No data brokers. Just practical guides to help you stop unwanted mail.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="/guides/how-to-stop-junk-mail/">Stop Junk Mail</a></li>
+          <li><a href="/guides/return-junk-mail-to-sender/">Return to Sender</a></li>
+          <li><a href="/guides/stop-credit-card-mail/">Credit Card Mail</a></li>
+          <li><a href="/guides/stop-junk-mail-deceased-person/">Deceased Person</a></li>
+          <li><a href="/guides/stop-military-junk-mail/">Military Mail</a></li>
+          <li><a href="/guides/">All Guides →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/tools/opt-out-kit/">Opt-Out Kit</a></li>
+          <li><a href="/tools/identify-mail/">Identify Mail</a></li>
+          <li><a href="/tools/letter-generator/">Letter Generator</a></li>
+          <li><a href="/tools/savings-calculator/">Savings Calculator</a></li>
+          <li><a href="/tools/send-letter/">Send a Letter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="citations">
+      <h4>Sources &amp; Citations</h4>
+      <ol class="cite-list">
+        <li>Federal law on mail obstruction: <a href="https://www.law.cornell.edu/uscode/text/18/1702" target="_blank" rel="nofollow noopener">18 U.S.C. § 1702</a></li>
+        <li>PS Form 1500: <a href="https://about.usps.com/forms/ps1500.pdf" target="_blank" rel="nofollow noopener">USPS.com</a></li>
+        <li>USPS Change of Address: <a href="https://moversguide.usps.com/" target="_blank" rel="nofollow noopener">USPS Mover's Guide</a></li>
+        <li>USPS Domestic Mail Manual: <a href="https://pe.usps.com/text/dmm300/507.htm" target="_blank" rel="nofollow noopener">DMM §507</a></li>
+      </ol>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 HowToStopJunkMail.org — Independent public resource</p>
+      <p class="footer-disclaimer">Some links are affiliate links. HowToStopJunkMail.org is not affiliated with any government agency, credit bureau, or data broker.</p>
+    </div>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>

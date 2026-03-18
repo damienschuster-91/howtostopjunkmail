@@ -52,6 +52,36 @@ function updateSidebar(filePath, slug) {
   return true;
 }
 
+// ── NAV HAMBURGER CSS ────────────────────────────────────────────────────────
+// Injected into every file that is missing it whenever the nav is rebuilt.
+
+const NAV_HAMBURGER_CSS = `/* MOBILE HAMBURGER */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+@media (max-width: 768px) {
+  .nav-hamburger { display: block; }
+}`;
+
+function ensureHamburgerCSS(filePath) {
+  let html = readFile(filePath);
+  if (html.includes('.nav-hamburger')) return false; // already present
+  // Insert after .nav-logo small line
+  const updated = html.replace(
+    /(\.nav-logo small \{[^\n]+\n)/,
+    '$1' + NAV_HAMBURGER_CSS + '\n'
+  );
+  if (updated === html) return false;
+  writeFile(filePath, updated);
+  return true;
+}
+
 // ── B) NAV DROPDOWN ──────────────────────────────────────────────────────────
 
 /**
@@ -221,7 +251,7 @@ for (const [i, g] of guides.entries()) {
   console.log(`   ${ok ? 'OK  ' : 'SKIP'}: ${g.slug}`);
 }
 
-// B) Nav dropdown — guides + root index
+// B) Nav dropdown + hamburger CSS — guides + root index
 const navFiles = [
   path.join(ROOT, 'index.html'),
   path.join(ROOT, 'guides', 'index.html'),
@@ -235,6 +265,7 @@ for (const filePath of navFiles) {
   }
   const label = path.relative(ROOT, filePath);
   const ok = updateNavDropdown(filePath);
+  ensureHamburgerCSS(filePath);
   console.log(`   ${ok ? 'OK  ' : 'SKIP'}: ${label}`);
 }
 

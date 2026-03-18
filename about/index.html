@@ -89,9 +89,25 @@ nav {
   text-decoration: none;
   line-height: 1.2;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .nav-logo span { color: var(--gold); }
 .nav-logo small { display: block; font-size: 9px; font-family: 'DM Mono', monospace; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; }
+/* MOBILE HAMBURGER */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+@media (max-width: 768px) {
+  .nav-hamburger { display: block; }
+}
 
 /* Top-level link list */
 .nav-links { display: flex; gap: 0; list-style: none; align-items: center; }

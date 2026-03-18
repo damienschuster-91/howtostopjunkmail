@@ -5,6 +5,7 @@
  * A) Updates sidebar nav in every guides/SLUG/index.html
  * B) Updates the Guides nav dropdown in every HTML file (guides + root index.html)
  * C) Regenerates sitemap.xml from guides.json
+ * D) Regenerates the guide card grid in guides/index.html from guides.json
  */
 
 const fs   = require('fs');
@@ -134,6 +135,73 @@ function regenerateSitemap() {
   writeFile(SITEMAP, newSitemap);
 }
 
+// ── D) GUIDES INDEX ──────────────────────────────────────────────────────────
+
+const SECTION_LABELS = {
+  featured:   'Core Guides',
+  situations: 'By Situation',
+  reference:  'Reference',
+};
+
+function buildGuideCard(g, cardIndex) {
+  const isDark    = cardIndex % 4 === 0;
+  const cardClass = isDark ? 'guide-card-dark' : 'guide-card-light';
+  const tag       = g.tag ? `\n          <div class="guide-card-tag">${g.tag}</div>` : '';
+  return (
+    `        <a href="/guides/${g.slug}/" class="guide-card ${cardClass}">${tag}\n` +
+    `          <div class="guide-card-title">${g.title}</div>\n` +
+    `          <p class="guide-card-desc">${g.desc}</p>\n` +
+    `          <div class="guide-card-read">Read guide →</div>\n` +
+    `        </a>`
+  );
+}
+
+function buildGuidesIndex() {
+  const indexPath = path.join(ROOT, 'guides', 'index.html');
+  if (!fs.existsSync(indexPath)) {
+    console.error('   ERROR: guides/index.html not found');
+    return false;
+  }
+
+  let html = readFile(indexPath);
+  const OPEN_MARKER  = '<!-- GUIDES_START -->';
+  const CLOSE_MARKER = '<!-- GUIDES_END -->';
+  const startIdx = html.indexOf(OPEN_MARKER);
+  const endIdx   = html.indexOf(CLOSE_MARKER);
+
+  if (startIdx === -1 || endIdx === -1) {
+    console.error('   ERROR: GUIDES_START/END markers not found in guides/index.html');
+    return false;
+  }
+
+  // Group guides by section, preserving JSON order within each section
+  const groups = {};
+  for (const key of Object.keys(SECTION_LABELS)) groups[key] = [];
+  for (const g of guides) {
+    const sect = g.section && groups[g.section] ? g.section : 'reference';
+    groups[sect].push(g);
+  }
+
+  let cardIndex = 0;
+  let inner = '\n';
+  for (const [sectKey, sectGuides] of Object.entries(groups)) {
+    if (sectGuides.length === 0) continue;
+    inner += `      <div class="guide-section-label">${SECTION_LABELS[sectKey]}</div>\n`;
+    inner += `      <div class="guide-card-grid">\n`;
+    for (const g of sectGuides) {
+      inner += buildGuideCard(g, cardIndex) + '\n';
+      cardIndex++;
+    }
+    inner += `      </div>\n`;
+  }
+
+  html = html.slice(0, startIdx + OPEN_MARKER.length) +
+         inner +
+         '    ' + html.slice(endIdx);
+  writeFile(indexPath, html);
+  return true;
+}
+
 // ── MAIN ─────────────────────────────────────────────────────────────────────
 
 console.log('=== build.js ===\n');
@@ -174,5 +242,10 @@ for (const filePath of navFiles) {
 console.log('\nC) Sitemap:');
 regenerateSitemap();
 console.log(`   OK  : sitemap.xml (lastmod ${today()})`);
+
+// D) Guides index card grid
+console.log('\nD) Guides index:');
+const indexOk = buildGuidesIndex();
+console.log(`   ${indexOk ? 'OK  ' : 'FAIL'}: guides/index.html`);
 
 console.log('\nDone.');

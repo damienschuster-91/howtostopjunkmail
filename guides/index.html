@@ -1155,6 +1155,65 @@ h2.display em { font-style: italic; color: var(--forest-lite); }
   max-width: 680px;
 }
 
+/* ── GUIDE INDEX CARDS ── */
+.guide-section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 40px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.guide-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.guide-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 36px 32px;
+  border-top: 3px solid;
+  transition: opacity 0.15s;
+}
+.guide-card:hover { opacity: 0.88; }
+.guide-card-dark  { background: var(--forest); border-top-color: var(--gold); }
+.guide-card-light { background: var(--white);  border-top-color: var(--forest); }
+.guide-card-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.guide-card-dark  .guide-card-tag { color: var(--gold); }
+.guide-card-light .guide-card-tag { color: var(--muted); }
+.guide-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.guide-card-dark  .guide-card-title { color: var(--white); }
+.guide-card-light .guide-card-title { color: var(--forest); }
+.guide-card-desc {
+  font-size: 13px;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.guide-card-dark  .guide-card-desc { color: var(--sage-light); }
+.guide-card-light .guide-card-desc { color: var(--mid); }
+.guide-card-read {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+}
+.guide-card-dark  .guide-card-read { color: var(--gold); }
+.guide-card-light .guide-card-read { color: var(--forest-lite); }
+
 .content-layout {
   display: grid;
   grid-template-columns: minmax(0, 700px) 300px;
@@ -1356,6 +1415,7 @@ footer {
   .content-sidebar { padding: 40px 32px; }
   .content-hero, .kit-hero { padding: 56px 32px 44px; }
   .guides-index-grid { padding: 40px 32px; }
+  .guide-card-grid { grid-template-columns: 1fr; }
   footer { padding: 48px 32px 36px; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; }
@@ -1411,12 +1471,13 @@ footer {
         <a href="/guides/stop-credit-card-mail/">Stop Credit Card Mail</a>
         <a href="/guides/opt-out-services-compared/">Opt-Out Services Compared</a>
         <a href="/guides/stop-junk-mail-deceased-person/">Stop Mail for a Deceased Person</a>
+        <a href="/guides/how-to-stop-unwanted-mail-from-previous-owner/">Stop Mail from Previous Owner</a>
         <a href="/guides/stop-military-junk-mail/">Stop Military Junk Mail</a>
         <a href="/guides/stop-political-junk-mail/">Stop Political Junk Mail</a>
         <a href="/guides/junk-mail-vs-spam/">Junk Mail vs. Spam</a>
         <a href="/guides/can-you-recycle-junk-mail/">Can You Recycle Junk Mail?</a>
         <a href="/guides/what-is-a-brm-envelope/">What Is a BRM Envelope?</a>
-        <a href="/guides/how-to-stop-unwanted-mail-from-previous-owner/">Stop Mail from Previous Owner</a>
+        <a href="/guides/is-junk-mail-recyclable/">Is Junk Mail Recyclable?</a>
         <hr class="nav-dropdown-divider">
         <a href="/guides/" style="color:var(--sage);font-size:9px;">View All Guides →</a>
       </div>
@@ -1436,80 +1497,95 @@ footer {
   <div class="guides-index-grid">
     <p>Whether you want to eliminate all junk mail permanently or just stop a specific type, start with a guide below. Each one covers a single angle in depth — free methods, paid options, legal tactics, and the environmental case for opting out.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1100px;margin:0 auto;">
-        <a href="/guides/how-to-stop-junk-mail/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--forest);padding:36px 32px;cursor:pointer;border-top:3px solid var(--gold);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">⭐ Start Here</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px;">How to Stop Junk Mail</div>
-          <p style="font-size:13px;color:var(--sage-light);line-height:1.65;margin-bottom:16px;">The complete playbook. Free methods, paid options, and services ranked by effectiveness. Covers 90–95% of all junk mail.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);">Read guide →</div>
-        </div></a>
-        <a href="/guides/return-junk-mail-to-sender/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Make Them Pay</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Return Junk Mail to Sender</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">The legal trick that makes junk mailers pay their own postage right back. BRM envelopes cost them $0.70–$1.20 each time they're returned.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/junk-mail-revenge/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Legally Satisfying</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Junk Mail Revenge</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Petty? Maybe. Legal? Absolutely. From stuffing BRM envelopes to data broker removal — how to make the system feel it.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/stop-credit-card-mail/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--forest);padding:36px 32px;cursor:pointer;border-top:3px solid var(--gold);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Biggest Offender</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px;">Stop Credit Card Mail</div>
-          <p style="font-size:13px;color:var(--sage-light);line-height:1.65;margin-bottom:16px;">One opt-out, five minutes, covers every credit card company and insurer in America. Also protects you from mail-based identity theft.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);">Read guide →</div>
-        </div></a>
-        <a href="/guides/how-to-stop-unwanted-mail-from-previous-owner/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">New Resident</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">How to Stop Unwanted Mail from the Previous Owner</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Keep getting mail for the previous resident? Here is what to do legally -- and what not to.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/opt-out-services-compared/" style="text-decoration:none;display:block;color:inherit;grid-column:1/-1;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Honest Comparison</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Opt-Out Services Compared: Free vs. Paid</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Free tools vs. paid services — what actually works, what's worth paying for, and when Incogni or DeleteMe makes sense.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/stop-junk-mail-deceased-person/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">After a Loss</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Stop Junk Mail for a Deceased Person</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">How to stop mail arriving for someone who has passed away.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/stop-military-junk-mail/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Military &amp; Veterans</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Stop Military Junk Mail</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Opt-out options specific to military personnel and veterans.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/stop-political-junk-mail/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Election Season</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Stop Political Junk Mail</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Why political mail is different and what you can actually do about it.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/junk-mail-vs-spam/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Know the Difference</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Junk Mail vs. Spam</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">What counts as junk mail, what counts as spam, and why it matters for opting out.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/can-you-recycle-junk-mail/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Go Green</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">Can You Recycle Junk Mail?</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">What goes in the bin and what does not, by mail type.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-        <a href="/guides/what-is-a-brm-envelope/" style="text-decoration:none;display:block;color:inherit;"><div style="background:var(--white);padding:36px 32px;cursor:pointer;border-top:3px solid var(--forest);">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Business Reply Mail</div>
-          <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:8px;">What Is a BRM Envelope?</div>
-          <p style="font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:16px;">Business Reply Mail explained, including how senders are charged.</p>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--forest-lite);">Read guide →</div>
-        </div></a>
-    </div>
+    <!-- GUIDES_START -->
+      <div class="guide-section-label">Core Guides</div>
+      <div class="guide-card-grid">
+        <a href="/guides/how-to-stop-junk-mail/" class="guide-card guide-card-dark">
+          <div class="guide-card-tag">⭐ Start Here</div>
+          <div class="guide-card-title">How to Stop Junk Mail</div>
+          <p class="guide-card-desc">The complete playbook. Free methods, paid options, and services ranked by effectiveness.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/return-junk-mail-to-sender/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Make Them Pay</div>
+          <div class="guide-card-title">Return Junk Mail to Sender</div>
+          <p class="guide-card-desc">How Business Reply Mail works and how to make junk mailers pay their own postage back.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/junk-mail-revenge/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Legally Satisfying</div>
+          <div class="guide-card-title">Junk Mail Revenge</div>
+          <p class="guide-card-desc">Legal tactics for making senders regret mailing you.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/stop-credit-card-mail/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Biggest Offender</div>
+          <div class="guide-card-title">Stop Credit Card Mail</div>
+          <p class="guide-card-desc">OptOutPrescreen and beyond. Stop pre-screened offers for good.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/opt-out-services-compared/" class="guide-card guide-card-dark">
+          <div class="guide-card-tag">Honest Comparison</div>
+          <div class="guide-card-title">Opt-Out Services Compared</div>
+          <p class="guide-card-desc">DMAchoice vs Incogni vs DeleteMe vs CatalogChoice, ranked honestly.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+      </div>
+      <div class="guide-section-label">By Situation</div>
+      <div class="guide-card-grid">
+        <a href="/guides/stop-junk-mail-deceased-person/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Sensitive</div>
+          <div class="guide-card-title">Stop Mail for a Deceased Person</div>
+          <p class="guide-card-desc">How to stop mail arriving for someone who has passed away.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/how-to-stop-unwanted-mail-from-previous-owner/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">New Address</div>
+          <div class="guide-card-title">Stop Mail from Previous Owner</div>
+          <p class="guide-card-desc">Keep getting mail for the previous resident? Here is what to do legally.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/stop-military-junk-mail/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Military</div>
+          <div class="guide-card-title">Stop Military Junk Mail</div>
+          <p class="guide-card-desc">Opt-out options specific to military personnel and veterans.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/stop-political-junk-mail/" class="guide-card guide-card-dark">
+          <div class="guide-card-tag">Election Mail</div>
+          <div class="guide-card-title">Stop Political Junk Mail</div>
+          <p class="guide-card-desc">Why political mail is different and what you can actually do about it.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+      </div>
+      <div class="guide-section-label">Reference</div>
+      <div class="guide-card-grid">
+        <a href="/guides/junk-mail-vs-spam/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Know the Difference</div>
+          <div class="guide-card-title">Junk Mail vs. Spam</div>
+          <p class="guide-card-desc">What counts as junk mail, what counts as spam, and why it matters for opting out.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/can-you-recycle-junk-mail/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Environment</div>
+          <div class="guide-card-title">Can You Recycle Junk Mail?</div>
+          <p class="guide-card-desc">What goes in the bin and what does not, by mail type.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/what-is-a-brm-envelope/" class="guide-card guide-card-light">
+          <div class="guide-card-tag">Explainer</div>
+          <div class="guide-card-title">What Is a BRM Envelope?</div>
+          <p class="guide-card-desc">Business Reply Mail explained, including how senders are charged.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+        <a href="/guides/is-junk-mail-recyclable/" class="guide-card guide-card-dark">
+          <div class="guide-card-tag">Environment</div>
+          <div class="guide-card-title">Is Junk Mail Recyclable?</div>
+          <p class="guide-card-desc">A deeper look at which mail types are truly recyclable and what ends up in landfill.</p>
+          <div class="guide-card-read">Read guide →</div>
+        </a>
+      </div>
+    <!-- GUIDES_END -->
   </div>
   <div class="content-layout">
     <div class="content-main">

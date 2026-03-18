@@ -165,7 +165,31 @@ function regenerateSitemap() {
   writeFile(SITEMAP, newSitemap);
 }
 
-// ── D) GUIDES INDEX ──────────────────────────────────────────────────────────
+// ── D) LLMS.TXT ──────────────────────────────────────────────────────────────
+
+function regenerateLlms() {
+  const llmsPath = path.join(ROOT, 'llms.txt');
+  const existing = readFile(llmsPath);
+
+  const guideLines = guides
+    .map(g => `- [${g.title}](https://howtostopjunkmail.org/guides/${g.slug}/) — ${g.desc}`)
+    .join('\n');
+
+  // Replace everything between "## Guides\n\n" and "\n\n## Key Facts"
+  const updated = existing.replace(
+    /(## Guides\n\n)[\s\S]*?(\n\n## Key Facts)/,
+    `$1${guideLines}$2`
+  );
+
+  if (updated === existing) {
+    console.error('   ERROR: could not find ## Guides / ## Key Facts markers in llms.txt');
+    return false;
+  }
+  writeFile(llmsPath, updated);
+  return true;
+}
+
+// ── E) GUIDES INDEX ──────────────────────────────────────────────────────────
 
 const SECTION_LABELS = {
   featured:   'Core Guides',
@@ -274,8 +298,13 @@ console.log('\nC) Sitemap:');
 regenerateSitemap();
 console.log(`   OK  : sitemap.xml (lastmod ${today()})`);
 
-// D) Guides index card grid
-console.log('\nD) Guides index:');
+// D) llms.txt
+console.log('\nD) llms.txt:');
+const llmsOk = regenerateLlms();
+console.log(`   ${llmsOk ? 'OK  ' : 'FAIL'}: llms.txt`);
+
+// E) Guides index card grid
+console.log('\nE) Guides index:');
 const indexOk = buildGuidesIndex();
 console.log(`   ${indexOk ? 'OK  ' : 'FAIL'}: guides/index.html`);
 

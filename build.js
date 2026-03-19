@@ -52,6 +52,21 @@ function updateSidebar(filePath, slug) {
   return true;
 }
 
+// ── FAVICON ──────────────────────────────────────────────────────────────────
+
+const FAVICON_TAGS = `<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#1a3a2a">`;
+
+function ensureFavicon(filePath) {
+  let html = readFile(filePath);
+  if (html.includes('favicon.svg')) return false;
+  const updated = html.replace('<meta charset="UTF-8">', '<meta charset="UTF-8">\n' + FAVICON_TAGS);
+  if (updated === html) return false;
+  writeFile(filePath, updated);
+  return true;
+}
+
 // ── NAV HAMBURGER CSS ────────────────────────────────────────────────────────
 // Injected into every file that is missing it whenever the nav is rebuilt.
 
@@ -181,11 +196,11 @@ function regenerateLlms() {
     `$1${guideLines}$2`
   );
 
-  if (updated === existing) {
+  if (!/(## Guides\n\n)[\s\S]*?(\n\n## Key Facts)/.test(existing)) {
     console.error('   ERROR: could not find ## Guides / ## Key Facts markers in llms.txt');
     return false;
   }
-  writeFile(llmsPath, updated);
+  if (updated !== existing) writeFile(llmsPath, updated);
   return true;
 }
 
@@ -290,6 +305,7 @@ for (const filePath of navFiles) {
   const label = path.relative(ROOT, filePath);
   const ok = updateNavDropdown(filePath);
   ensureHamburgerCSS(filePath);
+  ensureFavicon(filePath);
   console.log(`   ${ok ? 'OK  ' : 'SKIP'}: ${label}`);
 }
 

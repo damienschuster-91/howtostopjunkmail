@@ -38,8 +38,20 @@ a { color: var(--forest-lite); text-decoration: none; }
 a:hover { text-decoration: underline; }
 strong { font-weight: 600; }
 
-/* NAV */
-nav { background: var(--forest); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
+/* ═══ NAV ═══ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: var(--forest);
+  border-bottom: 2px solid var(--gold);
+}
+
 .nav-logo {
   font-family: 'Playfair Display', serif;
   font-size: 17px;
@@ -52,7 +64,7 @@ nav { background: var(--forest); padding: 0 40px; display: flex; align-items: ce
   flex-shrink: 0;
 }
 .nav-logo span { color: var(--gold); }
-.nav-logo small { font-size: 9px; letter-spacing: 0.08em; color: var(--sage); text-transform: uppercase; }
+.nav-logo small { display: block; font-size: 9px; font-family: 'DM Mono', monospace; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; }
 /* MOBILE HAMBURGER */
 .nav-hamburger {
   display: none;
@@ -66,20 +78,89 @@ nav { background: var(--forest); padding: 0 40px; display: flex; align-items: ce
 @media (max-width: 768px) {
   .nav-hamburger { display: block; }
 }
-.nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
+
+/* Top-level link list */
+.nav-links { display: flex; gap: 0; list-style: none; align-items: center; }
 .nav-links > li { position: relative; }
-.nav-links > li > a { color: var(--sage-light); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
-.nav-links > li > a:hover { color: var(--white); }
-.nav-dropdown { display: none; position: absolute; top: 100%; margin-top: 2px; left: -16px; background: var(--forest-mid); min-width: 220px; padding: 8px 0; z-index: 200; }
+.nav-links > li > a {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 21px 14px;
+  display: block;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-links > li > a:hover,
+.nav-links > li:hover > a { color: var(--cream); }
+
+/* Dropdown panels */
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--forest);
+  border: 1px solid rgba(200,168,75,0.25);
+  border-top: 2px solid var(--gold);
+  z-index: 600;
+  padding: 8px 0;
+}
 .nav-links > li:hover .nav-dropdown { display: block; }
-.nav-dropdown a { display: block; padding: 8px 18px; font-size: 13px; color: var(--sage-light); text-decoration: none; }
-.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--white); }
-.nav-dropdown-label { padding: 8px 18px 4px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); }
-.nav-dropdown-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 6px 0; }
-.nav-cta { background: var(--gold); color: var(--forest) !important; padding: 8px 18px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; text-decoration: none; }
+
+.nav-dropdown a {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.nav-dropdown a:hover { background: rgba(255,255,255,0.05); color: var(--cream); }
+.nav-dropdown-divider {
+  border: none; border-top: 1px solid rgba(255,255,255,0.07);
+  margin: 6px 0;
+}
+.nav-dropdown-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(122,171,142,0.5);
+  padding: 8px 20px 4px;
+}
+
+/* CTA button */
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--forest) !important;
+  font-weight: 500 !important;
+  padding: 9px 18px !important;
+  margin-left: 8px;
+  transition: background 0.2s !important;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--gold-light) !important; }
+
+/* Mobile: hide links */
+@media(max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+}
 
 /* HERO */
-.hero { background: var(--forest); padding: 56px 40px 48px; }
+.hero { background: var(--forest); padding: 56px 40px 48px; margin-top: 62px; }
 .hero-inner { max-width: 1100px; margin: 0 auto; }
 .hero-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
 .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 900; color: var(--white); line-height: 1.05; margin-bottom: 16px; }
@@ -208,26 +289,68 @@ nav { background: var(--forest); padding: 0 40px; display: flex; align-items: ce
 }
 
 /* FOOTER */
-footer { border-top: 1px solid var(--rule); padding: 48px 0 32px; }
-.footer-bottom { max-width: 1100px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
-.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
-.footer-disclaimer { font-size: 12px; color: var(--muted); }
+footer {
+  background: var(--forest);
+  border-top: 3px solid var(--gold);
+  padding: 72px 80px 44px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.footer-logo span { color: var(--gold); }
+.footer-logo small { display: block; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.15em; color: var(--sage); text-transform: uppercase; margin-top: 3px; }
+.footer-tagline { font-size: 13px; color: var(--sage); line-height: 1.7; max-width: 300px; margin-top: 14px; }
+.footer-col h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; cursor: pointer; transition: color 0.15s; }
+.footer-col ul li a:hover { color: var(--cream); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.2); }
+.footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.2); max-width: 480px; text-align: right; line-height: 1.6; }
 
 @media (max-width: 768px) {
-  nav { padding: 0 20px; }
   .hero { padding: 40px 20px; }
   .page { padding: 0 20px; }
   .mailer-card { grid-template-columns: 1fr; }
   .mailer-name-col { border-right: none; border-bottom: 1px solid var(--rule); }
   .mailer-meta-col { border-left: none; border-top: 1px solid var(--rule); align-items: flex-start; }
-  .nav-links { display: none; }
+  footer { padding: 48px 32px 36px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; }
+  .footer-disclaimer { text-align: left; max-width: 100%; }
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="/">HowToStopJunkMail<span>.org</span><small>Free guides · Opt-out tools · Data removal</small></a>
+  <a class="nav-logo" href="/">
+    HowToStopJunkMail<span>.org</span>
+    <small>Free guides · Opt-out tools · Data removal</small>
+  </a>
   <ul class="nav-links">
     <li>
       <a>Tools ▾</a>
@@ -306,6 +429,20 @@ footer { border-top: 1px solid var(--rule); padding: 48px 0 32px; }
 </div>
 
 <footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">HowToStopJunkMail<span>.org</span><small>Free opt-out guides &amp; tools</small></div><p class="footer-tagline">Free guides and tools for reclaiming your mailbox and your privacy.</p></div>
+    <div class="footer-col"><h4>Other Tools</h4><ul>
+      <li><a href="/tools/opt-out-kit/">Opt-Out Kit</a></li>
+      <li><a href="/tools/identify-mail/">Mail Identifier</a></li>
+      <li><a href="/tools/letter-generator/">Letter Generator</a></li>
+      <li><a href="/tools/savings-calculator/">Savings Calculator</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Free Resources</h4><ul>
+      <li><a href="https://optoutprescreen.com" target="_blank" rel="nofollow noopener">OptOutPrescreen</a></li>
+      <li><a href="https://dmachoice.org" target="_blank" rel="nofollow noopener">DMAchoice</a></li>
+      <li><a href="https://catalogchoice.org" target="_blank" rel="nofollow noopener">CatalogChoice</a></li>
+    </ul></div>
+  </div>
   <div class="footer-bottom">
     <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> HowToStopJunkMail.org</p>
     <p class="footer-disclaimer">Incogni and DeleteMe links are affiliate links. Opt-out URLs verified periodically — if a link is broken, <a href="mailto:hello@howtostopjunkmail.org">let us know</a>.</p>

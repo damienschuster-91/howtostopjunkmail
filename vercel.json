@@ -1,5 +1,22 @@
 {
   "buildCommand": "node build.js",
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/go/incogni",
+      "destination": "https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443",
+      "permanent": false
+    },
+    {
+      "source": "/go/deleteme",
+      "destination": "https://joindeleteme.com",
+      "permanent": false
+    },
+    {
+      "source": "/go/optery",
+      "destination": "https://optery.com",
+      "permanent": false
+    }
+  ]
 }

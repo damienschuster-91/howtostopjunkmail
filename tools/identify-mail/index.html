@@ -1498,7 +1498,7 @@ const mailData = {
     also: 'Data broker removal via Incogni or DeleteMe to prevent future re-listing',
     link: 'https://optoutprescreen.com',
     linkText: 'OptOutPrescreen.com',
-    paidLink: 'https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443',
+    paidLink: '/go/incogni',
     paidText: 'Try Incogni →'
   },
   insurance: {
@@ -1509,7 +1509,7 @@ const mailData = {
     also: 'Data broker removal to stop re-listing',
     link: 'https://optoutprescreen.com',
     linkText: 'OptOutPrescreen.com',
-    paidLink: 'https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443',
+    paidLink: '/go/incogni',
     paidText: 'Try Incogni →'
   },
   catalog: {
@@ -1520,7 +1520,7 @@ const mailData = {
     also: 'Data broker removal to stop your address being re-sold to other retailers',
     link: 'https://catalogchoice.org',
     linkText: 'CatalogChoice.org',
-    paidLink: 'https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443',
+    paidLink: '/go/incogni',
     paidText: 'Try Incogni →'
   },
   charity: {
@@ -1531,7 +1531,7 @@ const mailData = {
     also: 'Data broker removal limits how widely your address circulates',
     link: 'https://dmachoice.org',
     linkText: 'DMAchoice.org',
-    paidLink: 'https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443',
+    paidLink: '/go/incogni',
     paidText: 'Try Incogni →'
   },
   political: {
@@ -1542,7 +1542,7 @@ const mailData = {
     also: 'Consider a P.O. Box for sensitive mail to separate it from your home address',
     link: 'https://dmachoice.org',
     linkText: 'DMAchoice.org (partial coverage)',
-    paidLink: 'https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443',
+    paidLink: '/go/incogni',
     paidText: 'Reduce exposure with Incogni →'
   },
   realestate: {
@@ -1553,7 +1553,7 @@ const mailData = {
     also: 'Data broker removal reduces how widely your homeownership data circulates',
     link: 'https://optoutprescreen.com',
     linkText: 'OptOutPrescreen.com',
-    paidLink: 'https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443',
+    paidLink: '/go/incogni',
     paidText: 'Try Incogni →'
   },
   local: {
@@ -1574,7 +1574,7 @@ const mailData = {
     also: 'Data broker removal covers the remaining 20–30%',
     link: 'https://optoutprescreen.com',
     linkText: 'OptOutPrescreen.com (start here)',
-    paidLink: 'https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443',
+    paidLink: '/go/incogni',
     paidText: 'Try Incogni →'
   }
 };
@@ -1608,8 +1608,8 @@ function identifyMail() {
       <h3 style="color:var(--gold);">Data Broker Removal</h3>
       <p style="color:var(--sage-light);">${d.also}. Automated removal takes 5 minutes instead of 304 hours.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
-        <a href="https://deal.incogni.io/aff_c?offer_id=2&aff_id=2443" target="_blank" rel="nofollow noopener" class="kit-link-btn paid-link">Try Incogni (Affiliate) →</a>
-        <a href="https://joindeleteme.com" target="_blank" rel="nofollow noopener" class="kit-link-btn" style="color:var(--sage-light);border-color:var(--forest-lite)">Try DeleteMe (Affiliate) →</a>
+        <a href="/go/incogni" target="_blank" rel="nofollow noopener" class="kit-link-btn paid-link">Try Incogni (Affiliate) →</a>
+        <a href="/go/deleteme" target="_blank" rel="nofollow noopener" class="kit-link-btn" style="color:var(--sage-light);border-color:var(--forest-lite)">Try DeleteMe (Affiliate) →</a>
       </div>
     </div>` : ''}
     <div style="margin-top:16px;">

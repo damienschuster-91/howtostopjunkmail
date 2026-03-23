@@ -11,6 +11,7 @@
     { "slug": "stop-political-junk-mail",                       "title": "Stop Political Junk Mail",            "desc": "Why political mail is different and what you can actually do about it.",                        "tag": "Election Mail",        "section": "situations"  },
     { "slug": "junk-mail-vs-spam",                              "title": "Junk Mail vs. Spam",                  "desc": "What counts as junk mail, what counts as spam, and why it matters for opting out.",              "tag": "Know the Difference",  "section": "reference"   },
     { "slug": "can-you-recycle-junk-mail",                      "title": "Can You Recycle Junk Mail?",          "desc": "What goes in the bin and what does not, by mail type.",                                         "tag": "Environment",          "section": "reference"   },
-    { "slug": "what-is-a-brm-envelope",                         "title": "What Is a BRM Envelope?",             "desc": "Business Reply Mail explained, including how senders are charged.",                             "tag": "Explainer",            "section": "reference"   }
+    { "slug": "what-is-a-brm-envelope",                         "title": "What Is a BRM Envelope?",             "desc": "Business Reply Mail explained, including how senders are charged.",                             "tag": "Explainer",            "section": "reference"   },
+    { "slug": "junk-mail-statistics",                            "title": "Junk Mail Statistics (2026 Guide)",   "desc": "Up-to-date junk mail statistics for 2026. Volume, environmental impact, taxpayer costs, and time waste -- all sourced and cited.",  "tag": "Data & Research",      "section": "reference"   }
   ]
 }

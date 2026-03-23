@@ -29,6 +29,7 @@ HowToStopJunkMail.org provides step-by-step guides, opt-out tools, and resources
 - [Junk Mail vs. Spam](https://howtostopjunkmail.org/guides/junk-mail-vs-spam/) — What counts as junk mail, what counts as spam, and why it matters for opting out.
 - [Can You Recycle Junk Mail?](https://howtostopjunkmail.org/guides/can-you-recycle-junk-mail/) — What goes in the bin and what does not, by mail type.
 - [What Is a BRM Envelope?](https://howtostopjunkmail.org/guides/what-is-a-brm-envelope/) — Business Reply Mail explained, including how senders are charged.
+- [Junk Mail Statistics (2026 Guide)](https://howtostopjunkmail.org/guides/junk-mail-statistics/) — Up-to-date junk mail statistics for 2026. Volume, environmental impact, taxpayer costs, and time waste -- all sourced and cited.
 
 ## Key Facts
 

@@ -2,10 +2,17 @@
 /**
  * build.js — HowToStopJunkMail.org build script
  *
- * A) Updates sidebar nav in every guides/SLUG/index.html
- * B) Updates the Guides nav dropdown in every HTML file (guides + root index.html)
- * C) Regenerates sitemap.xml from guides.json
- * D) Regenerates the guide card grid in guides/index.html from guides.json
+ * Normal build (no flags):
+ *   A) Updates sidebar nav in every guides/SLUG/index.html
+ *   B) Updates the Guides nav dropdown in every HTML file (guides + root index.html)
+ *   C) Regenerates sitemap.xml from guides.json
+ *   D) Regenerates llms.txt from guides.json
+ *   E) Regenerates the guide card grid in guides/index.html from guides.json
+ *
+ * New guide scaffold:
+ *   node build.js --new-guide
+ *   node build.js --new-guide --data='{"SLUG":"my-slug","TITLE":"My Title",...}'
+ *   node build.js --new-guide --data=tokens.json
  */
 
 const fs   = require('fs');
@@ -271,7 +278,91 @@ function buildGuidesIndex() {
   return true;
 }
 
+// ── F) NEW GUIDE SCAFFOLD ─────────────────────────────────────────────────────
+
+const GUIDE_TOKENS = [
+  'SLUG',
+  'TITLE',
+  'META_DESCRIPTION',
+  'H1',
+  'LEAD',
+  'DATA_BG',
+  'SIDEBAR_TOC',
+  'MAIN_CONTENT',
+  'FOOTER_CITATIONS',
+];
+
+async function createNewGuide() {
+  const templatePath = path.join(ROOT, 'templates', 'guide-template.html');
+  if (!fs.existsSync(templatePath)) {
+    console.error('ERROR: templates/guide-template.html not found');
+    process.exit(1);
+  }
+
+  // Resolve token values from --data arg or interactive prompts
+  const dataArg = process.argv.find(a => a.startsWith('--data='));
+  let tokens = {};
+
+  if (dataArg) {
+    const val = dataArg.slice('--data='.length);
+    try {
+      tokens = JSON.parse(val);
+    } catch {
+      if (fs.existsSync(val)) {
+        tokens = JSON.parse(fs.readFileSync(val, 'utf8'));
+      } else {
+        console.error('--data value is neither valid JSON nor a readable file path');
+        process.exit(1);
+      }
+    }
+  } else {
+    const readline = require('readline');
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+    const ask = q => new Promise(resolve => rl.question(q, resolve));
+
+    console.log('=== New Guide Creator ===\n');
+    console.log('Tip: for multi-line tokens (MAIN_CONTENT, SIDEBAR_TOC, FOOTER_CITATIONS)');
+    console.log('enter a short placeholder here and edit the file afterward, or use:');
+    console.log('  node build.js --new-guide --data=tokens.json\n');
+
+    for (const token of GUIDE_TOKENS) {
+      tokens[token] = await ask(`${token}: `);
+    }
+    rl.close();
+    console.log('');
+  }
+
+  if (!tokens.SLUG) {
+    console.error('ERROR: SLUG is required');
+    process.exit(1);
+  }
+
+  // Replace all tokens in the template
+  let html = readFile(templatePath);
+  for (const [key, val] of Object.entries(tokens)) {
+    html = html.split('{{' + key + '}}').join(val || ('{{' + key + '}}'));
+  }
+
+  // Write to guides/[slug]/index.html
+  const outDir = path.join(ROOT, 'guides', tokens.SLUG);
+  fs.mkdirSync(outDir, { recursive: true });
+  const outPath = path.join(outDir, 'index.html');
+  writeFile(outPath, html);
+
+  console.log(`OK  : Created ${path.relative(ROOT, outPath)}`);
+  console.log('\nNext steps:');
+  console.log(`  1. Add an entry for "${tokens.SLUG}" to guides.json`);
+  console.log('  2. Edit the file to fill in any remaining {{TOKEN}} placeholders');
+  console.log('  3. Run: node build.js');
+}
+
 // ── MAIN ─────────────────────────────────────────────────────────────────────
+
+if (process.argv.includes('--new-guide')) {
+  createNewGuide()
+    .then(() => process.exit(0))
+    .catch(e => { console.error(e.message); process.exit(1); });
+} else {
 
 console.log('=== build.js ===\n');
 
@@ -325,3 +416,5 @@ const indexOk = buildGuidesIndex();
 console.log(`   ${indexOk ? 'OK  ' : 'FAIL'}: guides/index.html`);
 
 console.log('\nDone.');
+
+} // end else (normal build)

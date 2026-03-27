@@ -2073,9 +2073,14 @@ function setCredit(val) {
 }
 
 function updateCalc() {
-  const size  = parseInt(document.getElementById('calc-size').value);
-  const years = parseInt(document.getElementById('calc-years').value);
-  const shop  = parseInt(document.getElementById('calc-shop').value);
+  const sizeEl  = document.getElementById('calc-size');
+  const yearsEl = document.getElementById('calc-years');
+  const shopEl  = document.getElementById('calc-shop');
+  if (!sizeEl || !yearsEl || !shopEl) return;
+
+  const size  = parseInt(sizeEl.value);
+  const years = parseInt(yearsEl.value);
+  const shop  = parseInt(shopEl.value);
 
   document.getElementById('calc-size-val').textContent  = size + (size === 1 ? ' person' : ' people');
   document.getElementById('calc-years-val').textContent = years + ' year' + (years === 1 ? '' : 's');
